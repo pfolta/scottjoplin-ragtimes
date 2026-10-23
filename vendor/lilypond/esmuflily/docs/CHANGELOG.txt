@@ -1,0 +1,880 @@
+ChangeLog for Esmuflily
+=======================
+
+17 December 2020:
+- Initial release
+
+January 2021 - May 2021:
+- Added command "\tremolo" replacing "\setTremolo" and "\unsetTremolo".
+- Added command "\stem" replacing "\setStem" and "\unsetStem".
+- Removed additional commands for tremolos and symbols on stem ("\buzzroll" etc.)
+- Renamed ottava style "bassa" to "ordinals-bassa" and "bassa-ba" to "numbers-ba".
+- Added ottava style "ordinals-ba".
+- Renamed ottava style "default" to "ordinals-b".
+  New default style is "numbers".
+- Added command "\brass".
+- Added command "\makeScriptSmall".
+- Added command "\ekm-text" replacing "\ekm-text-char".
+- Added notehead styles "altdefault" and "baroque".
+- Extended "\makeBreathe", "\tremolo", and "\stem" to accept a code point,
+  a list of code points, or any markup.
+- Added fingering.
+- Added figured bass.
+- Added rest style "z".
+- Added note values 256, 512, 1024 for rests and flags.
+- Fixed timing of "\compoundMeter" with single list or pair.
+- Fixed "\upbow" and "\downbow" symbol below to be equal above (not turned).
+- Added clefs "neomensural-c*" replacing "*squareC".
+- Added clef "accordion".
+
+7 June 2021:
+- Added clef support for "TabStaff" and the clefs "talltab" and "seriftab".
+- Added 4-string variants of the tab clefs "4string*tab".
+- Added notehead style "parenthesised".
+
+23 June 2021:
+- Added command "\flagStyle" and the styles "straight" and "short".
+- Added command "\ekm-varchar".
+- Extended "\makeScript" and "\makeScriptSmall" to accept a code point,
+  a list of code points, or any markup.
+
+26 June 2021:
+- Added "\ekm-chf" for font features, replacing "\ekm-varchar".
+- Extended "\ekm-text", "\makeScript", and "\makeScriptSmall" to accept
+  a list with a code point and font features.
+- Extended "\ekm-line" to accept text elements like "\ekm-text".
+
+22 July 2021:
+- Added notehead style "withx-black".
+
+15 August 2021:
+- Added and renamed arrow and arrowhead styles for "\ekm-arrow".
+- Added note name noteheads with Do,Re,Mi,...
+
+5 September 2021:
+- Added sustain/sostenuto pedal symbols "1/2Ped" and "|1/4", "|1/2", "|3/4", "|1".
+- Renamed pedal key strings "+" to "o" and "_^_" to "H".
+- Extended "\ekm-definition" to accept text elements like "\ekm-text".
+
+8 September 2021:
+- Extended "\ekm-definition" to accept #f for no text.
+  For an unknown key, the text so far is drawn.
+- Changed "\ekm-harp-pedal" using "\ekm-definition".
+- Extended "\ekm-note-by-number" and "\ekm-rest-by-number" to support styles.
+- Added commands "\extrashortfermata" and "\extralongfermata".
+- Added styles "extrashort" and "extralong" for "\ekm-fermata".
+- Removed markup command "\fermata" (no redefining of LilyPond markup commands).
+- Extended "\ekm-eyeglasses" to accept a direction.
+
+10 September 2021:
+- Added "\ekm-accordion" as a standalone music event.
+- Added support for clef modifiers (any transposition and style) and change clefs.
+
+13 September 2021:
+- Fixed wrong size of change clefs.
+- Removed use of precomposed clef glyphs for clef modifiers.
+
+17 September 2021:
+- Renamed "\ekm-definition" to "\ekm-def".
+- Added note name noteheads with Do,..,Si.
+- Renamed "\nameHeads[Minor]" to "\nameHeadsTi[Minor]" for Do,..,Ti.
+
+24 September 2021:
+- Changed trill span and "\laissezVibrer" to be independent of Ekmelos font metrics.
+- Fixed trill span position after line break.
+- Added "\ekmStartTrillSpan" for different line styles.
+- Changed "\ekm-text" to accept TEXT only (no CENTER argument).
+- Removed "\ekm-center".
+
+26 September 2021:
+- Added una corda pedal and pedal key strings "una corda", "tre corde",
+  "u.c.", "t.c.", and "sos."
+- Changed "\ekm-def" to draw a key string as normal text italic if the value is 1.
+
+2 October 2021:
+- Added trill pitch with variable parenthesis and notehead styles.
+- Fixed "\ekmStartTrillSpan" to work with "\pitchedTrill", "\afterGrace", etc.
+- Changed "\parensDyn" and "\parensHairpin" to support several parenthesis styles.
+- Removed "(ekm-compound-dynamic)" (is now part of "\parensDyn").
+- Added stem symbols "stringNoise", "rimShot", "turnRight", "turnLeft", and "turnRightLeft".
+- Changed stem symbols "vibratoPulse" to "vibrato" and "pluckedDamp" to "damp".
+- Changed "\brass" to accept a symbol for style.
+- Fixed stem attachment of notehead styles "triangle-up", "triangle-down",
+  "arrow-up", and "arrow-down".
+- Unified access to internal tables of noteheads, note clusters, flags,
+  rests, scripts, ottava, and brass.
+
+7 October 2021:
+- Added "\breatheUpbow", "\breatheSalzedo", and "\heel".
+- Added "\ekm-fader" amd "\ekm-midi".
+- Changed position of ORIENT argument in "\ekm-arrow".
+- Added "\ekm-beater".
+
+10 October 2021:
+- Added "\ekmSlashSeparator".
+- Added "\ekm-analytics".
+- Added use of "\ekm-tied-lyric" in lyric input mode.
+
+17 October 2021:
+- Fixed "\ekm-tied-lyric" to recognize UTF-8 encoded single characters between "~".
+- Added name "hand" to "\ekm-beater".
+
+22 October 2021:
+- Added support for "short" stem down flags.
+- Added segno bar lines with small and large serpent glyphs ("s", "$").
+- Changed some piano pedal keys to use special glyphs instead of normal text.
+
+23 October 2021:
+- Extended "\ekm-midi" to draw any level (instead of the nearest precomposed glyph).
+
+8 November 2021:
+- Changed "\ekm-fader" and "\ekm-midi" to allow non-integral percent values in the label.
+
+26 November 2021:
+- Changed "\ekm-midi" to use the moved Ekmelos glyphs.
+- Added support for brace and angle brackets in trill pitches.
+- Added support for bilateral orientations (used by "\ekm-arrow").
+- Added styles "simple" and "double" for "\ekm-arrow".
+- Added key "Sos." to piano pedals.
+
+28 February 2022:
+- Added dynamic scripts "\sfffz" and "\sffffz".
+
+18 June 2022:
+- Added styles to "\ekm-arrow" for Unicode arrows "triple",
+  "dashed", "triangle-dashed", "opposite", "triangle-opposite",
+  "paired", "triangle-paired", "two-headed", "bent-tip", "long-bent-tip".
+- Added bilateral diagonal arrows for "\ekm-arrow" style "simple".
+
+3 July 2022:
+- Changed first argument of "\ekm-beater" from string to symbol
+  (consistent with "\ekm-arrow").
+
+25 August 2022:
+- Completely revised version.
+- Added switches to turn on/off SMuFL support for individual types of grobs:
+  "\ekmSmuflOn", "\ekmSmuflOff".
+- Renamed several commands (new - old):
+  "\ekmCadenzaOn" - "\cadenzaStyle",
+  "\ekmStaffDivider" - "\staffDivider",
+  "\ekmNameHeads" - "\nameHeads",
+  "\ekmNameHeadsMinor" - "\nameHeadsMinor",
+  "\ekmNameHeadsTi" - "\nameHeadsTi",
+  "\ekmNameHeadsTiMinor" - "\nameHeadsTiMinor",
+  "\ekmMakeClusters" - "\cluster",
+  "\ekmFlag" - "\flagStyle",
+  "\ekmParensDyn" - "\parensDyn",
+  "\ekmParensHairpin" - "\parensHairpin",
+  "\ekmScript" - "\makeScript",
+  "\ekmScriptSmall" - "\makeScriptSmall",
+  "\ekmBreathing" - "\makeBreathe",
+  "\ekmTremolo" - "\tremolo",
+  "\ekmStem" - "\stem",
+  "\ekmAccordion" - "\ekm-accordion",
+  "\ekmRicochet" - "\ricochet",
+  "\ekmStemRicochet" - "\ricochetStem",
+  "\ekmBendAfter" - "\brass".
+- Removed redefinitions of LilyPond commands:
+  "\clef", "\ottava", "\breathe".
+- Removed some commands since they are defined in LilyPond as of 2.22:
+  "\slashturn", "\haydnturn",
+  "\veryshortfermata", "\henzeshortfermata", "\henzelongfermata",
+  "\n".
+- Moved some commands to the file "usesmufl.ily",
+  since they are just supplements making use of Esmuflily commands:
+  "\pf", "\fz", "\sfpp", "\sfzp", "\sffz", "\sfffz", "\sffffz", "\rf",
+  "\overpressureupbow", "\overpressuredownbow",
+  "\heel", "\halfopenvertical",
+  "\extrashortfermata", "\extralongfermata",
+  "\DC", "\DCcoda", "\DCfine", "\DS", "\DScoda", "\DSfine",
+  "\breathe", "\breatheWedge", "\breatheTick", "\breatheUpbow",
+  "\breatheSalzedo",
+  "\caesura", "\caesuraThick", "\caesuraShort", "\caesuraCurved".
+- Added lists of ottavation texts instead of "\ottavaStyle",
+  each supporting the octave numbers 1 - 4:
+  "ekm-ottavation-numbers", "ekm-ottavation-ordinals",
+  "ekm-ottavation-simple-ordinals", "ekm-ottavation-ordinals-b",
+  "ekm-ottavation-ordinals-bassa", "ekm-ottavation-ordinals-ba",
+  "ekm-ottavation-numbers-ba".
+- Added tuplet formatting functions for non-default numbers
+  and for numbers with notes:
+  "ekm-tuplet-number::non-default-tuplet-denominator-text",
+  "ekm-tuplet-number::non-default-tuplet-fraction-text",
+  "ekm-tuplet-number::append-note-wrapper",
+  "ekm-tuplet-number::non-default-fraction-with-notes",
+  "ekm-tuplet-number::fraction-with-notes".
+
+6 September 2022:
+- Fixed vertical alignment of accordion registers with "\ekm-accordion".
+- Added command "\ekm-ottavation".
+- Added support for space characters in "\ekm-def" and for
+  dynamics, ottavation, fingering, piano pedals, and analytics.
+- "\ekm-def": Removed support for value 1 to draw the key as normal text.
+
+21 September 2022:
+- Added command "\ekm-finger".
+- Added support for italic fingering glyphs.
+- Added command "\ekm-piano-pedal".
+- Fixed stem attachment of Funk and Walker re noteheads.
+
+29 June 2023:
+- Added event function "\ekmLaissezVibrer".
+- Added command "\ekm-brace" supporting size variants.
+
+1 July 2023:
+- "\ekm-def": Enabled overriding of common keys (space, `_` etc.)
+- Renamed table of common keys `ekm-def-map` to `ekm-common-map`.
+- Added function `ekm-assd`.
+
+25 July 2023:
+- Esmuflily now requires LilyPond version 2.24.0 or higher.
+- Added arrow styles "quadruple" and "curving" in "\ekm-arrow".
+- Changed first argument of "\ekmScript" and "\ekmScriptSmall"
+  from string to symbol.
+- Extended tables "ekm-notehead-map" and "ekm-cluster-map" to provide
+  different stem attachments for up and down.
+- Changed UTF8-support in "\ekm-tied-lyric" due to Guile 2.2
+  Removed "ekm-utf8-next" and "ekm-utf8-size".
+- Changed parenthesis support in trill pitches and "\ekmPitchedTrill".
+
+2023-08-10:
+- Added styles for geometric shapes in "\ekm-arrow":
+  "black-triangle", "white-triangle",
+  "black-small-triangle", "white-small-triangle",
+  "half-circle", "circle-half-black",
+  "square-half-black", "diamond-half-black",
+  "circle-quarters".
+
+2023-08-24:
+- Added command "\ekm-theory" for function theory symbols.
+- Added command "\ekm-combine".
+- Changed argument of "\ekmStartTrillSpan" from symbol to integer.
+- Changed "\ekm-finger" to draw italic glyphs with a leading `*`
+  instead of `\`.
+
+2023-08-31:
+- Extended table "ekm-brace-map" with glyphs for scalings
+  14000, 16000, 18000.
+- Changed table "ekm-theory-map" using single glyph for "/D".
+- Changed "\ekm-fret-diagram-terse" for centered fretboard symbols.
+
+2023-09-08:
+- Changed name of command "\ekm-theory" to "\ekm-func".
+- Changed properties of "\ekm-func" and extended syntax
+  of definition strings.
+- Added music functions "\ekmFunc" and "\ekmFuncList"
+  for use in lyrics context.
+- Extended table "ekm-ottavation-map" with glyphs for "8^vb" ,
+  "15^mb", "22^mb", "29^mb".
+
+2023-10-25:
+- Added SMuFL support for string numbers with symbol `stringnumber`
+  and command "\ekm-string-number".
+- Extended fingering to support right-hand fingering.
+  Changed "ekm-fingering" for variable size and italic shape.
+
+2023-10-31:
+- Added SMuFL support for repeat bar colons with symbol `colon`.
+
+2023-11-11:
+- Added command "\ekm-metronome" and music function "\ekmMetronome"
+  to draw metronome strokes.
+
+2024-03-29:
+- Added fingering keys R RE L LE for keyboardPlayWith... symbols.
+- Changed table "ekm-finger-map" including italic symbols instead of
+  separate italic table.
+
+2024-03-30:
+- Added command "\ekmPlayWith".
+
+2024-04-06:
+- Added support to draw paths instead of font glyphs.
+  Changed "\ekm-char", "\ekm-chars", and "\ekm-charf" for paths.
+- New variable "ekmFont" and option "ekmfont" to select a font.
+
+2024-06-26:
+- Added SMuFL support for multi-measure rests and multi-measure rest
+  numbers with symbol `rest`.
+- Added commands "\ekm-multi-measure-rest-by-number" and "\ekm-rest",
+  and the auxiliary command "\ekm-mmr".
+- Changed command "\ekm-rest-by-number" using the properties
+  "style" and "ledgers".
+- Changed command "\ekm-metronome" using property "word-space"
+  instead of "stroke-space".
+- Changed calculation of stem lengths for flags.
+  Changed "ekm-stemlength-map" and added "(ekm-stemlength)".
+- Changed "(ekm-assld)" for more flexible table access.
+
+2024-07-15:
+- Added SMuFL support for system start delimiters (brace, bracket)
+  with symbol `systemstart`.
+- Added command "\ekm-system-start".
+- Removed command "\ekm-brace".
+
+2024-08-18:
+- Added clefs "string" and "behindbridgestring".
+
+2024-08-19:
+- Added clef "frenchG".
+
+2024-09-29:
+- Fixed cyclic dependency of Stem "direction" property for beamed
+  cross-staff notes (issue #11). Changed "(ekm-assld)".
+- Added procedure for "NoteHead.stem-attachment".
+
+2024-10-07:
+- Fixed position of broken trill spanner with "after-line-breaking".
+
+2024-10-10:
+- Fixed too large change clef for non-default staff space (issue #12).
+- Added variable "ekm:clef-change-font-size".
+- Added variable "ekm:font-size" for all symbols like in Ekmelily.
+
+2024-10-16:
+- Added SMuFL support for ambitus note heads. Changed "(ekm-notehead)".
+
+2025-01-13:
+- Fixed colon bar lines (volta repeat) for LilyPond 2.25 (issue #9).
+
+2025-01-16:
+- Added "\ekmStartTrillSpanScript" (issue #14).
+- Fixed segno bar lines and "\ekmCompoundMeter" for LilyPond 2.25 (issue #15).
+
+2025-01-24:
+- Added command "\ekm-scoop", music function "\ekmScoop",
+  and fingering definition keys "S", "P" (issue #5).
+
+2025-02-25:
+- Added SMuFL switch "textspan", event function "\ekmStartSpan",
+  and music function "\ekmStartSpanMusic" for multi-segment spanner
+  (issue #13).
+- "\ekmStartTrillSpanScript" is now deprecated.
+
+2025-06-16:
+- Fixed multi-measure rest placement on one-line staff (issue #16).
+- Changed condition for ledgered multi-measure rest.
+- Added table "ekm-linepos-tab" and "(ekm-linepos)" for standard staff line positions.
+
+2025-06-17:
+- Fixed wrong bracket thickness for other fonts (issue #17).
+  Added property "thickness" to "\ekm-system-start" and "(ekm-system-start)".
+- Changed name of "(trill?)" to "(ekm-trill?)".
+- Removed "\ekmStartTrillSpanScript", replaced by "\ekmStartSpan".
+
+2025-08-04:
+- Added basic metadata support (issue #3).
+- Added "ekmd.scm": Parse JSON file and create metadata table.
+- Added metadata tables: "metadata-bravura.scm", "metadata-ekmelos.scm",
+  and "metadata-template.scm" to create new tables.
+  They include data from "engravingDefaults" and stem attachment of note heads.
+- Added "(ekm-md)" to access engravingDefaults,
+  and "(ekm-md-glyph)" to access glyph metadata.
+- Added bracket thickness from engravingDefaults.
+- Removed stem-attachment data from table "ekm-notehead-tab".
+- Changed "(ekm-note)" and "(ekm-stem-attachment)" to access metadata.
+
+2025-08-05:
+- Added cluster notes to "metadata-*.scm".
+- Removed stem-attachment data from table "ekm-cluster-tab".
+- Changed "(ekm-cluster)" to access metadata.
+
+2025-08-06:
+- Added "(ekm-dir)" for beamed notes and clusters (issue #19).
+
+2025-08-10:
+- Added metadata support for flags of different font-specific styles.
+- Added "\ekmInitFlag" to prepare flag metadata.
+- ekmd.scm: Added "(ekmd:tag!)" to tag glyphs for grouping by style
+  and duration log. Used for flags.
+- ekmd.scm: Added "(ekmd:name->cp gn)" to convert glyph names to code points.
+
+2025-08-13:
+- ekmd.scm: Includes the glyphnames table "ekmd:glyphnames" instead of
+  separate file "glyphnames.scm".
+- Changed names of cache files from "metadata-*" to "ekmd-*".
+
+2025-08-14:
+- Changed table "ekm-stemlength-tab" and "\ekmInitFlag"
+  to provide up and down stem length.
+  Adapt "(ekm-stemlength)" and "(ekm-flag)" accordingly.
+
+2025-09-05:
+- Added common type table "ekm-types" replacing type-specific tables:
+  "ekm-notehead-tab", "ekm-flag-tab", "ekm-rest-tab", "ekm-script-tab",
+  "ekm-cluster-tab", "ekm-delimiter-tab", "ekm-spanner-tab",
+  "ekm-accordion-tab", "ekm-brass-tab", "ekm-parens-tab", ...
+- Added "(ekm-merge-type)" to extend type tables with font-specific
+  styles from the cache file.
+- Changed format of flag entries in the "glyphs" sub-table of the
+  metadata table. Moved FLAG-STYLE and LOG to the "styles" sub-table.
+- Added "(ekm-init-stemlength)" replacing "\ekmInitFlag".
+- Changed tables delimiter, accordion, brass:
+  Separate up and down values for a unique format and to allow directions.
+- Removed MINIMUM-LENGTH from brass table.
+- Changed "\ekmBendAfter" to calculate minimum-length from glyphs.
+- Changed parens table:
+  "#t" instead of "ekm-align" to avoid quasi-quote.
+
+2025-09-07:
+- Changed tables script, clef, dynamic, shared:
+  Sub-table with style "#t".
+- Added "(ekm-init-clef)".
+- Added table laissezvibrer.
+  Changed "\ekmLaissezVibrer" to accept an extent instead of an index.
+
+2025-09-08:
+- Added tables tremolo, stem, ottava, ottavation, finger, string.
+- Added "(ekm-ottavation)" creating an ottavation style list for "ottavationMarkups".
+- Removed predefined lists "ekm-ottavation-*" and "(ekm-cdr-text)".
+- Set shared table to "\hspace" markups for SP,EMSP,ENSP,THSP,HSP,
+  and new key "`" to 0 for ZWSP.
+
+2025-09-09:
+- Added tables pedal, harp.
+
+2025-09-10:
+- Added styles to table number: time, time-turned, time-reversed, tuplet,
+  finger, finger-italic, string, fbass, func.
+  string replaces type table.
+- Changed "(ekm-number->list)" and "\ekm-number" to access table number.
+- Added table clef-mod.
+- Added command "\ekm-concat".
+- Changed direction order in glyphs and types tables to (DOWN . UP).
+
+2025-09-18:
+- Add tables fbass, fbass-acc, lyric, analytics, func, arrow, beater.
+- Change "(ekm-fbass)" to accept any extext.
+- Add command "\ekm-orient".
+- Remove "(ekm-oref)".
+- Change "\ekmBendAfter" to accept any extext.
+
+2025-09-20:
+- Add tables time, time-sub, dots.
+- Change "\ekm-note-by-number", "\ekm-fermata", "(ekm-time-num)",
+  "(ekm-timesig)", "\ekmCadenzaOn" to accept any extext.
+- Change "\ekmCadenzaOn" to accept string styles from table time.
+
+2025-09-21:
+- Add tables colon, segno.
+- Add "(make-ekm-old-bar-line)", "(make-ekm-bar-line)", and "(ekm-bar-init)"
+  replacing separate functions for colon and segno.
+- Add "(ekm-symex)".
+- Change "(ekm-asst)" to accept type symbol or table.
+
+2025-09-21:
+- Add table tuplet.
+- Add "(ekm-tuplet-num)" replacing "(ekm-tuplet-list)",
+  and "(ekm-tuplet-frac)".
+- Change "(ekm-tuplet-number)" and "(ekm-tuplet-number::non-default-fraction-with-notes)"
+  to accept extext and "word-space" property instead of space chars.
+
+2025-09-22:
+- Add tables barline, separator, grace, mmrest.
+- Change "\ekm-mmr" using metadata "hBarThickness" instead of U+E4F0.
+- Change to accept extext: "\ekm-number", "\ekmStaffDivider",
+  "ekmSlashSeparator", "(ekm-dots)", "(ekm-flag)", "\ekm-mmr",
+  "\ekm-rest-by-number".
+- Change "\ekm-note-by-number" supporting dot style.
+
+2025-09-23:
+- Add tables percent, arpeggio.
+- Add "(ekm-repeat)", "(ekm-doublerepeat)", "(ekm-doublepercent)"
+  replacing "(ekm-percent)" for separate percent repeats.
+- Change to accept extext: "\ekm-scoop", "\ekmBendAfter", "(ekm-arpeggio)".
+- Add "\ekmArpeggioArrowUp", "\ekmArpeggioArrowDown", "\ekmArpeggioNormal".
+
+2025-09-24:
+- Change to accept extext: "\ekm-harp-change", "\ekm-fret-diagram-terse",
+  "(ekm-time-num)".
+- Add table "fret". Support fretboard without nut.
+- Extend "\ekm-number" and table "number" for normal text styles and default numbers.
+- Remove "(ekm-number->list)".
+- Change "\ekm-string-number" and add "\ekm-default-string-number"
+  for default numbers.
+
+2025-09-26:
+- Change "\ekm-accordion" to accept extext.
+- Fix table "accordion" holding only symbols without direction.
+- Add accordion ricochet symbols to tables "script" and "stem".
+- Fix table "parens" for transformation values.
+- Add tables "level", "misc".
+- Change to accept extext: "(ekm-control)", "\ekm-eyeglasses", "\ekm-metronome".
+
+2025-09-27:
+- Add command "\ekm-misc".
+- Fix "(ekm-repeat-tremolo)" and "\ekmTremolo" to pass extext to stencil.
+- Fix tables "arrow" and "beater" with a default style as first entry.
+
+2025-09-28:
+- Remove styles "straight", "short", "beamed" from table "notehead".
+- Add name "d" to all styles of table "parens".
+- Fix "\ekmParensDyn" using "d" instead of normal text.
+
+2025-10-02:
+- Fix "\ekm-concat", "\ekm-line" to accept "cheap-list?".
+- Fix "(ekm-md-glyph)" default stem-attachment.
+
+2025-10-03:
+- Rename some internals.
+- Add JSON file names to lookup: "FNAME_metadata.json", "metadata.json".
+- Add "\ekmMergeType".
+
+2025-10-04:
+- Add "(ekmd:find-file)" and change "(ekmd:load)" to find json and scm
+  (issue #28).
+- Add "(ekmd:set-dg!)" swapped from "(ekmd:load)".
+
+2025-10-05:
+- Fix "(ekmd:set-dg!)" to set "glyphs" table.
+- Add "(ekm:reverse)".
+- Change "(ekm-script)" to draw symbols with "\ekmScript" in UP,DOWN order.
+- Change "(ekm-text)" and "(ekm-extext?)" to accept "#f" which draws
+  an empty-stencil.
+- Remove "(ekm-extext-or-not?)".
+- Fix markup entries in table "harp".
+- Change "hBarThickness" in cache files "ekmd-bravura.scm" and "ekmd-sebastian.scm".
+
+2025-10-06:
+- Add style "ekm" to "number" table with default procedures.
+  Change "(ekm-number)" accordingly.
+- Add command "\ekm-default-scale-number".
+- Add file "types-template.scm".
+  Change creating metadata table to use this file.
+- Add "types" table to file "ekmd-sebastian.scm".
+- Add "`" to "shared" table.
+- Change "\ekmParensDyn" and "\ekmParensHairpin" using "shared" space for gap.
+
+2025-10-11:
+- Change tuplet procedures to be defined public.
+- Add quasiquote to metadata tables in cache files (issue #29).
+- Add keyword list.
+- Change style symbols of `parens` table to "accidental", "dynamic",
+  "hairpin", "func", "text".
+- Change "\ekmSlashSeparator" arg type to number.
+
+2025-10-16:
+- Simplify "ekm-cp?" to "integer?" (issue #30).
+- Revise "\ekm-chars" and "\ekm-concat".
+
+2025-10-21:
+- Add "\ekm-script".
+- cosmufl.ily: Add "\ekm-combine-accidental", "\ekmScriptAccidental".
+- cosmufl.ily: Change "\ekmStartTrillSpanAccidental".
+
+2025-11-03:
+- Fix LP 2.25 support in type table "number". Style "serif" replaces "roman"
+  (issue #31).
+- Fix LP 2.25 support for new text font:
+  "(ekm-parens-align)" draws a string with \sans instead of "\ekm-text".
+  Change in type table "parens" font-size to -1 ("dynamic" keys).
+- Fix LP 2.25.30 support for time signature:
+  "(ekm-timesig)" uses property "time-signature" or "fraction".
+  "\ekmCompoundMeter" sets property "timeSignature" instead of "timeSignatureFraction".
+
+2025-11-08:
+- cosmufl.ily: Add variable "ekmUse".
+
+2025-11-10:
+- Add support for negative SMuFL switches in "\ekmSmuflOn".
+- Change some type names: "delimiter" to "systemstart",
+  "finger" to "fingering", "dots" to "dot", "lvtie" to "lv".
+- Change "number" styles: "finger" to "fingering",
+  "finger-italic" to "fingering-italic".
+
+2025-11-15:
+- cosmufl.ily: Fix X alignment in "\ekmStartTrillSpanAccidental".
+
+2025-11-16:
+- Add "ekm:chord-set!" and switch "chord" to support chord symbols (issue #34).
+
+2025-11-18:
+- cosmufl.ily: Extend setting with "ekmUse" (issue #36).
+
+2025-11-30:
+- Add "ekm-stem-print" to support different stem lengths for up and down flags
+  (issue #22).
+- Change format of "ekm-stemlength-tab", and "ekm-init-stemlength",
+  "ekm-set-stemlength!", "ekm-flag", and "\ekmFlag" which is now obsolete.
+
+2025-12-02:
+- Change "ekm-stem-print": duration log is not required.
+
+2025-12-14:
+- Add SMuFL cue clef support (issue #41).
+
+2025-12-17:
+- Fix thickness and size of MMrest bar (issue #39, #40).
+- Fix MMrest staff position for staff's "staff-space" (issue #43).
+
+2025-12-18:
+- Change default to draw MMrest bar with "restHBarMiddle".
+
+2025-12-27:
+- cosmufl.ily: Flexible arguments in "ekmUse".
+
+2026-01-06:
+- Fix: Stem thickness.
+- cosmufl.ily: More versatile "ekmUse".
+
+2026-01-18:
+- Add "ekm:is-ledgered" and change "ekm-rest" and "ekm-mmr"
+  for correct ledgered rest and MMrest, combined with cue notes and for LP 2.25
+  (issues #45, #46).
+
+2026-01-22:
+- Add "\ekm-ledgered" and "ekm:ledgered", and change "ekm-rest", "\ekm-mmr",
+  and "\ekm-rest-by-number" to support composite ledgered glyphs (issue #47).
+- Add "ekm-bound", an extented version of LP's "interval-bound".
+
+2026-02-05:
+- Add support of "font-name" property in the commands "ekm-str",
+  "ekm-char", and "ekm-charf" (part of issue #33).
+
+2026-03-02:
+- Add support of EXTEXT for clefs in "ekm-clef"
+  and for dynamics in "\ekm-dynamic" (issue #49).
+- Change "\ekmMergeType" and "ekm-init-clef" to initialize merged clefs.
+- Add in "ekm-clef" support for individual change clef font size
+  specified in type table "clef".
+- Add "\ekmMergeGlyphs" to customize the glyphs sub-table (issue #50).
+
+2026-03-09:
+- Change "\ekmMergeType" to support the defaults and glyphs table,
+  replacing "\ekmMergeGlyphs".
+- Change trailing "%" to "#" in PRIVATE_LOCATION ("ekmMetadata").
+  "%" can conflict with Win system variables.
+
+2026-05-06:
+- ekmd-ekmelos.scm: Update for Ekmelos 2.60.
+  Add new glyphs to type tables "spanner" (U+F7A0 - U+F7A5)
+  and "pedal" (U+F79E, U+F79F).
+
+2026-05-10:
+- Add to "ekm:assid" an optional argument DIR with default #f.
+  Revise "\ekm-dynamic", "ekm-repeat-tremolo", "ekm-stem", "\ekm-misc",
+  "\ekm-eyeglasses", "ekm:chord-set!" now calling "ekm:assid" with DIR.
+- Add type table "chord" for chord name symbols and accidentals.
+  Change "ekm:chord-set!" to use the table (issue #51).
+- "ekm:chord-set!" now detects superscript parts in the markup and
+  selects superscript (small) variants.
+- ekmd-bravura.scm: Add "chord" type table with superscript variants.
+- ekmd-ekmelos.scm: Add "chord" type table with quadruple sharp/flat.
+
+2026-06-21:
+- Extend "\ekm-number" to draw rational numbers as vulgar or mixed fractions
+  in different styles (issue #53).
+- Add type table "sign" for signs (fraction slash, plus) in numbers.
+- Add type table "fraction" for precomposed fractions in LP 2.26
+  replacing type table "time-sub".
+- Remove type table "time-sub".
+- Add "\ekm-join-line" like "\line" but with a separator.
+- Add "ekm:kern" similar to ekm:stencil-kern in Ekmelily.
+- Extend "\ekm-note-by-number" to support properties and variable
+  stem length like "\note-by-number" (issue #54), and precomposed notes.
+  The style is now a property instead of a parameter.
+- Add "\ekm-note" as a wrapper around "\ekm-note-by-number".
+- Add "ekm:note" creating a note head markup.
+- Rewrite "\ekm-compound-meter" and add stencil "ekm-time-signature"
+  to support the new time signature format of LP 2.26 (issue #52).
+- Add type table "note" for precomposed notes separated from the
+  type table "notehead".
+- Fix in type table "dot" some padding values.
+- Rename in type table "dot" the styles "short", "straight", and "beamed"
+  to "note-*" to distinguish note styles from flag styles (required in
+  "\ekm-note-by-number").
+- Extend "ekm:md-glyph" to accept a stencil alternative to a grob
+  (used in "\ekm-note-by-number").
+- Adapt "\ekm-tuplet-note" for new "\ekm-note-by-number".
+- ekmd-ekmelos.scm: Add type table "note" and rename the styles "short",
+  "straight", and "beamed" to "note-*".
+- Fix in "ekm-repeat-tremolo" the tremolo position on whole notes (issue #55).
+- Fix "\ekm-default-string-number" using sans font for clearer appearance.
+- Add in type table "script" symbols for upbow, downbow, and pedal.
+
+2026-07-05:
+- Fix cyclic dependency bug in "ekm-percent" stencil (issue #57).
+- Remove whiteout of finger numbers in "\ekm-fret-diagram-terse".
+- Fix "ekm-control" to round level for precomposed glyphs.
+
+2026-07-07:
+- Fix "ekm-repeat-tremolo" for size of tremolo bars in CueVoice (issue #56).
+  Support cue style tremolo glyphs if any.
+  Switch back to LilyPond output for beamed notes.
+- Add in type table "tremolo" new style "cue".
+
+2026-07-09:
+- Add stencil "ekm-toe-heel", table "ekm-toe-heel-tab",
+  and type table "toeheel" for toe-heel substitutions.
+- Redefine "rtoeheel", "ltoeheel", "rheeltoe", "lheeltoe"
+  for SMuFL output if "script" switch is on.
+
+2026-07-14:
+- Extend "ekm:tokens" to draw numbers (digits and "/") with "\ekm-number"
+  in any number style independent of the token table (issue #58).
+  Support two forms of symbols in a token table.
+- Extend "\ekm-def" to accept a type symbol alternative to a token table,
+  and property "number-style" for digits.
+- Add predicate "ekm-type?".
+- Add "ekm:symbol" to allow single markup in type tables with two forms
+  (required for "shared" in "ekm:tokens").
+- Add table "ekm:num" with digits and "/".
+- Add "ekm:def-prefix" for definition strings with prefix `*`.
+- Extend "\ekm-number" to accept a string alternative to a number.
+- Add in type table "number" new style "default".
+- Modify type table "fingering" from a style table into a token table.
+  Remove digit symbols (reside in type table "number").
+  Some entries now have 2 symbols for default and italic.
+- Remove digit symbols from type table "func" (reside in type table "number").
+- Adapt "\ekm-finger" for new type table "fingering".
+- Adapt "ekm-clef-mod" to draw clef modifiers with "\ekm-finger".
+- Adapt "\ekm-harp-pedal" for new "ekm:tokens".
+- Adapt "\ekm-dynamic", "\ekm-ottavation", "ekm-ottavation",
+  "\ekm-piano-pedal", "\ekm-analytics", "ekm-func", "\ekmFunc"
+  for new "\ekm-def".
+- Add "\ekm-rhythm" and type table "rhythm" to draw rhythmic patterns
+  (issue #59).
+
+2026-07-20:
+- Redefine "\arpeggioArrowUp", "\arpeggioArrowDown", and "\arpeggioNormal"
+  for SMuFL output if "arpeggio" switch is on.
+  They replace the "\ekmArpeggio*" variants which are now equal to the
+  LP commands and deprecated.
+- Set property "font-series" to "'ekm" in grobs "Script" and "Arpeggio"
+  as a flag for switch on.
+- Extend "ekm-default-string-number" with property "style".
+- Move "\fontsize" from "\ekm-string-number" to stencil "ekm-stringnumber".
+
+2026-08-25:
+- Fix "ekm-segment-spanner" for spanner over 3 or more staves (issue #64).
+- Redefine "\xNotesOn", "\xNote", "\deadNotesOn", and "\deadNote"
+  for SMuFL output if "notehead" switch is on.
+  Add "ekm-cross-style" (issue #66).
+
+2026-09-13 (v2.1):
+- Add in type table "number" the style table "clef-modifier".
+- Remove type table "clef-mod".
+- Add to "\ekm-number" new property "fall-back-style" for use with
+  precomposed number styles ("clef-modifier", "string", "scale").
+- Add in type table "number" in each style table with precomposed numbers
+  an entry "ekm" with fall-back data.
+  Remove separate style table "ekm".
+- Replace "\ekm-default-string-number" with "ekm-string-fall-back",
+  and "\ekm-default-scale-number" with "ekm-scale-fall-back".
+- Modify type table "parens" and redefine "ekm-parens" to draw all SMuFL parentheses
+  (issue #67).
+- Adapt "\ekmParensDyn", "\ekmParensHairpin", and "ekm-calc-parenthesis-stencils"
+  and add "ekm-dynamic-parens" for new parenthesis support.
+- Replace in "\ekmParensDyn" and "\ekmParensHairpin" space tokens by
+  padding constants.
+- Add command "\ekm-with-parens".
+- Add command "\ekm-lily" and table "ekm:lily-style" to draw with LilyPond fonts.
+- Remove in type tables "number" and "parens" the style tables "sans", "serif",
+  and "typewriter" now combined in style table "default" using "\ekm-lily".
+- Add aux. procedure "ekm:identity".
+- Add commands "\ekm-clef" and "\ekm-clef-modifier" to draw ligated clefs
+  (issue #65).
+- Adapt stencil "ekm-clef" and transposition formatter "ekm-clef-mod".
+- Add stencil "ekm-clef-modifier".
+- Add parent-alignment-X function "ekm-clef-modifier-alignment".
+- Add number "ekm:clef-modifier-font-size" for ligated modifiers.
+- Add in type table "clef" entries of ligated clefs with prefix "_".
+- Adapt "ekm-init-clef" to ignore entries of ligated clefs.
+- Add in type table "clef" offset data for the positioning of modifiers.
+- Add "ekm-clef-offset" to read offset data.
+- Add "ekm:make-clef-set" and replace "\clef" and "\cueClef" to use it
+  instead of "make-clef-set" and "make-cue-clef-set".
+- Add music functions "\ekmLigaClefsOn" and "\ekmLigaClefsOff".
+
+2026-09-16 (v2.2):
+- Add SMuFL switch "metronome" and metronome mark formatter "ekm-format-metronome"
+  to draw notes in "\tempo" with "\ekm-note-by-number" (issue #68).
+- Change argument order in "\ekm-lily", "ekm:identity", and "ekm-dynamic-parens".
+- Adapt "\ekm-number" and "ekm-parens" for new argument order.
+- Extend "\ekm-lily" to fully support EXTEXT arguments, ie. also lists.
+
+2026-09-17 (v2.3):
+- Add in type table "clef" the Y self-alignment (issue #69).
+- Fix "\ekm-clef", "ekm-clef-offset", and "ekm-clef-modifier-alignment"
+  for Y alignment.
+- Fix "draw" in "\ekm-clef" to draw a pure instead of a ligated clef if it is #f.
+- ekmd-ekmelos.scm: Fix type table "clef".
+- ekmd-bravura.scm, ekmd-petaluma.scm, ekmd-sebastian.scm:
+  Add type table "clef".
+- Fix "ekm:asslim", "\ekm-mmr", and "ekm-parens" for "ekm:asstl" never returning #f.
+
+2026-09-22 (v2.4):
+- ekmd-petaluma.scm, ekmd-sebastian.scm, ekmd-leland.scm:
+  Fix in type table "number" missing fall back style (issue #70).
+- Change argument in "\ekmPlayWith" from boolean to number (issue #71).
+- Remove deprecated commands "\ekmFlag", "\ekmArpeggioArrowUp",
+  "\ekmArpeggioArrowDown", "\ekmArpeggioNormal" (issue #72).
+- Redefine "\thumb" for SMuFL output if "fingering" switch is on.
+- Fix stencil "ekm-fingering" for "\thumb" and change size argument.
+- Fix "\ekmScoop" for "ekm-fingering" size.
+- ekmd-ekmelos.scm: Add in type table "chord" superscript (small) variants.
+- Fix "ekm-toe-heel" to support tie properties or symbols.
+- Add predicate "ekm-draw?".
+- Add command "\ekm-toe-heel-tie".
+- Add in type table "toeheel" tie properties.
+- ekmd-ekmelos.scm: Add in type table "toeheel" tie symbols.
+- ekmd-petaluma.scm: Add in type table "toeheel" tie properties.
+- Reset in "ekm-lily" property "font-series". Value "'ekm" may cause errors.
+
+2026-09-30:
+- Add in "\ekm-clef" support for arrow clefs with clef mode "arrow"
+  and for Schaeffer clefs with clef mode "schaeffer" (issue #65,#75).
+- Add in "\ekm-clef" support for Sorabji octave indicators with clef
+  mode "sorabji" (issue #74).
+- Fix stencil "ekm-clef" to pass "Y-offset" (for "sorabji").
+- Add in "ekm:make-clef-set" and "\ekm-clef" support for an optional
+  clef attribute.
+- Add table "ekm:clef-attr".
+- Add music functions "\ekmClefMode" and "\ekmClefNormal".
+- Remove obsolete "\ekmLigaClefsOff".
+  "\ekmLigaClefsOn" is deprecated.
+- ekmd-ekmelos.scm: Add in type table "clef" arrow clef positions and
+  Sorabji octave indicators.
+- ekmd-petaluma.scm: Add in type table "clef" arrow clef positions.
+- Fix in "\ekm-compound-meter" vertical alignment of the denominator
+  (required by Petaluma).
+
+2026-10-01:
+- Redefine "\romanStringNumbers" and "\arabicStringNumbers",
+  and fix stencil "ekm-stringnumber" for SMuFL output (issue #76).
+- Add in "\ekm-string-number" property "size" for numbers,
+  and "\ekm-lily" for strings.
+- Add auxiliary functions for SMuFL mode stored in grob property "font-series"
+  (as a workaround for a more suitable property):
+  "ekm?", "ekm-mode", "\ekmOn", "\ekmOff".
+
+2026-10-07:
+- Add command "\ekm-segment-bar".
+- Fix "\ekm-mmr" and type tyble "mmrest" to use "\ekm-segment-bar"
+  for compressed mmrest.
+- Fix "ekm-cluster" and type table "cluster" to use "\ekm-segment-bar"
+  to allow any middle segment height.
+- Add "legerLineThickness" to SMuFL switch "staff".
+- ekmd-ekmelos.scm: Remove type table "mmrest" (equal default).
+- ekmd-ekmelos.scm: Change "legerLineThickness".
+
+2026-10-08:
+- ekmd-ekmelos.scm: Fix type table "cluster" to use "\ekm-segment-bar".
+- Add flag "ekm:clef-on" and fix "ekm:make-clef-set" for normal LP glyphs.
+
+2026-10-16:
+- Add engraver "Ekm_span_cluster_engraver" and music function "\ekmCrossCluster"
+  for cross-staff note clusters (issue #2).
+- Add auxiliary procedures for cross-staff note clusters:
+  "ekm:cluster-bar", "ekm:cluster-span", "ekm:cluster-note", "ekm:cluster?",
+  "ekm:make-cluster".
+- Rename "\ekmMakeClusters" to "\ekmCluster".
+  "\ekmMakeClusters" is deprecated.
+
+2026-10-18 (v2.6):
+- Fix "\ekmSmuflOn" and "\ekmSmuflOff" to set flag "ekm:clef-on".
+- Add in type table "cluster" style "harmonic" an entry for duration log -1.
+- ekmd-ekmelos.scm: Add in type table "cluster" style "diamond"
+  an entry for duration log -1.
+- Fix "ekm:make-cluster" and "ekm:cluster-span" for stem direction.
+- Add auxiliary procedure "ekm:cluster-stem".
