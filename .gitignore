@@ -1,0 +1,20 @@
+# Generated build and distribution output
+/build/
+/dist/
+
+# Editor backup and temporary files
+*~
+.*.swp
+.*.swo
+*.tmp
+*.bak
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
