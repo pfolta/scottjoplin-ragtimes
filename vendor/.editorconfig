@@ -1,0 +1,3 @@
+# Reset all rules so vendored dependencies are not reformatted.
+root = true
+
