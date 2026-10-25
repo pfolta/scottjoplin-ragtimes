@@ -1,0 +1,9 @@
+{
+    "material-icon-theme.files.associations": {
+        "*.ily": "lilypond",
+        "*.ly": "lilypond",
+    },
+    "material-icon-theme.folders.associations": {
+        "vendor/lilypond": "src",
+    }
+}
