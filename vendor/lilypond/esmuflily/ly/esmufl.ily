@@ -316,6 +316,11 @@ ekmOff =
               (ly:grob-property-data stem 'direction))))
     (if (number? dir) dir UP)))
 
+#(define-markup-command (ekm-hspace layout props x)
+  (number?)
+  #:properties ((font-size 0))
+  (ly:make-stencil "" (cons 0 (* x (magstep font-size))) empty-interval))
+
 
 %% Table access
 
@@ -581,7 +586,7 @@ ekmOff =
   (pair? number? integer?)
   #:properties
    ((font-size 0)
-    (padding -0.08))
+    (bar-padding -0.08))
 
   (define (extent sil x dir)
     (if x (ekm-extent sil X)
@@ -601,7 +606,7 @@ ekmOff =
          (rbar (ekm:text layout props (ekm:sym (cdr sym) RIGHT)))
          (lext (extent lbar x UP))
          (rext (extent rbar x DOWN))
-         (dist (- len lext rext (* 2 padding)))
+         (dist (- len lext rext (* 2 bar-padding)))
          (thickness
           (and
            (pair? (car sym)) (eq? 'draw (caar sym))
@@ -617,22 +622,22 @@ ekmOff =
                 (other-axis axis))))))
          (bar
           (cond
-           ((< dist (abs (* 2 padding)))
+           ((< dist (abs (* 2 bar-padding)))
             empty-stencil)
            (thickness
             (orient make-filled-box-stencil (cons 0 dist) thickness x))
            (else
             (let* ((sil (ekm:text layout props (car sym)))
                    (sil (if x sil (ly:stencil-aligned-to sil Y DOWN)))
-                   (size (+ (extent sil x UP) padding))
+                   (size (+ (extent sil x UP) bar-padding))
                    (cnt (inexact->exact (truncate (/ dist size)))))
              (if (zero? cnt)
               (scale sil (/ dist size) x)
-              (stack-stencils axis RIGHT padding
+              (stack-stencils axis RIGHT bar-padding
                (make-list cnt (scale sil (/ dist cnt size) x)))))))))
     (ly:stencil-add
       (translate (if x (ly:stencil-aligned-to rbar X RIGHT) rbar) len x)
-      (translate bar (+ lext padding) x)
+      (translate bar (+ lext bar-padding) x)
       lbar)))
 
 
@@ -954,7 +959,6 @@ ekmClefMode =
   #})
 
 ekmClefNormal = \ekmClefMode #'default
-ekmLigaClefsOn = \ekmClefMode #'liga
 
 
 %% Time signature
@@ -1546,8 +1550,6 @@ ekmCluster =
     $music
     \revert NoteColumn.before-line-breaking
   #})
-
-ekmMakeClusters = #ekmCluster
 
 #(define (ekm:cluster-bar cluster)
   (let* ((span (ly:grob-object cluster 'notes))
@@ -3104,6 +3106,10 @@ ekmBendAfter =
 
 #(define ekm-func-sep (string->char-set ",^"))
 #(define ekm-func-paren (string->char-set "()[]{}"))
+#(define-public ekm:func-size -4)
+
+#(define (ekm:func? x)
+  (or (boolean? x) (string? x) (pair? x)))
 
 #(define (ekm-func layout props size def)
   (interpret-markup layout props
@@ -3113,8 +3119,9 @@ ekmBendAfter =
 #(define-markup-command (ekm-func layout props def)
   (string?)
   #:properties ((font-size 0)
-                (func-size -4)
-                (func-skip 2.5)
+                (func-size -6)
+                (func-skip 1.6)
+                (func-raise 1.5)
                 (func-space 0.3))
   (let* ((mag (magstep font-size))
          (skip (* mag func-skip))
@@ -3152,8 +3159,7 @@ ekmBendAfter =
                 (ly:stencil-combine-at-edge sil X RIGHT
                   (ly:stencil-translate
                     (ly:stencil-aligned-to sxtra Y DOWN)
-                    ;(cons 0 (if (< 2 (length xtra)) (/ skip 2) (/ skip 1.4)))
-                    (cons 0 (/ skip 1.5)))
+                    (cons 0 (* mag func-raise)))
                   space)))
          (sil (if lpar
                 (ly:stencil-combine-at-edge sil X LEFT
@@ -3167,69 +3173,179 @@ ekmBendAfter =
                 sil)))
     sil))
 
-#(define-markup-command (ekm-magfunc layout props size def)
-  (number? string?)
-  (interpret-markup
-    layout
-    (cons `((font-size . ,size)) props)
-    (make-ekm-func-markup def)))
+#(define-markup-command (ekm-func-column layout props pivot arg1 arg2)
+  (boolean? string-or-pair? ekm:func?)
+  #:properties
+   ((font-size 0)
+    (y-padding 1.6))
+
+  (define (func arg dir)
+   (if dir
+    (make-override-markup '(func-raise . 0) (make-ekm-func-markup arg))
+    (make-ekm-func-markup arg)))
+
+  (define (line arg dir)
+   (let ((sil
+          (interpret-markup layout props
+           (make-line-markup
+            (map (lambda (a)
+             (let ((i (string-index a #\:)))
+              (if i
+               (make-concat-markup (list
+                 (make-fontsize-markup (- ekm:func-size)
+                  (make-ekm-lily-markup 'sans (string-take a (1+ i))))
+                 (make-ekm-hspace-markup 0.7)
+                 (func (string-drop a (1+ i)) dir)))
+               (func a dir))))
+            (if (string? arg) (list arg) arg))))))
+    (if dir
+     (ly:stencil-aligned-to (ly:stencil-aligned-to
+      sil
+      X CENTER) Y (* dir y-padding))
+     sil)))
+
+  (let ((arg1 (line arg1 (and arg2 DOWN)))
+        (arg2 (and arg2 (line arg2 UP))))
+   (if arg2
+    (let* ((pad (* y-padding (magstep font-size)))
+           (w (interval-union (ly:stencil-extent arg1 X) (ly:stencil-extent arg2 X)))
+           (pivot
+            (if pivot
+             (ly:stencil-aligned-to
+              (interpret-markup layout props
+               (make-ekm-segment-bar-markup
+                (ekm:asstl 'func 'pivot)
+                (+ (* 2 pad) (interval-length w)) X))
+              X CENTER)
+             empty-stencil)))
+     (ly:stencil-translate
+      (ly:stencil-add arg1 pivot arg2)
+      (cons (- (car w)) (* 0.5 pad))))
+    arg1)))
+
+#(define-markup-command (ekm-func-pivot layout props dir)
+  (ly:dir?)
+  #:properties ((font-size 0))
+  (let ((h (* 4.5 (magstep font-size))))
+   (interpret-markup layout props
+    (make-filled-box-markup
+     '(0 . 0.3)
+     (if (< dir 0) (cons (- h) 0.15) (cons -0.15 h))
+     0))))
 
 ekmFunc =
 #(define-music-function (def)
   (string?)
-  (let* ((size -4)
-         (len (string-length def))
-         (sfx (if (= 0 len) #f (string-ref def (1- len))))
-         (mdef (case sfx
-                 ((#\- #\. #\+ #\*) (string-drop-right def 1))
-                 (else def)))
-         (i (string-index mdef ekm-func-sep))
-         (mk (markup
-               #:override `(font-size . ,size)
-               #:ekm-def 'func (if i (substring mdef 0 i) mdef))))
-    (case sfx
-      ((#\-) #{
+  (let* ((padding 1.6)
+         (pivot-padding (* padding (magstep ekm:func-size)))
+         (sfx (if (string-null? def) #f
+               (string-ref (string-take-right def 1) 0)))
+         (def (case sfx
+               ((#\- #\~ #\. #\+ #\* #\!) (string-drop-right def 1))
+               (else def)))
+         (def (string-split def #\|))
+         (func (lambda (pivot def)
+                (make-override-markup `(font-size . ,ekm:func-size)
+                 (make-ekm-func-column-markup pivot
+                  (first def) (if (null? (cdr def)) #f (second def)))))))
+   (case sfx
+    ((#\-)
+     (let* ((i (string-index (car def) ekm-func-sep))
+            (mk (make-override-markup `(font-size . ,ekm:func-size)
+                 (make-ekm-def-markup 'func
+                  (if i (substring (car def) 0 i) (car def))))))
+      #{
         \once \override TextSpanner.direction = #DOWN
         \once \override TextSpanner.style = #'line
         \once \override TextSpanner.outside-staff-priority = ##f
-        \once \override TextSpanner.thickness = #(* 2.5 (magstep size))
+
+        \once \override TextSpanner.thickness =
+         #(* 2.5 (magstep ekm:func-size))
+
         \once \override TextSpanner.padding =
-          #(lambda (grob) (* (ekm-dim grob mk Y) -0.4))
+         #(lambda (grob)
+           (* (ekm-dim grob mk Y) -0.4))
+
         \once \override TextSpanner.bound-details =
-          #(lambda (grob)
-           `((left .
-               ((Y . 0)
-                (padding . ,(+ (* (ekm-dim grob mk X)
-                  (if (string-index mdef #\^) 0.55 0.8)) 0.3))
-                (attach-dir . ,LEFT)))
-             (left-broken .
-               ((end-on-note . #t)))
-             (right .
-               ((Y . 0)
-                (padding . 0)
-                (attach-dir . ,RIGHT)))))
-        \lyricmode { \markup \ekm-magfunc #size #mdef }
+         #(lambda (grob)
+          `((left .
+             ((Y . 0)
+              (padding .
+               ,(+ (* (ekm-dim grob mk X)
+                      (if (string-index (car def) #\^) 0.55 0.8))
+                   0.3))
+              (attach-dir . ,LEFT)))
+            (left-broken .
+             ((end-on-note . #t)))
+            (right .
+             ((Y . 0)
+              (padding . 0)
+              (attach-dir . ,RIGHT)))))
+
+        \lyricmode { #(func #f def) }
         \startTextSpan
-      #})
-      ((#\.) #{
-        \lyricmode { \markup \ekm-magfunc #size #mdef }
-        \stopTextSpan
-      #})
-      ((#\+) #{
-        \once \override StanzaNumber.padding = #0.5
-        \set stanza = \markup \ekm-magfunc #size #mdef
-      #})
-      ((#\*) #{
-        \once \override StanzaNumber.padding = #0.5
-        \set stanza = \markup \ekm-func #mdef
-      #})
-      (else #{
-        \lyricmode { \markup \ekm-magfunc #size #mdef }
-      #}))))
+      #}))
+    ((#\~) #{
+      \once \override TextSpanner.direction = #DOWN
+      \once \override TextSpanner.style = #'line
+      \once \override TextSpanner.outside-staff-priority = ##f
+
+      \once \override TextSpanner.bound-details =
+       #(lambda (grob)
+        `((left .
+           ((Y . 0)
+            (padding .
+             ,(- (* -0.5 (ekm-dim grob (func #f def) X)) pivot-padding))
+            (attach-dir . ,LEFT)))
+          (right .
+           ((Y . 0)
+            (padding . ,(- pivot-padding))
+            (attach-dir . ,RIGHT)))))
+
+      \once \override TextSpanner.X-offset =
+       #(lambda (grob)
+         (* -0.5 (+ (ekm-dim grob (func #f def) X) pivot-padding)))
+
+      \once \override TextSpanner.Y-offset =
+       #(* 0.5 pivot-padding)
+
+      \once \override TextSpanner.stencil =
+       #(lambda (grob)
+         (grob-interpret-markup grob
+          (make-override-markup `(font-size . ,ekm:func-size)
+           (make-ekm-segment-bar-markup
+            (ekm:asstl 'func 'pivot)
+            (ekm-extent (ly:line-spanner::print grob) X)
+            X))))
+
+      \lyricmode { #(func #f def) }
+      \startTextSpan
+    #})
+    ((#\.) #{
+      \lyricmode { #(func #f def) }
+      \stopTextSpan
+    #})
+    ((#\+) #{
+      \once \override StanzaNumber.padding = #0.5
+      \set stanza =
+       #(make-override-markup `(padding . ,padding)
+         (func #f def))
+    #})
+    ((#\*) #{
+      \once \override StanzaNumber.padding = #0.5
+      \set stanza =
+       #(make-ekm-func-markup (car def))
+    #})
+    ((#\!) #{
+      \lyricmode { #(func #t def) }
+    #})
+    (else #{
+      \lyricmode { #(func #f def) }
+    #}))))
 
 ekmFuncList =
 #(define-music-function (defs)
-  (list?)
+  (cheap-list?)
   (fold
     (lambda (def music) #{ $music \ekmFunc #def #})
     #{ #}
@@ -4507,11 +4623,11 @@ ekmMetronome =
   )
 
   (shared (#t #t
-  (" " . ,(markup #:hspace 1))
-  ("____" . ,(markup #:hspace 4))
-  ("___" . ,(markup #:hspace 2))
-  ("__" . ,(markup #:hspace 0.78))
-  ("_" . ,(markup #:hspace 0.17))
+  (" " . ,(make-ekm-hspace-markup 1))
+  ("____" . ,(make-ekm-hspace-markup 4))
+  ("___" . ,(make-ekm-hspace-markup 2))
+  ("__" . ,(make-ekm-hspace-markup 0.78))
+  ("_" . ,(make-ekm-hspace-markup 0.17))
   ("'" . #f)
   ))
 
@@ -4692,8 +4808,13 @@ ekmMetronome =
   ("#" . #xED62)
   ("x" . #xED63)
   ("=" . #xED61)
-  ("~" . ,(markup #:with-dimensions-from #:ekm-char #xEA70 ""))
-  ))
+  ("?" . ,(markup #:with-dimensions-from #:ekm-char #xEA70 ""))
+  )
+  (pivot .
+    ((draw . (-0.15 . 0.15))
+     ,(markup #:ekm-func-pivot START) .
+     ,(markup #:ekm-func-pivot STOP)))
+  )
 
   (arrow
   (black . #xEB60)

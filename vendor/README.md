@@ -8,52 +8,14 @@ Avoid modifying vendored files directly wherever possible. Document any necessar
 
 ## Fonts
 
-<table width="100%">
-    <tr>
-        <th width="20%">Font</th>
-        <th width="15%">License</th>
-        <th width="15%">Version</th>
-        <th width="20%">Pinned Commit</th>
-        <th width="30%">Upstream Repository</th>
-    </tr>
-    <tr>
-        <td><a href="fonts/edwin"><strong>Edwin</strong></a></td>
-        <td><a href="fonts/edwin/LICENSE.txt"><code>OFL-1.1</code></a></td>
-        <td>0.54</td>
-        <td><a href="https://github.com/MuseScoreFonts/Edwin/commit/14d82aca352c18d7cd31a40e7fa0d2e40b3f2805"><code>14d82ac</code></a></td>
-        <td><a href="https://github.com/MuseScoreFonts/Edwin">MuseScoreFonts/Edwin</a></td>
-    </tr>
-    <tr>
-        <td><a href="fonts/leland"><strong>Leland</strong></a></td>
-        <td><a href="fonts/leland/LICENSE.txt"><code>OFL-1.1</code></a></td>
-        <td>0.80</td>
-        <td><a href="https://github.com/MuseScoreFonts/Leland/commit/d91cf5d21045e2c294541676ad386b7ffb4ac881"><code>d91cf5d</code></a></td>
-        <td><a href="https://github.com/MuseScoreFonts/Leland">MuseScoreFonts/Leland</a></td>
-    </tr>
-</table>
+|Font|License|Version|Pinned Commit|Upstream Repository|
+|---|---|---|---|---|
+|[**Edwin**](fonts/edwin)|[`OFL-1.1`](fonts/edwin/LICENSE.txt)|[0.54](https://github.com/MuseScoreFonts/Edwin/releases/tag/v0.54)|[`14d82ac`](https://github.com/MuseScoreFonts/Edwin/commit/14d82aca352c18d7cd31a40e7fa0d2e40b3f2805)|[MuseScoreFonts/Edwin](https://github.com/MuseScoreFonts/Edwin)|
+|[**Leland**](fonts/leland)|[`OFL-1.1`](fonts/leland/LICENSE.txt)|[0.80](https://github.com/MuseScoreFonts/Leland/releases/tag/v0.80)|[`d91cf5d`](https://github.com/MuseScoreFonts/Leland/commit/d91cf5d21045e2c294541676ad386b7ffb4ac881)|[MuseScoreFonts/Leland](https://github.com/MuseScoreFonts/Leland)|
 
 ## LilyPond
 
-<table width="100%">
-    <tr>
-        <th width="20%">Package</th>
-        <th width="15%">License</th>
-        <th width="15%">Version</th>
-        <th width="20%">Pinned Commit</th>
-        <th width="30%">Upstream Repository</th>
-    </tr>
-    <tr>
-        <td><a href="lilypond/ekmelily"><strong>Ekmelily</strong></a></td>
-        <td><a href="lilypond/ekmelily/LICENSE.txt"><code>GPL-3.0</code></a></td>
-        <td>–</td>
-        <td><a href="https://github.com/tr-igem/ekmelily/commit/fc9538efbdc0177b570f405966a0f80d3411c199"><code>fc9538e</code></a></td>
-        <td><a href="https://github.com/tr-igem/ekmelily">tr-igem/ekmelily</a></td>
-    </tr>
-    <tr>
-        <td><a href="lilypond/esmuflily"><strong>Esmuflily</strong></a></td>
-        <td><a href="lilypond/esmuflily/LICENSE.txt"><code>MIT</code></a></td>
-        <td>2.6</td>
-        <td><a href="https://github.com/tr-igem/esmuflily/commit/8a13290d48006b65085823a3d5c1608e5e79604f"><code>8a13290</code></a></td>
-        <td><a href="https://github.com/tr-igem/esmuflily">tr-igem/esmuflily</a></td>
-    </tr>
-</table>
+|Package|License|Version|Pinned Commit|Upstream Repository|
+|---|---|---|---|---|
+|[**Ekmelily**](lilypond/ekmelily)|[`GPL-3.0`](lilypond/ekmelily/LICENSE.txt)|[2.0](https://github.com/tr-igem/ekmelily/releases/tag/v2.0)|[`fc9538e`](https://github.com/tr-igem/ekmelily/commit/fc9538efbdc0177b570f405966a0f80d3411c199)|[tr-igem/ekmelily](https://github.com/tr-igem/ekmelily)|
+|[**Esmuflily**](lilypond/esmuflily)|[`MIT`](lilypond/esmuflily/LICENSE.txt)|[2.7](https://github.com/tr-igem/esmuflily/releases/tag/v2.7)|[`9544a32`](https://github.com/tr-igem/esmuflily/commit/9544a323de5d7d6eb3bdca518a68be55a88c8c81)|[tr-igem/esmuflily](https://github.com/tr-igem/esmuflily)|
