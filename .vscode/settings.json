@@ -4,6 +4,7 @@
         "*.ly": "lilypond",
     },
     "material-icon-theme.folders.associations": {
+        "src/sheets": "docs",
         "vendor/lilypond": "src",
     }
 }
