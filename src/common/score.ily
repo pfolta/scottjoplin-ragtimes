@@ -16,3 +16,6 @@
         autoBeaming = ##f
     }
 }
+
+% Show the measure number at the current position.
+show-measure-number = \once \override Score.BarNumber.break-visibility = ##(#t #t #t)
