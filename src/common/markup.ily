@@ -13,6 +13,5 @@ rh = \markup { \italic "r.h." }
 %
 % Code points can be found in the SMuFL glyph tables:
 % https://smufl.formats.music/latest/tables/index.html
-smufl-eighth-note = \markup { \ekm-note {8} #UP }
 smufl-flat = \markup { \ekm-char ##xE260 }
 smufl-sharp = \markup { \ekm-char ##xE262 }

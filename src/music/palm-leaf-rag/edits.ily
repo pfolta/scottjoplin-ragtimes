@@ -13,7 +13,7 @@ palm-leaf-rag-edits = \markup {
             \line { "Natural sign added." }
             \line { \null }
 
-            \line \bold { "Measure 34, upper staff, first note:" }
+            \line \bold { \concat { "Measure 34, upper staff, first note (E" \super \smufl-flat "4):" } }
             \line { "Double-dotted note changed to single-dotted note." }
             \line { \null }
 

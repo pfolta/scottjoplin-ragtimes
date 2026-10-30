@@ -20,7 +20,7 @@ maple-leaf-rag-edits = \markup {
             \line { "Slurs added (cf. measure 8)." }
             \line { \null }
 
-            \line \bold { \concat { "Measure 46, lower staff, third " \fontsize #-4 \smufl-eighth-note ":" } }
+            \line \bold { "Measure 46, lower staff, third note:" }
             \line { \concat { "E" \super \smufl-flat "4 omitted (cf. measure 12)." } }
             \line { \null }
 
