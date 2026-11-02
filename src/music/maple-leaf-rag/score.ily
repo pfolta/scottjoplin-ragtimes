@@ -260,7 +260,7 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         | \stemUp <ff, ff>4 <ef, ef>8[ <ef, ef>8] |
         | <ff, ff>4 <ef, ef>8 r8 |
-        | \tag #'layout { << { \voiceOne \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \voiceTwo \stemDown af,,8_\lh r8 af,8_\lh r8 } >> } \tag #'midi { af,,8 r8 af,8 r8 } |
+        | \tag #'layout { << { \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \stemDown af,,8_\lh r8 af,8_\lh r8 } >> } \tag #'midi { af,,8 r8 af,8 r8 } |
         | \stemDown af8 r8 af'8 r8 |
 
         | \clef treble \stemUp <d' f' af' b'>8[ <d' f' af' b'>8] <d' f' af' b'>8[ <d' f' af' b'>8] |
@@ -306,7 +306,7 @@ maple-leaf-rag-score = \new PianoStaff <<
         | \stemUp <ff, ff>4 <ef, ef>8[ <ef, ef>8] |
         | <ff, ff>4 <ef, ef>8 r8 |
 
-        | \tag #'layout { << { \voiceOne \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \voiceTwo \stemDown af,,8_\lh r8 af,8_\lh r8 } >> } \tag #'midi { af,,8 r8 af,8 r8 } |
+        | \tag #'layout { << { \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \stemDown af,,8_\lh r8 af,8_\lh r8 } >> } \tag #'midi { af,,8 r8 af,8 r8 } |
         | \stemDown af8 r8 af'8 r8 |
         | \clef treble \stemUp <d' f' af' b'>8[ <d' f' af' b'>8] <d' f' af' b'>8[ <d' f' af' b'>8] |
         | <ef' af' c''>8[ <ef' af' c''>8] <ef' af' c''>8[ <ef' af' c''>8] |

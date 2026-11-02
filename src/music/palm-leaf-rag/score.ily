@@ -20,15 +20,15 @@ palm-leaf-rag-score = \new PianoStaff <<
         | d''16[ d'''16 bf''16 f''16] g''16[ f''16 bf'16 d''16^~] |
         | d''16[ bf''16 a''16 g''16] g''16[ f''8 d''16] | \break
 
-        | << { \voiceOne \stemUp ef''8[ f''16 ef''16^~] ef''16[ d''16 c''8] } \\ { \voiceTwo \stemDown a'8.[ a'16_~] a'8[ a'8] } >> |
+        | << { \stemUp ef''8[ f''16 ef''16^~] ef''16[ d''16 c''8] } \\ { \stemDown a'8.[ a'16_~] a'8[ a'8] } >> |
         | bf'4^~ bf'16[ d''16 g''16 bf''16] |
         | a''16[ f''16 d''16 a'16^~] a'16[ g''16 f''16 e''16] |
         | d''4^~ d''8 r8 |
         | \stemUp f'8[ g'16 a'16_~] a'16[ g'16 f'8] | \break
 
         | \stemDown <f'_~ a'^~ f''^~>4 <f' a' f''>16[ ef''16 c''16 cs''16] |
-        | d''16[ d'''16 bf''16 f''16] << { \voiceOne \stemUp af''16[ g''16 f''16 ef''16^~] } \\ { \voiceTwo \stemDown b'8.[ c''16_~] } >> |
-        | << { \voiceOne \stemDown ef''16[ fs''16 g''16 a''!16] } \\ { \voiceTwo \once \override Stem.length = #2 \once \override Flag.stencil = ##f c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
+        | d''16[ d'''16 bf''16 f''16] << { \stemUp af''16[ g''16 f''16 ef''16^~] } \\ { \stemDown b'8.[ c''16_~] } >> |
+        | << { \stemDown ef''16[ fs''16 g''16 a''!16] } \\ { \once \override Stem.length = #2 \once \override Flag.stencil = ##f c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
         | g''16[ bf'16 c''16 ef''16^~] ef''16[ f''16 <bf' g''>8] | \break
 
         \pageBreak
@@ -75,7 +75,7 @@ palm-leaf-rag-score = \new PianoStaff <<
         | g''16[ fs''16 g''16 <g''_~ ef'''^~>16] <g'' ef'''>16[ d'''16 <g'' ef'''>16 c'''16]  | \break
 
         | <f''! d'''>16[ bf''16 f''16 <e''_~ g''^~>16] <e'' g''>16[ <e'' g''>16 <ef'' a''>8] |
-        | << { \voiceOne \stemUp bf''16[ c'''16 bf''16 af''!16] f''16[ d''16 c''16 cf''16] } \\ { \voiceTwo \stemDown d''4 r4 } >> |
+        | << { \stemUp bf''16[ c'''16 bf''16 af''!16] f''16[ d''16 c''16 cf''16] } \\ { \stemDown d''4 r4 } >> |
         | bf'16[^( g''16 f''16 ef''16] bf'16[ b'16 c''16 cs''16)] | \break
 
         | d''16[ <af'' c'''>8 d''16] <af'' c'''>8.[ bf'!16^~] |
@@ -92,7 +92,7 @@ palm-leaf-rag-score = \new PianoStaff <<
 
         \pageBreak
 
-        | \section ef'16[_( bf'16 g'16 gf'16)] << { \voiceOne \stemUp f'8[_( <bf' d''>8)] } \\ { \voiceTwo \stemDown f'4 } >> |
+        | \section ef'16[_( bf'16 g'16 gf'16)] << { \stemUp f'8[_( <bf' d''>8)] } \\ { \stemDown f'4 } >> |
         | ef'16[_( bf'16 g'!16 gf'16] f'4) |
         | \stemDown a'16[ c''16 ef''16 g''!16^~] g''16[ f''16 ef''16 a'16] |
         | bf'8 r8 r4 | \break
@@ -102,15 +102,15 @@ palm-leaf-rag-score = \new PianoStaff <<
         | d''16[ d'''16 bf''16 f''16] g''16[ f''16 bf'16 d''16^~] |
         | d''16[ bf''16 a''16 g''16] g''16[ f''8 d''16] | \break
 
-        | << { \voiceOne \stemUp ef''8[ f''16 ef''16^~] ef''16[ d''16 c''8] } \\ { \voiceTwo \stemDown a'8.[ a'16_~] a'8[ a'8] } >> |
+        | << { \stemUp ef''8[ f''16 ef''16^~] ef''16[ d''16 c''8] } \\ { \stemDown a'8.[ a'16_~] a'8[ a'8] } >> |
         | bf'4^~ bf'16[ d''16 g''16 bf''16] |
         | a''16[ f''16 d''16 a'16^~] a'16[ g''16 f''16 e''16] |
         | d''4^~ d''8 r8 |
         | \stemUp f'8[ g'16 a'16_~] a'16[ g'16 f'8] | \break
 
         | \stemDown <f'_~ a'^~ f''^~>4 <f' a' f''>16[ ef''16 c''16 cs''16] |
-        | d''16[ d'''16 bf''16 f''16] << { \voiceOne \stemUp af''16[ g''16 f''16 ef''16^~] } \\ { \voiceTwo \stemDown b'8.[ c''16_~] } >> |
-        | << { \voiceOne \stemDown ef''16[ fs''16 g''16 a''!16] } \\ { \voiceTwo \once \override Stem.length = #2 \once \override Flag.stencil = ##f c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
+        | d''16[ d'''16 bf''16 f''16] << { \stemUp af''16[ g''16 f''16 ef''16^~] } \\ { \stemDown b'8.[ c''16_~] } >> |
+        | << { \stemDown ef''16[ fs''16 g''16 a''!16] } \\ { \once \override Stem.length = #2 \once \override Flag.stencil = ##f c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
         | g''16[ bf'16 c''16 ef''16^~] ef''16[ f''16 <bf' g''>8] | \break
 
         | <bf'_~ f''^~ bf''^~>4 <bf' f'' bf''>16[ bf''16 a''16 g''16] |
@@ -283,7 +283,7 @@ palm-leaf-rag-score = \new PianoStaff <<
         | f8[ <bf d'>8] f8[ <a ef'>8] |
         \alternative {
             { | <bf d'>8 f'8[^( d'8 bf8)] | }
-            { | << { \voiceOne \stemUp d'4^~ d'8 } \\ { \voiceTwo \stemDown bf8[ f8 bf,8] } >> }
+            { | << { \stemUp d'4^~ d'8 } \\ { \stemDown bf8[ f8 bf,8] } >> }
         }}
 
           \section \key ef \major r8 |
@@ -296,7 +296,7 @@ palm-leaf-rag-score = \new PianoStaff <<
         | <ef, ef>8[ <bf ef' g'>8] c8[ <c' ef'>8] |
 
         | f8[ <bf d'>8] c8[ f8] |
-        | << { \voiceOne r4 \stemUp <bf d' af'>4 } \\ { bf,2 } >> |
+        | << { r4 \stemUp <bf d' af'>4 } \\ { bf,2 } >> |
         | <ef, ef>8[ <bf ef' g'>8] \stemUp <g, g>8[ <gf, gf>8] |
 
         | \stemDown <f, f>8[ <bf d' af'>8] bf,8[ <bf d' af'>8] |
@@ -311,7 +311,7 @@ palm-leaf-rag-score = \new PianoStaff <<
             { | <ef g bf>8[ <bf, bf>8] \stemUp <ef, ef>8 r8 | }
         }}
 
-        | \section << { \voiceOne \stemUp s4 f4 } \\ { \voiceTwo \stemDown ef8[_( e8] f8[ bf,8)] } >> |
+        | \section << { \stemUp s4 f4 } \\ { \stemDown ef8[_( e8] f8[ bf,8)] } >> |
         | \stemDown ef8[^( e8)] f4 |
         | c8[ <f a ef'>8] f,8[ <f a ef'>8] |
         | bf,8[ <f bf d'>8] f,8[ <f bf d'>8] |
