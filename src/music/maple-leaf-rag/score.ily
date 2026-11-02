@@ -2,7 +2,7 @@
 \language "english"
 
 maple-leaf-rag-score = \new PianoStaff <<
-    \new Staff {
+    \new Staff = "RH" {
         \key af \major
         \time 2/4
         \partial 8
@@ -248,7 +248,7 @@ maple-leaf-rag-score = \new PianoStaff <<
         \fine
     }
 
-    \new Staff {
+    \new Staff = "LH" {
         \key af \major
         \clef bass
 

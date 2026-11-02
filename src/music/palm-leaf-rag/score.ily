@@ -2,7 +2,7 @@
 \language "english"
 
 palm-leaf-rag-score = \new PianoStaff <<
-    \new Staff {
+    \new Staff = "RH" {
         \key bf \major
         \time 2/4
         \clef treble
@@ -231,7 +231,7 @@ palm-leaf-rag-score = \new PianoStaff <<
         \fine
     }
 
-    \new Staff {
+    \new Staff = "LH" {
         \key bf \major
         \clef bass
 
