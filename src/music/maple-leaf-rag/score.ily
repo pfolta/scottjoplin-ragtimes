@@ -19,7 +19,7 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         | r16 af'16[ cf''16 <ff' ff''>16] r16 <ef' ef''>16 r16 <ef' ef''>16 |
         | r16 af'16[ cf''16 <ff' ff''>16] r16 <ef' ef''>16 r8 |
-        | s2 |
+        | \tag #'layout { s2 } \tag #'midi { r16 af,16[( cf16 af16)] r16 af16[( cf'16 af'16)] } |
         | r16 af'16[( cf''16 af''16)] r16 af''16[( cf'''16 af'''16)] | \break
 
         | <af'' af'''>8[ <af'' af'''>8] <af'' af'''>8[ <af'' af'''>16 <af'' af'''>16~] |
@@ -69,7 +69,7 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         \pageBreak
 
-        | s2 |
+        | \tag #'layout { s2 } \tag #'midi { r16 af,16[( cf16 af16)] r16 af16[( cf'16 af'16)] } |
         | r16 af'16[( cf''16 af''16)] r16 af''16[( cf'''16 af'''16)] |
         | <af'' af'''>8[ <af'' af'''>8] <af'' af'''>8[ <af'' af'''>16 <af'' af'''>16~] |
         | <af'' af'''>16[ ef'''16 f'''16 c'''16] ef'''16[ <af'' f'''>8 <ff'' af''>16~] |
@@ -260,7 +260,7 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         | \stemUp <ff, ff>4 <ef, ef>8[ <ef, ef>8] |
         | <ff, ff>4 <ef, ef>8 r8 |
-        | << { \voiceOne \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \voiceTwo \stemDown af,,8_\lh r8 af,8_\lh r8 } >> |
+        | \tag #'layout { << { \voiceOne \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \voiceTwo \stemDown af,,8_\lh r8 af,8_\lh r8 } >> } \tag #'midi { af,,8 r8 af,8 r8 } |
         | \stemDown af8 r8 af'8 r8 |
 
         | \clef treble \stemUp <d' f' af' b'>8[ <d' f' af' b'>8] <d' f' af' b'>8[ <d' f' af' b'>8] |
@@ -306,7 +306,7 @@ maple-leaf-rag-score = \new PianoStaff <<
         | \stemUp <ff, ff>4 <ef, ef>8[ <ef, ef>8] |
         | <ff, ff>4 <ef, ef>8 r8 |
 
-        | << { \voiceOne \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \voiceTwo \stemDown af,,8_\lh r8 af,8_\lh r8 } >> |
+        | \tag #'layout { << { \voiceOne \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \voiceTwo \stemDown af,,8_\lh r8 af,8_\lh r8 } >> } \tag #'midi { af,,8 r8 af,8 r8 } |
         | \stemDown af8 r8 af'8 r8 |
         | \clef treble \stemUp <d' f' af' b'>8[ <d' f' af' b'>8] <d' f' af' b'>8[ <d' f' af' b'>8] |
         | <ef' af' c''>8[ <ef' af' c''>8] <ef' af' c''>8[ <ef' af' c''>8] |
