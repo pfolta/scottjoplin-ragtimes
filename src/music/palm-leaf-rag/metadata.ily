@@ -8,10 +8,9 @@ palm-leaf-rag-subtitle = "A Slow Drag"
 
 palm-leaf-rag-composer = "Scott Joplin"
 
-palm-leaf-rag-publisher = "Victor Kremer"
+palm-leaf-rag-publication-publisher = "Victor Kremer Co."
+palm-leaf-rag-publication-place = "Chicago, IL"
 palm-leaf-rag-publication-year = "1903"
-
-palm-leaf-rag-source = "https://levysheetmusic.mse.jhu.edu/sites/default/files/collection-pdfs/levy-172-032a.pdf"
 
 palm-leaf-rag-header = \header {
     title = \palm-leaf-rag-title
@@ -19,6 +18,13 @@ palm-leaf-rag-header = \header {
 
     composer = \palm-leaf-rag-composer
 
-    publisher = \palm-leaf-rag-publisher
-    publication-year = \palm-leaf-rag-publication-year
+    tagline = \markup \concat {
+        "First published by "
+        \palm-leaf-rag-publication-publisher
+        ", "
+        \palm-leaf-rag-publication-place
+        ", in "
+        \palm-leaf-rag-publication-year
+        "."
+    }
 }
