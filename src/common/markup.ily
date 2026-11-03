@@ -9,6 +9,8 @@ f-stacc = \markup { \concat { \ekm-dynamic "f" " stacc." } }
 lh = \markup { \italic "l.h." }
 rh = \markup { \italic "r.h." }
 
+ten = \markup { \italic "ten." }
+
 % Define SMuFL glyphs to use within markup.
 %
 % Code points can be found in the SMuFL glyph tables:

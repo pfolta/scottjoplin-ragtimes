@@ -26,6 +26,17 @@
     }
 }
 
+% Make pedal markings smaller.
+\layout {
+    \context {
+        \Dynamics
+
+        \override SustainPedal.font-size = #-2
+        \override SostenutoPedal.font-size = #-2
+        \override UnaCordaPedal.font-size = #-2
+    }
+}
+
 % Use Leland as the SMuFL notation font.
 ekmFont = "Leland"
 
