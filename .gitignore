@@ -1,6 +1,5 @@
-# Generated build and distribution output
+# Generated build output
 /build/
-/dist/
 
 # Editor backup and temporary files
 *~

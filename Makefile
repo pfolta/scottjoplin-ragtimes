@@ -1,4 +1,7 @@
 BUILD_DIR ?= ./build
+BUILD_DIST_DIR := $(BUILD_DIR)/dist
+BUILD_DIST_MIDI_DIR := $(BUILD_DIST_DIR)/MIDI
+BUILD_DIST_SHEETS_DIR := $(BUILD_DIST_DIR)/Sheet Music
 BUILD_SHEETS_DIR := $(BUILD_DIR)/lilypond/sheets
 
 SRC_SHEETS_DIR := src/sheets
@@ -17,7 +20,7 @@ LILYPOND_CMD := lilypond \
 .NOTPARALLEL:
 
 .PHONY: default
-default: build-sheets
+default: dist
 
 .PHONY: build-sheet
 build-sheet:
@@ -34,14 +37,25 @@ build-sheets:
 clean:
 	@rm -rf "$(BUILD_DIR)"
 
+.PHONY: dist
+dist: build-sheets
+	@mkdir -p "$(BUILD_DIST_SHEETS_DIR)"
+	@cp "$(BUILD_SHEETS_DIR)"/*.pdf "$(BUILD_DIST_SHEETS_DIR)/"
+	@cd "$(BUILD_DIST_SHEETS_DIR)" && zip -r "../Sheet Music.zip" *.pdf
+
+	@mkdir -p "$(BUILD_DIST_MIDI_DIR)"
+	@cp "$(BUILD_SHEETS_DIR)"/*.mid "$(BUILD_DIST_MIDI_DIR)/"
+	@cd "$(BUILD_DIST_MIDI_DIR)" && zip -r "../MIDI.zip" *.mid
+
 .PHONY: help
 help:
 	@printf '%s\n' \
 		'Usage:' \
-		'  make                             Build all sheets (default)' \
+		'  make                             Build and package all sheets (default)' \
 		'  make build-sheet SHEET=<name>    Build one sheet' \
 		'  make build-sheets                Build all sheets' \
 		'  make clean                       Remove build output' \
+		'  make dist                        Build and package all sheets' \
 		'  make help                        Show this help message' \
 		'  make list-sheets                 List available sheets' \
 		''
