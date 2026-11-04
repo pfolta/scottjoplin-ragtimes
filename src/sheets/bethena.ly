@@ -3,7 +3,6 @@
 
 \include "src/common.ily"
 
-\include "src/music/bethena/edits.ily"
 \include "src/music/bethena/metadata.ily"
 \include "src/music/bethena/score.ily"
 

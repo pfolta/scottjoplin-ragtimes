@@ -3,7 +3,6 @@
 
 \include "src/common.ily"
 
-\include "src/music/maple-leaf-rag/edits.ily"
 \include "src/music/maple-leaf-rag/metadata.ily"
 \include "src/music/maple-leaf-rag/score.ily"
 

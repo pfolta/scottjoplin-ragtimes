@@ -3,7 +3,6 @@
 
 \include "src/common.ily"
 
-\include "src/music/palm-leaf-rag/edits.ily"
 \include "src/music/palm-leaf-rag/metadata.ily"
 \include "src/music/palm-leaf-rag/score.ily"
 
