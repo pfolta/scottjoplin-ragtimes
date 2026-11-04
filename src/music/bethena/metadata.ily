@@ -3,14 +3,14 @@
 
 bethena-output-name = "Bethena"
 
-bethena-dedication = "Respectfully Dedicated to Mr. & Mrs. Dan E. Davenport of St. Louis, MO."
+bethena-dedication = "Respectfully Dedicated to Mr. & Mrs. Dan E. Davenport of St. Louis, Mo."
 bethena-title = "Bethena"
 bethena-subtitle = "A Concert Waltz"
 
 bethena-composer = "Scott Joplin"
 
 bethena-publication-publisher = "T. Bahnsen Piano Mfg. Co."
-bethena-publication-place = "St. Louis, MO."
+bethena-publication-place = "St. Louis, MO"
 bethena-publication-year = "1905"
 
 bethena-header = \header {
@@ -22,10 +22,10 @@ bethena-header = \header {
 
     tagline = \markup \concat {
         "First published by "
-        \bethena-publication-publisher
-        ", "
+        \italic \bethena-publication-publisher
+        " ("
         \bethena-publication-place
-        ", in "
+        ") in "
         \bethena-publication-year
         "."
     }

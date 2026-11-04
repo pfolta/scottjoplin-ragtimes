@@ -9,7 +9,7 @@ maple-leaf-rag-title = "Maple Leaf Rag"
 maple-leaf-rag-composer = "Scott Joplin"
 
 maple-leaf-rag-publication-publisher = "John Stark & Son"
-maple-leaf-rag-publication-place = "Sedalia, MO."
+maple-leaf-rag-publication-place = "Sedalia, MO"
 maple-leaf-rag-publication-year = "1899"
 
 maple-leaf-rag-header = \header {
@@ -20,10 +20,10 @@ maple-leaf-rag-header = \header {
 
     tagline = \markup \concat {
         "First published by "
-        \maple-leaf-rag-publication-publisher
-        ", "
+        \italic \maple-leaf-rag-publication-publisher
+        " ("
         \maple-leaf-rag-publication-place
-        ", in "
+        ") in "
         \maple-leaf-rag-publication-year
         "."
     }

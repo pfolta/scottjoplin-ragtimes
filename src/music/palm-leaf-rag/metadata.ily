@@ -9,7 +9,7 @@ palm-leaf-rag-subtitle = "A Slow Drag"
 palm-leaf-rag-composer = "Scott Joplin"
 
 palm-leaf-rag-publication-publisher = "Victor Kremer Co."
-palm-leaf-rag-publication-place = "Chicago, IL."
+palm-leaf-rag-publication-place = "Chicago, IL"
 palm-leaf-rag-publication-year = "1903"
 
 palm-leaf-rag-header = \header {
@@ -20,10 +20,10 @@ palm-leaf-rag-header = \header {
 
     tagline = \markup \concat {
         "First published by "
-        \palm-leaf-rag-publication-publisher
-        ", "
+        \italic \palm-leaf-rag-publication-publisher
+        " ("
         \palm-leaf-rag-publication-place
-        ", in "
+        ") in "
         \palm-leaf-rag-publication-year
         "."
     }
