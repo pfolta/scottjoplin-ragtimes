@@ -30,7 +30,5 @@
 
             \midi {}
         }
-
-        \markup \abs-fontsize #10 \palm-leaf-rag-edits
     }
 }

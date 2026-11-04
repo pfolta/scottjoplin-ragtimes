@@ -30,7 +30,5 @@
 
             \midi {}
         }
-
-        \markup \abs-fontsize #10 \maple-leaf-rag-edits
     }
 }
