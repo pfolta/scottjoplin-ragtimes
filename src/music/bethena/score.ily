@@ -635,7 +635,7 @@ bethena-score = \new PianoStaff <<
                 | a8[^( gs8 a8 gs8 g8 fs8)] |
             }
         }}
-        | gs8[^( fss8 gs8 fss8 fs8 f8)] |
+        | gs8[^( fss8 gs8 fss8 \natural-sharp-accidental fs8 f8)] |
         | g!8[^( fs!8 g8 fs8 f8 e8)] |
         | \stemUp <e, e>4 <ef, ef>2^\tenuto |
         | <d, d>2.^\tenuto |

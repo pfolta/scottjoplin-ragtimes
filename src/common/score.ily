@@ -68,3 +68,10 @@ fermata-over-bar-line = {
 
     \caesura
 }
+
+% Override the next accidental to display the SMuFL natural-sharp glyph (U+E268),
+% rather than LilyPond's default accidental notation.
+natural-sharp-accidental = {
+    \once \override Accidental.stencil = #ly:text-interface::print
+    \once \override Accidental.text = \markup { \ekm-char ##xE268 }
+}

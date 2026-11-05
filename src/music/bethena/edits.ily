@@ -28,10 +28,6 @@ bethena-edits = \markup {
             \line \bold { "Measure 100, upper staff, second note:" }
             \line { "Neutral sign added." }
             \line { \null }
-
-            \line \bold { "Measure 137, lower staff, fifth note:" }
-            \line { "Neutral sign omitted." }
-            \line { \null }
         }
     }
 }
