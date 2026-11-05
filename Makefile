@@ -20,7 +20,7 @@ LILYPOND_CMD := lilypond \
 .NOTPARALLEL:
 
 .PHONY: default
-default: dist
+default: build-sheets dist
 
 .PHONY: build-sheet
 build-sheet:
@@ -38,7 +38,7 @@ clean:
 	@rm -rf "$(BUILD_DIR)"
 
 .PHONY: dist
-dist: build-sheets
+dist:
 	@mkdir -p "$(BUILD_DIST_SHEETS_DIR)"
 	@cp "$(BUILD_SHEETS_DIR)"/*.pdf "$(BUILD_DIST_SHEETS_DIR)/"
 	@cd "$(BUILD_DIST_SHEETS_DIR)" && zip -r "../Sheet Music.zip" *.pdf
@@ -55,11 +55,11 @@ help:
 		'  make build-sheet SHEET=<name>    Build one sheet' \
 		'  make build-sheets                Build all sheets' \
 		'  make clean                       Remove build output' \
-		'  make dist                        Build and package all sheets' \
+		'  make dist                        Package all sheets' \
 		'  make help                        Show this help message' \
 		'  make list-sheets                 List available sheets' \
-		''
-	@printf 'Available sheets:\n'
+		'' \
+		'Available sheets:'
 	@printf '  %s\n' $(SHEETS)
 
 .PHONY: list-sheets
