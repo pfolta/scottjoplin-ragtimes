@@ -40,11 +40,11 @@ bethena-score = \new PianoStaff <<
 
         \pageBreak
 
-        | \section << { \stemUp b'4^( a'2)^\ten } \\ { \stemDown <b ds'>2. } >> |
-        | << { \stemUp <cs' g'>2.^\ten } \\ { \stemDown bf2_( a4) } >> |
-        | << { \stemUp fs'4^( f'2)^\ten } \\ { \shiftOn \once \override NoteColumn.force-hshift = #0.5 \stemDown a2. } \\ { \shiftOff \stemDown \shape #'((1.25 . 1) (2 . 0.5) (0 . 0.5) (0 . 0)) Slur d'2_( ef'4) } >> |
+        | \section << { \stemUp b'4^( a'2)^\tenuto } \\ { \stemDown <b ds'>2. } >> |
+        | << { \stemUp <cs' g'>2.^\tenuto } \\ { \stemDown bf2_( a4) } >> |
+        | << { \stemUp fs'4^( f'2)^\tenuto } \\ { \shiftOn \once \override NoteColumn.force-hshift = #0.5 \stemDown a2. } \\ { \shiftOff \stemDown \shape #'((1.25 . 1) (2 . 0.5) (0 . 0.5) (0 . 0)) Slur d'2_( ef'4) } >> |
         |
-          \tag #'layout { \once \override Staff.Arpeggio.positions = #'(-3 . 4) << { \stemUp <c'' f''>2.\arpeggio^\ten } \\ { \stemDown <ef' a'>2.\arpeggio } >> }
+          \tag #'layout { \once \override Staff.Arpeggio.positions = #'(-3 . 4) << { \stemUp <c'' f''>2.\arpeggio^\tenuto } \\ { \stemDown <ef' a'>2.\arpeggio } >> }
           \tag #'midi { << { ef'2. } \\ { s16 a'2~ a'8. } \\ { s8 c''2~ c''8 } \\ { s8. f''2~ f''16 } >> }
         |
         | \key bf \major \repeat volta 2 { <d' bf' d''>8 \stemDown <g' g''>4 <f' f''>8 <g' g''>8[ <a' a''>8] |
@@ -76,7 +76,7 @@ bethena-score = \new PianoStaff <<
         | <d' f'! gs' b'>4 <d' f' gs' b'>4 <d' f' gs' b'>4 |
         | <cs' g'! bf'!>2 <c' g' a'>4 |
         | <c'_~ fs'_~ a'^~>2. |
-        | <c' fs'! a'>2.^\ten | \break
+        | <c' fs'! a'>2.^\tenuto | \break
 
         | \section \key g \major << { \stemUp a'8^\markup { \italic "cantabile" } g'4 b'8 a'4 } \\ { \stemDown <b d'>2. } >> |
         | << { \stemUp a'8 g'4 b'8 a'4 } \\ { \stemDown <cs' g'>2. } >> |
@@ -107,7 +107,7 @@ bethena-score = \new PianoStaff <<
         | << { \stemUp r4 cs''8[^( gs''8 fs''!8 es''8)] } \\ { \stemDown <es' gs'>2. } >> |
         | << { \stemUp r4 c''!8[^( f''8 g''!8 af''8)] } \\ { \stemDown <f' af'>2. } >> |
         | \tempo "rit." <df' f' af'>4 <d' f' af'>4 <d' f' a'>4 |
-        | << { \stemUp bf'2.^\ten } \\ { \stemDown <d' f'>4_( <c' e'>2) } >> | \break
+        | << { \stemUp bf'2.^\tenuto } \\ { \stemDown <d' f'>4_( <c' e'>2) } >> | \break
 
         | \section \key f \major \repeat volta 2 { \tempo "a tempo" <c' f' a'>4_(^\markup { \italic "cantabile" } <c' e' bf'> <d' f' b'>4) |
         | \stemDown c''8^( <f'' a''>4) c''8^( <f'' a''>4) |
@@ -199,13 +199,13 @@ bethena-score = \new PianoStaff <<
 
                 \pageBreak
 
-                | \tempo "a tempo" <ds' fs'! c''>2.^\ten |
+                | \tempo "a tempo" <ds' fs'! c''>2.^\tenuto |
             }
         }}
-        | <d'! f' b'>2.^\ten |
-        | <cs'! e' bf'>2.^\ten |
-        | <cs'! e' bf'>4 <c' g' a'>2^\ten |
-        | <c' fs' a'>2.^\ten | \break
+        | <d'! f' b'>2.^\tenuto |
+        | <cs'! e' bf'>2.^\tenuto |
+        | <cs'! e' bf'>4 <c' g' a'>2^\tenuto |
+        | <c' fs' a'>2.^\tenuto | \break
 
         | \section \sectionLabel "Finale" \key g \major << { \stemUp a'8 g'4 b'8 a'4 } \\ { \stemDown <b d'>2. } >> |
         | << { \stemUp a'8 g'4 b'8 a'4 } \\ { \stemDown <cs' g'>2. } >> |
@@ -489,7 +489,7 @@ bethena-score = \new PianoStaff <<
         | \section <fs,! fs!>2_( <f, f>4) |
         | <e, e>2_( <ef, ef>4) |
         | <d, d>2_( <c, c>4) |
-        | <f,, f,>2.^\ten |
+        | <f,, f,>2.^\tenuto |
         | \key bf \major \repeat volta 2 { <bf,, bf,>4 \stemDown <f bf d'>8[ <f, f>8] \stemUp <e, e>8[ <ef, ef>8] |
         | <d, d>4 \stemDown <f bf d'>4 <f bf d'>4 |
 
@@ -519,7 +519,7 @@ bethena-score = \new PianoStaff <<
         | \stemUp <d, d>4 <d, d>4 <d, d>4 |
         | <e, e>2 <ef, ef>4 |
         | <d, d>2 a,4 |
-        | d,2.^\ten |
+        | d,2.^\tenuto |
 
         | \section \key g \major g,4 \stemDown <d g>4 <d g>4 |
         | \stemUp <e, e>4 \stemDown <e g a>4 <e g a>4 |
@@ -540,12 +540,12 @@ bethena-score = \new PianoStaff <<
         | \stemUp <e, e>4 <a,, a,>4 <d, d>4 |
         | \stemDown <g, g>4 d4 \stemUp g,4 |
 
-        | \section \stemDown <f b d'>2.^\ten |
-        | <e b d'>2.^\ten |
-        | << { \stemDown s2. | <d! b>2.^\ten } \\ { \stemDown \showStaffSwitch <ds b ds'>2.^\ten | \change Staff = "RH" e'2. } >> |
+        | \section \stemDown <f b d'>2.^\tenuto |
+        | <e b d'>2.^\tenuto |
+        | << { \stemDown s2. | <d! b>2.^\tenuto } \\ { \stemDown \showStaffSwitch <ds b ds'>2.^\tenuto | \change Staff = "RH" e'2. } >> |
 
-        | <cs b>2.^\ten |
-        | <c! c'!>2.^\ten |
+        | <cs b>2.^\tenuto |
+        | <c! c'!>2.^\tenuto |
         | \stemUp cf4 bf,4 a,8[ d8] |
         | g,4_( c2) |
 
@@ -580,9 +580,9 @@ bethena-score = \new PianoStaff <<
             }
         }}
 
-        | \section <gs b d'>2.^\ten |
-        | <g! bf! df'>2.^\ten |
-        | <fs a c'>2.^\ten |
+        | \section <gs b d'>2.^\tenuto |
+        | <g! bf! df'>2.^\tenuto |
+        | <fs a c'>2.^\tenuto |
         | << { \stemUp as2 } \\ { \stemDown fs4 fs,4 } >> { \oneVoice r4^\fermata } |
 
         | \section \key b \minor \repeat volta 2 { \stemUp <b,, b,>4 \stemDown <fs b d'>4 <fs b d'>4 |
@@ -637,8 +637,8 @@ bethena-score = \new PianoStaff <<
         }}
         | gs8[^( fss8 gs8 fss8 fs8 f8)] |
         | g!8[^( fs!8 g8 fs8 f8 e8)] |
-        | \stemUp <e, e>4 <ef, ef>2^\ten |
-        | <d, d>2.^\ten |
+        | \stemUp <e, e>4 <ef, ef>2^\tenuto |
+        | <d, d>2.^\tenuto |
 
         | \section \key g \major g,4 \stemDown <d g>4 <d g>4 |
         | \stemUp <e, e>4 \stemDown <e g a>4 <e g a>4 |

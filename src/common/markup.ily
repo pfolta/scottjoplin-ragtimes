@@ -9,7 +9,8 @@ f-stacc = \markup { \concat { \ekm-dynamic "f" " stacc." } }
 lh = \markup { \italic "l.h." }
 rh = \markup { \italic "r.h." }
 
-ten = \markup { \italic "ten." }
+% Use an italic `ten.` text indication instead of the standard tenuto symbol.
+tenuto = \markup { \italic "ten." }
 
 % Define SMuFL glyphs to use within markup.
 %
