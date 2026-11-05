@@ -28,7 +28,7 @@ palm-leaf-rag-score = \new PianoStaff <<
 
         | \stemDown <f'_~ a'^~ f''^~>4 <f' a' f''>16[ ef''16 c''16 cs''16] |
         | d''16[ d'''16 bf''16 f''16] << { \stemUp af''16[ g''16 f''16 ef''16^~] } \\ { \stemDown b'8.[ c''16_~] } >> |
-        | << { \stemDown ef''16[ fs''16 g''16 a''!16] } \\ { \once \override Stem.length = #2 \once \override Flag.stencil = ##f c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
+        | << { \stemDown ef''16[ fs''16 g''16 a''!16] } \\ { \once \override Stem.length = #2 \once \omit Flag c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
         | g''16[ bf'16 c''16 ef''16^~] ef''16[ f''16 <bf' g''>8] | \break
 
         \pageBreak
