@@ -28,7 +28,7 @@ palm-leaf-rag-score = \new PianoStaff <<
 
         | \stemDown <f'_~ a'^~ f''^~>4 <f' a' f''>16[ ef''16 c''16 cs''16] |
         | d''16[ d'''16 bf''16 f''16] << { \stemUp af''16[ g''16 f''16 ef''16^~] } \\ { \stemDown b'8.[ c''16_~] } >> |
-        | << { \stemDown ef''16[ fs''16 g''16 a''!16] } \\ { \once \override Stem.length = #2 \once \omit Flag c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
+        | << { \stemDown ef''16[ fs''16 g''16 a''16] } \\ { \once \override Stem.length = #2 \once \omit Flag c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
         | g''16[ bf'16 c''16 ef''16^~] ef''16[ f''16 <bf' g''>8] | \break
 
         \pageBreak
@@ -57,7 +57,7 @@ palm-leaf-rag-score = \new PianoStaff <<
 
         | <ef' g'>8.[ <g' bf'>16] \stemDown <bf' ef''>16[ g'16 bf'16 c''16] |
         | \stemUp <bf' d''>8[ f'8] e'16[_( g'16 bf'16 cs''16)] |
-        | \stemDown d''8[ f''16 f'16^~] f'16[ d''16 c''!8] |
+        | \stemDown d''8[ f''16 f'16^~] f'16[ d''16 c''8] |
         \alternative {
             { | bf'8 d''8[^( f''8 <f'' d'''>8)] | }
             { | bf'4^~ bf'8 }
@@ -65,26 +65,26 @@ palm-leaf-rag-score = \new PianoStaff <<
 
         \pageBreak
 
-          \section \key ef \major \stemUp g'16[_( af'!16)] |
+          \section \key ef \major \stemUp g'16[_( af'16)] |
         | \show-measure-number \repeat volta 2 { | \stemDown bf'16[^( g''16 f''16 ef''16] bf'16[ b'16 c''16 cs''16)] |
-        | d''16[ <af'' c'''>8 d''16] <af'' c'''>8.[ bf'!16^~] |
+        | d''16[ <af'' c'''>8 d''16] <af'' c'''>8.[ bf'16^~] |
         | bf'16[ g''16^( f''16 ef''16] bf'16[ b'16 c''16 cs''16)] | \break
 
         | d''16[ <af'' c'''>8 d''16] <af'' c'''>8.[ bf''16^~] |
         | bf''16[ f''16 g''16 af''16^~] af''16[ g''16 f''16 fs''16] |
         | g''16[ fs''16 g''16 <g''_~ ef'''^~>16] <g'' ef'''>16[ d'''16 <g'' ef'''>16 c'''16]  | \break
 
-        | <f''! d'''>16[ bf''16 f''16 <e''_~ g''^~>16] <e'' g''>16[ <e'' g''>16 <ef'' a''>8] |
-        | << { \stemUp bf''16[ c'''16 bf''16 af''!16] f''16[ d''16 c''16 cf''16] } \\ { \stemDown d''4 r4 } >> |
+        | <f'' d'''>16[ bf''16 f''16 <e''_~ g''^~>16] <e'' g''>16[ <e'' g''>16 <ef'' a''>8] |
+        | << { \stemUp bf''16[ c'''16 bf''16 af''16] f''16[ d''16 c''16 cf''16] } \\ { \stemDown d''4 r4 } >> |
         | bf'16[^( g''16 f''16 ef''16] bf'16[ b'16 c''16 cs''16)] | \break
 
-        | d''16[ <af'' c'''>8 d''16] <af'' c'''>8.[ bf'!16^~] |
+        | d''16[ <af'' c'''>8 d''16] <af'' c'''>8.[ bf'16^~] |
         | bf'16[ g''16^( f''16 ef''16] bf'16[ b'16 c''16 cs''16)] |
         | d''16[ <af'' c'''>8 d''16] <af'' c'''>8.[ g''16^~] |
         | g''16[ ef'''16 bf''16 g''16] ef''16[ g''16 f''16 ef''16] | \break
 
         | c''16[ b'16 c''16 ef''16^~] ef''16[ c''16 a'16 fs'16] |
-        | \stemUp g'16[ af'!16 bf'!8] g'16[ f'!8 bf'16] |
+        | \stemUp g'16[ af'16 bf'8] g'16[ f'8 bf'16] |
         \alternative {
             { | ef'8[ \acciaccatura c''8 bf'8] \acciaccatura c''8 bf'8[ g'16_( af'16)] | }
             { | ef'4 <ef' g' bf' ef''>8 r8 | }
@@ -93,8 +93,8 @@ palm-leaf-rag-score = \new PianoStaff <<
         \pageBreak
 
         | \section ef'16[_( bf'16 g'16 gf'16)] << { \stemUp f'8[_( <bf' d''>8)] } \\ { \stemDown f'4 } >> |
-        | ef'16[_( bf'16 g'!16 gf'16] f'4) |
-        | \stemDown a'16[ c''16 ef''16 g''!16^~] g''16[ f''16 ef''16 a'16] |
+        | ef'16[_( bf'16 g'16 gf'16] f'4) |
+        | \stemDown a'16[ c''16 ef''16 g''16^~] g''16[ f''16 ef''16 a'16] |
         | bf'8 r8 r4 | \break
 
         | \section \key bf \major \repeat volta 2 { \stemUp f'8[ g'16 a'16_~] a'16[ g'16 f'8] |
@@ -110,7 +110,7 @@ palm-leaf-rag-score = \new PianoStaff <<
 
         | \stemDown <f'_~ a'^~ f''^~>4 <f' a' f''>16[ ef''16 c''16 cs''16] |
         | d''16[ d'''16 bf''16 f''16] << { \stemUp af''16[ g''16 f''16 ef''16^~] } \\ { \stemDown b'8.[ c''16_~] } >> |
-        | << { \stemDown ef''16[ fs''16 g''16 a''!16] } \\ { \once \override Stem.length = #2 \once \override Flag.stencil = ##f c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
+        | << { \stemDown ef''16[ fs''16 g''16 a''16] } \\ { \once \override Stem.length = #2 \once \override Flag.stencil = ##f c''16 s8. } >> c'''16[ bf''16 g''16 ef''16] |
         | g''16[ bf'16 c''16 ef''16^~] ef''16[ f''16 <bf' g''>8] | \break
 
         | <bf'_~ f''^~ bf''^~>4 <bf' f'' bf''>16[ bf''16 a''16 g''16] |

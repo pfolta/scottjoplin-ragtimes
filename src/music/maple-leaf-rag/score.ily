@@ -24,12 +24,12 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         | <af'' af'''>8[ <af'' af'''>8] <af'' af'''>8[ <af'' af'''>16 <af'' af'''>16~] |
         | <af'' af'''>16[ ef'''16 f'''16 c'''16] ef'''16[ <af'' f'''>8 <ff'' af''>16~] |
-        | <ff''! af''>16[ bf''16 <ff'' cf'''>16 af''16] bf''16[ <ef'' c'''>8 af''16] |
+        | <ff'' af''>16[ bf''16 <ff'' cf'''>16 af''16] bf''16[ <ef'' c'''>8 af''16] |
         | <ef'' c'''>16[ af''16 <ef'' bf''>8] <ef'' af''>8[ r16 <af' af''>16~] | \break
 
         | <af' af''>8[ <af' af''>8] <af' af''>8[ <af' af''>16 <af' af''>16~] |
         | <af' af''>16[ ef''16 <af' f''>16 c''16] ef''16[ <af' f''>8 <ff' af'>16~] |
-        | \stemUp <ff'! af'>16[ bf'16 <ff' cf''>16 af'16] bf'16[ <ef' c''>8 af'16] |
+        | \stemUp <ff' af'>16[ bf'16 <ff' cf''>16 af'16] bf'16[ <ef' c''>8 af'16] |
         \alternative {
             { | <ef' c''>16[ af'16 <ef' bf'>8] <ef' af'>8 r8 | }
             { | <ef' c''>16[ af'16 <ef' bf'>8] <ef' af'>8 r8 | }
@@ -38,7 +38,7 @@ maple-leaf-rag-score = \new PianoStaff <<
         \pageBreak
 
         | \section \repeat volta 2 { r16 \stemDown g''16[ <ef'' ef'''>16 g''16] bf''16[ <d'' d'''>8 g''16] |
-        | <df''! df'''!>16[ g''16 bf''16 <c'' c'''>16~] <c'' c'''>16[ ef''16 <bf' bf''>16 ef''16] |
+        | <df'' df'''>16[ g''16 bf''16 <c'' c'''>16~] <c'' c'''>16[ ef''16 <bf' bf''>16 ef''16] |
         | r16 c''16[ <af' af''>16 c''16] ef''16[ <f' f''>8 c''16] |
         | <af' af''>16[ c''16 ef''16 <f' f''>16~] <f' f''>16[ c''16 <f' f''>8] | \break
 
@@ -48,7 +48,7 @@ maple-leaf-rag-score = \new PianoStaff <<
         | <af' af''>16[ c''16 ef''16 <f' f''>16~] <f' f''>16[ c''16 <f' f''>8] | \break
 
         | r16 g''16[ <ef'' ef'''>16 g''16] bf''16[ <d'' d'''>8 g''16] |
-        | <df''! df'''!>16[ g''16 bf''16 <c'' c'''>16~] <c'' c'''>16[ ef''16 <bf' bf''>16 ef''16] |
+        | <df'' df'''>16[ g''16 bf''16 <c'' c'''>16~] <c'' c'''>16[ ef''16 <bf' bf''>16 ef''16] |
         | r16 c''16[ <af' af''>16 c''16] ef''16[ <f' f''>8 c''16] |
         | <af' af''>8[ <af' af''>8] <g' g''>8[ <gf' gf''>8] |
         | r16 \stemUp f'16[ a'16 c''16] f''16[ c''16 a'16 f'16] | \break
@@ -73,12 +73,12 @@ maple-leaf-rag-score = \new PianoStaff <<
         | r16 af'16[( cf''16 af''16)] r16 af''16[( cf'''16 af'''16)] |
         | <af'' af'''>8[ <af'' af'''>8] <af'' af'''>8[ <af'' af'''>16 <af'' af'''>16~] |
         | <af'' af'''>16[ ef'''16 f'''16 c'''16] ef'''16[ <af'' f'''>8 <ff'' af''>16~] |
-        | <ff''! af''>16[ bf''16 <ff'' cf'''>16 af''16] bf''16[ <ef'' c'''>8 af''16] | \break
+        | <ff'' af''>16[ bf''16 <ff'' cf'''>16 af''16] bf''16[ <ef'' c'''>8 af''16] | \break
 
         | <ef'' c'''>16[ af''16 <ef'' bf''>8] <ef'' af''>8[ r16 <af' af''>16~] |
         | <af' af''>8[ <af' af''>8] <af' af''>8[ <af' af''>16 <af' af''>16~] |
         | <af' af''>16[ ef''16 <af' f''>16 c''16] ef''16[ <af' f''>8 <ff' af'>16~] |
-        | \stemUp <ff'! af'>16[ bf'16 <ff' cf''>16 af'16] bf'16[ <ef' c''>8 af'16] |
+        | \stemUp <ff' af'>16[ bf'16 <ff' cf''>16 af'16] bf'16[ <ef' c''>8 af'16] |
         | <ef' c''>16[ af'16 <ef' bf'>8] \stemDown <ef' af'>8[ <af' af''>8] | \break
 
         | \section \sectionLabel "Trio" \key df \major \repeat volta 2 { <af' c'' ef'' af''>8.[ <bf' c'' ef'' af''>16~] <bf' c'' ef'' af''>16[ <c'' ef''>16 bf'8] |
@@ -99,7 +99,7 @@ maple-leaf-rag-score = \new PianoStaff <<
         \pageBreak
 
         | <df'' ff'' df'''>8[ <df'' ff'' df'''>8] <c'' ff'' c'''>8[ <bf' ff'' bf''>8] |
-        | <af' f''!>16[ df''16 ef''16 <bf' gf''>16~] <bf' gf''>16[ bf'16 <af' f''>8] |
+        | <af' f''>16[ df''16 ef''16 <bf' gf''>16~] <bf' gf''>16[ bf'16 <af' f''>8] |
         | <g' f''>16[ df''16 ef''16 <gf' f''>16~] <gf' f''>16[ c''16 <gf' ef''>16 <f' df''>16~] |
         \alternative {
             { | <f' df''>16[ <af' af''>8 f''16] <af' af''>16[ f''16 <af' af''>16 f''16] | \break }
@@ -123,7 +123,7 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         | \stemUp <f' af'>16[ bf'16 <f' af'>8] <ff' af'>8[ <ff' bf'>16 <ef' af'>16~] |
         | <ef' af'>16[ bf'16 <ef' c''>16 af'16] bf'16[ <ef' c''>8 <d' af'>16~] |
-        | <d'! af'>16[ bf'16 <d' c''>16 af'16] r16 <df' bf'>8[ ef'16] |
+        | <d' af'>16[ bf'16 <d' c''>16 af'16] r16 <df' bf'>8[ ef'16] |
         \alternative {
             { | \stemDown <c' af'>8[ <ef' ef''>8] <ef' ef''>8[ <ef' ef''>8] | }
             { | <c' af'>8[ <g' df'' ef''>8] <af' c'' ef'' af''>8 }
@@ -333,9 +333,9 @@ maple-leaf-rag-score = \new PianoStaff <<
         | <ef, ef>8[ <bf ef' gf'>8] <gf, gf>8[ <bf ef' gf'>8] |
         | <ef, ef>8[ <bf ef' gf'>8] <gf, gf>8[ <bf ef' gf'>8] |
 
-        | g16[ bf8 df'16] ff'16[ df'16 bf16 g!16] |
-        | <af, af>8[ <af df' f'!>8] bf,8[ <af bf d'>8] |
-        | <ef bf df'!>8[ <ef bf df'>8] <af c'>8[ <af c'>8] |
+        | g16[ bf8 df'16] ff'16[ df'16 bf16 g16] |
+        | <af, af>8[ <af df' f'>8] bf,8[ <af bf d'>8] |
+        | <ef bf df'>8[ <ef bf df'>8] <af c'>8[ <af c'>8] |
         \alternative {
             { | <df df'>8[ <af df' f'>8] <af df' f'>8[ <d, d>8] | }
 

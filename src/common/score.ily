@@ -52,6 +52,21 @@
     }
 }
 
+% Use the modern accidental style.
+% See https://lilypond.org/doc/v2.26/Documentation/notation/displaying-pitches#automatic-accidentals
+\layout {
+    \context {
+        \Score
+        \accidentalStyle modern
+    }
+}
+
+% Override the next accidental to display the SMuFL natural-sharp glyph (U+E268).
+natural-sharp-accidental = {
+    \once \override Accidental.stencil = #ly:text-interface::print
+    \once \override Accidental.text = \markup { \ekm-char ##xE268 }
+}
+
 % Show the measure number at the current position.
 show-measure-number = \once \override Score.BarNumber.break-visibility = ##(#t #t #t)
 
@@ -67,11 +82,4 @@ fermata-over-bar-line = {
                 #{ \markup \ekm-fermata #'default #}))
 
     \caesura
-}
-
-% Override the next accidental to display the SMuFL natural-sharp glyph (U+E268),
-% rather than LilyPond's default accidental notation.
-natural-sharp-accidental = {
-    \once \override Accidental.stencil = #ly:text-interface::print
-    \once \override Accidental.text = \markup { \ekm-char ##xE268 }
 }
