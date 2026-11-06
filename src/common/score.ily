@@ -53,7 +53,6 @@
 }
 
 % Use the modern accidental style.
-% See https://lilypond.org/doc/v2.26/Documentation/notation/displaying-pitches#automatic-accidentals
 \layout {
     \context {
         \Score
