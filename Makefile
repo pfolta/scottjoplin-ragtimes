@@ -1,9 +1,11 @@
 BUILD_DIR ?= ./build
+BUILD_BOOK_DIR := $(BUILD_DIR)/lilypond/book
 BUILD_DIST_DIR := $(BUILD_DIR)/dist
 BUILD_DIST_MIDI_DIR := $(BUILD_DIST_DIR)/MIDI
 BUILD_DIST_SHEETS_DIR := $(BUILD_DIST_DIR)/Sheet Music
 BUILD_SHEETS_DIR := $(BUILD_DIR)/lilypond/sheets
 
+SRC_BOOK := src/book/scottjoplin-ragtimes.ly
 SRC_SHEETS_DIR := src/sheets
 
 # Discover all .ly files in SRC_SHEETS_DIR and extract the sheet names.
@@ -20,7 +22,12 @@ LILYPOND_CMD := lilypond \
 .NOTPARALLEL:
 
 .PHONY: default
-default: build-sheets dist
+default: build-book build-sheets dist
+
+.PHONY: build-book
+build-book:
+	@mkdir -p "$(BUILD_BOOK_DIR)"
+	@$(LILYPOND_CMD) -o "$(BUILD_BOOK_DIR)" "$(SRC_BOOK)"
 
 .PHONY: build-sheet
 build-sheet:
@@ -39,6 +46,9 @@ clean:
 
 .PHONY: dist
 dist:
+	@mkdir -p "$(BUILD_DIST_DIR)"
+	@cp "$(BUILD_BOOK_DIR)"/*.pdf "$(BUILD_DIST_DIR)/"
+
 	@mkdir -p "$(BUILD_DIST_SHEETS_DIR)"
 	@cp "$(BUILD_SHEETS_DIR)"/*.pdf "$(BUILD_DIST_SHEETS_DIR)/"
 	@cd "$(BUILD_DIST_SHEETS_DIR)" && zip -r "../Sheet Music.zip" *.pdf
@@ -51,11 +61,12 @@ dist:
 help:
 	@printf '%s\n' \
 		'Usage:' \
-		'  make                             Build and package all sheets (default)' \
+		'  make                             Build and package the book and all sheets (default)' \
+		'  make build-book                  Build the "Scott Joplin: Ragtimes" book' \
 		'  make build-sheet SHEET=<name>    Build one sheet' \
 		'  make build-sheets                Build all sheets' \
 		'  make clean                       Remove build output' \
-		'  make dist                        Package all sheets' \
+		'  make dist                        Package existing book, sheet music and MIDI files' \
 		'  make help                        Show this help message' \
 		'  make list-sheets                 List available sheets' \
 		'' \
