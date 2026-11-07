@@ -1,0 +1,33 @@
+\version "2.26.0"
+\language "english"
+
+\include "src/common.ily"
+
+\include "src/music/weeping-willow/metadata.ily"
+\include "src/music/weeping-willow/score.ily"
+
+\book {
+    \bookOutputName \weeping-willow-output-name
+
+    \weeping-willow-header
+
+    \bookpart {
+        \markup \pdf-two-page-left
+
+        \score {
+            \keepWithTag #'layout {
+                \weeping-willow-score
+            }
+
+            \layout {}
+        }
+
+        \score {
+            \keepWithTag #'midi {
+                \unfoldRepeats \weeping-willow-score
+            }
+
+            \midi {}
+        }
+    }
+}
