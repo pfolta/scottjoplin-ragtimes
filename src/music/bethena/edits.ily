@@ -5,7 +5,7 @@ bethena-edits = \markup {
     \column {
         \column-lines {
             \line \bold { "Title:" }
-            \line { "Dedication appears on the cover only." }
+            \line { "The dedication is printed on the cover only." }
             \line { \concat { \italic "Composer of “Maple Leaf Rag”" " omitted." } }
             \line { \null }
 

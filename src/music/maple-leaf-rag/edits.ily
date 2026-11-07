@@ -4,8 +4,8 @@
 maple-leaf-rag-edits = \markup {
     \column {
         \column-lines {
-            \line \bold { "Dedication:" }
-            \line { "Only on the cover of the second edition (1901)." }
+            \line \bold { "Title:" }
+            \line { "The dedication is printed on the cover of the second edition (1901) only." }
             \line { \null }
 
             \line \bold { "Measure 7, lower staff:" }

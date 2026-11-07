@@ -5,7 +5,7 @@ palm-leaf-rag-edits = \markup {
     \column {
         \column-lines {
             \line \bold { "Title:" }
-            \line { \concat { \italic "A Slow Drag" " appears on the cover only." } }
+            \line { \concat { \italic "A Slow Drag" " is printed on the cover only." } }
             \line { \concat { \italic "Composer of “Maple Leaf Rag”" " omitted." } }
             \line { \null }
 
