@@ -11,7 +11,9 @@ SRC_SHEETS_DIR := src/sheets
 # Discover all .ly files in SRC_SHEETS_DIR and extract the sheet names.
 SHEETS := $(patsubst $(SRC_SHEETS_DIR)/%.ly, %, $(wildcard $(SRC_SHEETS_DIR)/*.ly))
 
-LILYPOND_CMD := lilypond \
+LILYPOND ?= lilypond
+LILYPOND_VERSION := 2.26.0
+LILYPOND_CMD := "$(LILYPOND)" \
 	-dwarning-as-error \
 	-dno-point-and-click \
 	-I "$$(pwd)" \
@@ -25,27 +27,56 @@ LILYPOND_CMD := lilypond \
 default: build-book build-sheets dist
 
 .PHONY: build-book
-build-book:
+build-book: check-deps
 	@mkdir -p "$(BUILD_BOOK_DIR)"
 	@$(LILYPOND_CMD) -o "$(BUILD_BOOK_DIR)" "$(SRC_BOOK)"
 
 .PHONY: build-sheet
-build-sheet:
+build-sheet: check-deps
 	$(if $(filter $(SHEET),$(SHEETS)),,$(error Unknown SHEET '$(SHEET)'. Available sheets: $(SHEETS)))
 	@mkdir -p "$(BUILD_SHEETS_DIR)"
 	@$(LILYPOND_CMD) -o "$(BUILD_SHEETS_DIR)" "$(SRC_SHEETS_DIR)/$(SHEET).ly"
 
 .PHONY: build-sheets
-build-sheets:
+build-sheets: check-deps
 	@mkdir -p "$(BUILD_SHEETS_DIR)"
 	@$(foreach sheet,$(SHEETS),$(LILYPOND_CMD) -o "$(BUILD_SHEETS_DIR)" "$(SRC_SHEETS_DIR)/$(sheet).ly" &&) :
+
+.PHONY: check-deps
+check-deps:
+	@printf 'Checking dependencies...\n'
+
+	@status=0; \
+	\
+	if lilypond_path=$$(command -v "$(LILYPOND)"); then \
+		printf '  ✓ LilyPond found: %s\n' "$$lilypond_path"; \
+		version=$$("$$lilypond_path" --version | sed -n '1s/.*LilyPond \([0-9][0-9.]*\).*/\1/p'); \
+		if [ "$$version" = "$(LILYPOND_VERSION)" ]; then \
+			printf '  ✓ LilyPond version: %s\n' "$$version"; \
+		else \
+			printf '  ✗ LilyPond version: expected $(LILYPOND_VERSION), got %s\n' "$${version:-unknown}"; \
+			status=1; \
+		fi; \
+	else \
+		printf '  ✗ LilyPond not found\n'; \
+		status=1; \
+	fi; \
+	\
+	if zip_path=$$(command -v zip); then \
+		printf '  ✓ zip found: %s\n' "$$zip_path"; \
+	else \
+		printf '  ✗ zip not found\n'; \
+		status=1; \
+	fi; \
+	\
+	exit "$$status"
 
 .PHONY: clean
 clean:
 	@rm -rf "$(BUILD_DIR)"
 
 .PHONY: dist
-dist:
+dist: check-deps
 	@mkdir -p "$(BUILD_DIST_DIR)"
 	@cp "$(BUILD_BOOK_DIR)"/*.pdf "$(BUILD_DIST_DIR)/"
 
@@ -60,17 +91,27 @@ dist:
 .PHONY: help
 help:
 	@printf '%s\n' \
-		'Usage:' \
-		'  make                             Build and package the book and all sheets (default)' \
+		'USAGE' \
+		'  make                             Build and package the book, all sheet music and MIDI files (default)' \
 		'  make build-book                  Build the "Scott Joplin: Ragtimes" book' \
 		'  make build-sheet SHEET=<name>    Build one sheet' \
 		'  make build-sheets                Build all sheets' \
+		'  make check-deps                  Check required dependencies' \
 		'  make clean                       Remove build output' \
 		'  make dist                        Package existing book, sheet music and MIDI files' \
 		'  make help                        Show this help message' \
 		'  make list-sheets                 List available sheets' \
 		'' \
-		'Available sheets:'
+		'OPTIONS' \
+		'  BUILD_DIR=<path>                 Specify the build directory (default: ./build)' \
+		'  LILYPOND=<path>                  Specify a LilyPond executable (default: lilypond)' \
+		'' \
+		'EXAMPLES' \
+		'  make LILYPOND=/opt/homebrew/bin/lilypond' \
+		'  make build-book LILYPOND=/opt/homebrew/bin/lilypond' \
+		'  make build-sheet SHEET=bethena' \
+		'' \
+		'AVAILABLE SHEETS'
 	@printf '  %s\n' $(SHEETS)
 
 .PHONY: list-sheets
