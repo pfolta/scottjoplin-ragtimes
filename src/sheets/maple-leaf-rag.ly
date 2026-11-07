@@ -9,10 +9,9 @@
 \book {
     \bookOutputName \maple-leaf-rag-output-name
 
-    \maple-leaf-rag-header
-
     \bookpart {
         \markup \pdf-two-page-left
+        \maple-leaf-rag-header
 
         \score {
             \keepWithTag #'layout {
