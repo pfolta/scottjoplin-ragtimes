@@ -3,7 +3,6 @@
 
 \bookpart {
     \label #'index
-    \tocItem index "Index"
     \pdf-bookmark "index" "Index" #0
 
     \header {

@@ -3,7 +3,6 @@
 
 \bookpart {
     \label #'ragtimes.bethena
-    \tocItem ragtimes.bethena \bethena-title
     \pdf-bookmark "ragtimes.bethena" \bethena-title #0
 
     \bethena-header
