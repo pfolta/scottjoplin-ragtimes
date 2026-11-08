@@ -1,6 +1,29 @@
 \version "2.26.0"
 \language "english"
 
+% Create a PDF bookmark pointing to the named destination `label`.
+% The bookmark title is given by `text`.
+% The number of immediate child bookmarks is given by `child-count`:
+%   0  = no children
+%   N  = N visible children (expanded by default)
+%  -N  = N hidden children (collapsed by default)
+pdf-bookmark = #(define-scheme-function (label text child-count) (string? string? integer?)
+    #{
+        \markup
+        \with-dimensions #'(0 . 0) #'(0 . 0)
+        \postscript
+            #(format #f
+                "mark /Dest /~a /DEST pdfmark
+                 mark /Title (~a)~a /Dest /~a /OUT pdfmark"
+                label
+                text
+                (if (zero? child-count)
+                    ""
+                    (format #f " /Count ~a" child-count))
+                label)
+    #}
+)
+
 % Set the PDF viewer's initial page layout.
 %
 % The PDF PageLayout name is given by `page-layout`; the zero-sized markup

@@ -4,6 +4,7 @@
 \bookpart {
     \label #'ragtimes.weeping-willow
     \tocItem ragtimes.weeping-willow \weeping-willow-title
+    \pdf-bookmark "ragtimes.weeping-willow" \weeping-willow-title #0
 
     \weeping-willow-header
 

@@ -4,6 +4,7 @@
 \bookpart {
     \label #'ragtimes.maple-leaf-rag
     \tocItem ragtimes.maple-leaf-rag \maple-leaf-rag-title
+    \pdf-bookmark "ragtimes.maple-leaf-rag" \maple-leaf-rag-title #0
 
     \maple-leaf-rag-header
 
