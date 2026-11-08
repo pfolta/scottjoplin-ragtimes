@@ -27,6 +27,7 @@
     \include "src/book/parts/front-matter/contents.ily"
 
     % Ragtimes
+    \include "src/book/parts/blank-page.ily"
     \include "src/book/parts/ragtimes/ragtimes.ily"
     \include "src/book/parts/ragtimes/maple-leaf-rag.ily"
     \include "src/book/parts/ragtimes/weeping-willow.ily"
@@ -34,5 +35,6 @@
     \include "src/book/parts/ragtimes/bethena.ily"
 
     % Back Matter
+    \include "src/book/parts/blank-page.ily"
     \include "src/book/parts/back-matter/index.ily"
 }
