@@ -10,7 +10,7 @@
     \bookOutputName \bethena-output-name
 
     \bookpart {
-        \markup \pdf-two-page-left
+        \pdf-two-page-left
         \bethena-header
 
         \score {

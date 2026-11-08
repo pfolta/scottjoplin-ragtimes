@@ -10,7 +10,7 @@
     \bookOutputName \maple-leaf-rag-output-name
 
     \bookpart {
-        \markup \pdf-two-page-left
+        \pdf-two-page-left
         \maple-leaf-rag-header
 
         \score {

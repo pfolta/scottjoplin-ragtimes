@@ -10,7 +10,7 @@
         oddFooterMarkup = ##f
     }
 
-    \markup \pdf-two-page-right
+    \pdf-two-page-right
 
     \markup {
         \column {

@@ -10,7 +10,7 @@
     \bookOutputName \weeping-willow-output-name
 
     \bookpart {
-        \markup \pdf-two-page-left
+        \pdf-two-page-left
         \weeping-willow-header
 
         \score {
