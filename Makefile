@@ -20,6 +20,11 @@ LILYPOND_CMD := "$(LILYPOND)" \
 	-I "$$(pwd)/vendor/lilypond/ekmelily/ly" \
 	-I "$$(pwd)/vendor/lilypond/esmuflily/ly"
 
+# Required external commands.
+DEPENDENCIES := "$(LILYPOND)" \
+	zip \
+	sha256sum
+
 # Disable parallel execution, even when make is invoked with -j.
 .NOTPARALLEL:
 
@@ -47,25 +52,20 @@ check-deps:
 	@printf 'Checking dependencies...\n'
 
 	@status=0; \
-	\
-	if lilypond_path=$$(command -v "$(LILYPOND)"); then \
-		printf '  ✓ LilyPond found: %s\n' "$$lilypond_path"; \
-		version=$$("$$lilypond_path" --version | sed -n '1s/.*LilyPond \([0-9][0-9.]*\).*/\1/p'); \
-		if [ "$$version" = "$(LILYPOND_VERSION)" ]; then \
-			printf '  ✓ LilyPond version: %s\n' "$$version"; \
+	for dependency in $(DEPENDENCIES); do \
+		if dependency_path=$$(command -v "$$dependency"); then \
+			printf '  ✓ %s found: %s\n' "$$dependency" "$$dependency_path"; \
 		else \
-			printf '  ✗ LilyPond version: expected $(LILYPOND_VERSION), got %s\n' "$${version:-unknown}"; \
+			printf '  ✗ %s not found\n' "$$dependency"; \
 			status=1; \
 		fi; \
-	else \
-		printf '  ✗ LilyPond not found\n'; \
-		status=1; \
-	fi; \
+	done; \
 	\
-	if zip_path=$$(command -v zip); then \
-		printf '  ✓ zip found: %s\n' "$$zip_path"; \
+	version=$$("$$(command -v "$(LILYPOND)")" --version | sed -n '1s/.*LilyPond \([0-9][0-9.]*\).*/\1/p'); \
+	if [ "$$version" = "$(LILYPOND_VERSION)" ]; then \
+		printf '  ✓ LilyPond version: %s\n' "$$version"; \
 	else \
-		printf '  ✗ zip not found\n'; \
+		printf '  ✗ LilyPond version: expected $(LILYPOND_VERSION), got %s\n' "$${version:-unknown}"; \
 		status=1; \
 	fi; \
 	\
@@ -87,6 +87,12 @@ dist: check-deps
 	@mkdir -p "$(BUILD_DIST_MIDI_DIR)"
 	@cp "$(BUILD_SHEETS_DIR)"/*.mid "$(BUILD_DIST_MIDI_DIR)/"
 	@cd "$(BUILD_DIST_MIDI_DIR)" && zip -r "../MIDI.zip" *.mid
+
+	@cd "$(BUILD_DIST_DIR)" && \
+		find . -type f ! -path './SHA256SUMS' -print0 \
+			| LC_ALL=C sort -z \
+			| xargs -0 sha256sum \
+			| sed 's| \./| |' > SHA256SUMS
 
 .PHONY: help
 help:
