@@ -16,7 +16,7 @@
         \column {
             \column-lines {
                 \fill-line \abs-fontsize #24 { "Scott Joplin" }
-                \fill-line \abs-fontsize #48 \bold { "RAGTIMES" }
+                \fill-line \abs-fontsize #48 \uppercase \bold { "Ragtimes" }
 
                 \line { \null }
                 \line { \null }

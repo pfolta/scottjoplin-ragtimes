@@ -18,3 +18,11 @@ tenuto = \markup { \italic "ten." }
 % https://smufl.formats.music/latest/tables/index.html
 smufl-flat = \markup { \ekm-char ##xE260 }
 smufl-sharp = \markup { \ekm-char ##xE262 }
+
+% \uppercase
+% Convert text in the supplied markup to UPPERCASE.
+#(define-markup-command (uppercase layout props arg) (markup?)
+    (interpret-markup layout props
+        (make-with-string-transformer-markup
+            (lambda (layout props str) (string-upcase str))
+            arg)))
