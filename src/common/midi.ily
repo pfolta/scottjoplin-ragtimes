@@ -6,6 +6,14 @@
     #(ly:set-option 'midi-extension "mid")
 }
 
+% Use `Honky-tonk Piano` instead of the default `Acoustic Grand Piano`.
+\midi {
+    \context {
+        \Score
+        midiInstrument = "honky-tonk"
+    }
+}
+
 % Move the MIDI dynamic performer from Voice to PianoStaff so that dynamic
 % markings (e.g. \f, \p, \mf) affect both piano staves.
 \midi {
