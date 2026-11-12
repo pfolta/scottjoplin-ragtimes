@@ -5,6 +5,7 @@
 \include "src/common/typography.ily"
 
 % Include all other shared components.
+\include "src/common/header.ily"
 \include "src/common/markup.ily"
 \include "src/common/midi.ily"
 \include "src/common/page.ily"
