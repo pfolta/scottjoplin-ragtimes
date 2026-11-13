@@ -52,11 +52,11 @@
     }
 }
 
-% Use the modern accidental style.
+% Use the piano accidental style.
 \layout {
     \context {
         \Score
-        \accidentalStyle modern
+        \accidentalStyle piano
     }
 }
 
