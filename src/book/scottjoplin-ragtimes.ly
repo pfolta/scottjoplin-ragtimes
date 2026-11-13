@@ -4,14 +4,19 @@
 \include "src/common.ily"
 
 \include "src/music/original-rags/metadata.ily"
+\include "src/music/original-rags/edits.ily"
 \include "src/music/original-rags/score.ily"
 \include "src/music/maple-leaf-rag/metadata.ily"
+\include "src/music/maple-leaf-rag/edits.ily"
 \include "src/music/maple-leaf-rag/score.ily"
 \include "src/music/weeping-willow/metadata.ily"
+\include "src/music/weeping-willow/edits.ily"
 \include "src/music/weeping-willow/score.ily"
 \include "src/music/palm-leaf-rag/metadata.ily"
+\include "src/music/palm-leaf-rag/edits.ily"
 \include "src/music/palm-leaf-rag/score.ily"
 \include "src/music/bethena/metadata.ily"
+\include "src/music/bethena/edits.ily"
 \include "src/music/bethena/score.ily"
 
 \book {
@@ -39,5 +44,7 @@
 
     % Back Matter
     \include "src/book/parts/blank-page.ily"
+    \include "src/book/parts/back-matter/appendix.ily"
+    \include "src/book/parts/back-matter/editorial-notes.ily"
     \include "src/book/parts/back-matter/index.ily"
 }

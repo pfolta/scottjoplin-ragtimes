@@ -44,6 +44,18 @@
                 \fill-line { \null }
 
                 \fill-line \bold {
+                    \with-link #'appendix { "Appendix" }
+                    \with-link #'appendix { \page-ref #'appendix "000" "?" }
+                }
+
+                \fill-line {
+                    \concat { \hspace #(to-staff-space 10 'mm) \with-link #'appendix.editorial-notes { "Editorial Notes" } }
+                    \with-link #'appendix.editorial-notes { \page-ref #'appendix.editorial-notes "000" "?" }
+                }
+
+                \fill-line { \null }
+
+                \fill-line \bold {
                     \with-link #'index { "Index" }
                     \with-link #'index { \page-ref #'index "000" "?" }
                 }
