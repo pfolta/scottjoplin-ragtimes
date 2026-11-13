@@ -26,6 +26,14 @@
     }
 }
 
+% Include ordinal suffixes in ottava bracket labels (e.g. 8va and 15ma).
+\layout {
+    \context {
+        \Staff
+        ottavationMarkups = #ottavation-ordinals
+    }
+}
+
 % Span arpeggios across notes in different voices.
 \layout {
     \context {
@@ -81,4 +89,23 @@ fermata-over-bar-line = {
                 #{ \markup \ekm-fermata #'default #}))
 
     \caesura
+}
+
+% Use SMuFL notehead parentheses for parenthesized notes.
+\layout {
+    \context {
+        \Score
+
+        \override Parentheses.stencils =
+            #(lambda (grob)
+                (let ((parens (ekm-parens 'notehead #f 'parens)))
+                    (list
+                        (ekm-ctext grob CX (car parens))
+                        (ekm-ctext grob CX (cdr parens)))))
+    }
+}
+
+% Reduce the next notehead to cue size.
+cue-note = {
+    \once \override NoteHead.font-size = #-4
 }

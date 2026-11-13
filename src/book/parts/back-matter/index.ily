@@ -23,6 +23,11 @@
                 }
 
                 \fill-line {
+                    \with-link #'ragtimes.original-rags { \original-rags-title }
+                    \with-link #'ragtimes.original-rags { \page-ref #'ragtimes.original-rags "000" "?" }
+                }
+
+                \fill-line {
                     \with-link #'ragtimes.palm-leaf-rag { \palm-leaf-rag-title }
                     \with-link #'ragtimes.palm-leaf-rag { \page-ref #'ragtimes.palm-leaf-rag "000" "?" }
                 }

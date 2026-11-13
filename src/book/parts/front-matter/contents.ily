@@ -17,6 +17,11 @@
                 }
 
                 \fill-line {
+                    \concat { \hspace #(to-staff-space 10 'mm) \with-link #'ragtimes.original-rags { \original-rags-title } }
+                    \with-link #'ragtimes.original-rags { \page-ref #'ragtimes.original-rags "000" "?" }
+                }
+
+                \fill-line {
                     \concat { \hspace #(to-staff-space 10 'mm) \with-link #'ragtimes.maple-leaf-rag { \maple-leaf-rag-title } }
                     \with-link #'ragtimes.maple-leaf-rag { \page-ref #'ragtimes.maple-leaf-rag "000" "?" }
                 }

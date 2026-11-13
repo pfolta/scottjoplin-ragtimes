@@ -3,6 +3,8 @@
 
 \include "src/common.ily"
 
+\include "src/music/original-rags/metadata.ily"
+\include "src/music/original-rags/score.ily"
 \include "src/music/maple-leaf-rag/metadata.ily"
 \include "src/music/maple-leaf-rag/score.ily"
 \include "src/music/weeping-willow/metadata.ily"
@@ -29,6 +31,7 @@
     % Ragtimes
     \include "src/book/parts/blank-page.ily"
     \include "src/book/parts/ragtimes/ragtimes.ily"
+    \include "src/book/parts/ragtimes/original-rags.ily"
     \include "src/book/parts/ragtimes/maple-leaf-rag.ily"
     \include "src/book/parts/ragtimes/weeping-willow.ily"
     \include "src/book/parts/ragtimes/palm-leaf-rag.ily"

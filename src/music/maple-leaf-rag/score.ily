@@ -157,7 +157,7 @@ maple-leaf-rag-score = \new PianoStaff <<
             { | s2 | }
         }}
 
-        | \section \repeat volta 2 { \tag #'midi { s2\f } \tag #'layout { s2-\f-stacc } |
+        | \section \repeat volta 2 { \tag #'midi { s2\f } \tag #'layout { s2\f-stacc } |
         | s2 |
         | s2 |
         | s2 |

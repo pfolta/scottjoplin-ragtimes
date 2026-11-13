@@ -339,7 +339,7 @@ bethena-score = \new PianoStaff <<
         | s2. |
 
         | s2. |
-        | s2.^\markup { "dim." } |
+        | s2.\dim |
         | s2. |
         | s2.\f |
         | s2. |
