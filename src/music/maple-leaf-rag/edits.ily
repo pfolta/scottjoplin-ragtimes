@@ -3,15 +3,15 @@
 
 maple-leaf-rag-edits = \markuplist {
     \column-lines {
-        \line \bold { "Measure 41, lower staff:" }
-        \line { "Slurs added (cf. measure 7)." }
+        \justified-lines \bold { Measure 41, lower staff: }
+        \justified-lines { Slurs added (cf. measure 7). }
         \line { \null }
 
-        \line \bold { "Measure 42, upper staff:" }
-        \line { "Slurs added (cf. measure 8)." }
+        \justified-lines \bold { Measure 42, upper staff: }
+        \justified-lines { Slurs added (cf. measure 8). }
         \line { \null }
 
-        \line \bold { "Measure 46, lower staff, third note:" }
-        \line { \concat { "E" \super \smufl-flat "4 omitted (cf. measure 12)." } }
+        \justified-lines \bold { Measure 46, lower staff, third note: }
+        \justified-lines { \concat { "E" \super \smufl-flat "4" } omitted (cf. measure 12). }
     }
 }

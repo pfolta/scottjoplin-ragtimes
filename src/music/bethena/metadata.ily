@@ -13,6 +13,10 @@ bethena-publication-publisher = "T. Bahnsen Piano Mfg. Co."
 bethena-publication-place = "St. Louis, MO"
 bethena-publication-year = "1905"
 
+bethena-tagline = \markuplist {
+    First published by \italic { T. Bahnsen Piano Mfg. Co. } (St. Louis, MO) in 1905.
+}
+
 bethena-header = \header {
     dedication = \bethena-dedication
     title = \bethena-title
@@ -20,13 +24,5 @@ bethena-header = \header {
 
     composer = \bethena-composer
 
-    tagline = \markup \concat {
-        "First published by "
-        \italic \bethena-publication-publisher
-        " ("
-        \bethena-publication-place
-        ") in "
-        \bethena-publication-year
-        "."
-    }
+    tagline = \markup \bethena-tagline
 }

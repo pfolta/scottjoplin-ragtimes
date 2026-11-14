@@ -3,7 +3,7 @@
 
 palm-leaf-rag-edits = \markuplist {
     \column-lines {
-        \line \bold { \concat { "Measure 34, upper staff, first note (E" \super \smufl-flat "4):" } }
-        \line { "Double-dotted note changed to single-dotted note." }
+        \justified-lines \bold { Measure 34, upper staff, first note \concat { "(E" \super \smufl-flat "4):" } }
+        \justified-lines { Double-dotted note changed to single-dotted note. }
     }
 }

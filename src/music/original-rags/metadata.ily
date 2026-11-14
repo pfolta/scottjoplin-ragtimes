@@ -11,18 +11,14 @@ original-rags-publication-publisher = "Carl Hoffman"
 original-rags-publication-place = "Kansas City, MO"
 original-rags-publication-year = "1899"
 
+original-rags-tagline = \markuplist {
+    First published by \italic { Carl Hoffman } (Kansas City, MO) in 1899.
+}
+
 original-rags-header = \header {
     title = \original-rags-title
 
     composer = \original-rags-composer
 
-    tagline = \markup \concat {
-        "First published by "
-        \italic \original-rags-publication-publisher
-        " ("
-        \original-rags-publication-place
-        ") in "
-        \original-rags-publication-year
-        "."
-    }
+    tagline = \markup \original-rags-tagline
 }

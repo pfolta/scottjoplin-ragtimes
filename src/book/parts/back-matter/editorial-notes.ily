@@ -9,34 +9,55 @@
         title = "Editorial Notes"
     }
 
-    \markuplist {
+    \markup \abs-fontsize #10 {
+        \two-columns \hspace #(to-staff-space 5 'mm)
         \column-lines {
-            \line { \with-link #'ragtimes.original-rags { \uppercase \bold { \original-rags-title } } }
-        }
-        \original-rags-edits
-
-        \column-lines {
+            \fill-line {
+                \with-link #'ragtimes.original-rags { \uppercase \bold { \original-rags-title } }
+                \with-link #'ragtimes.original-rags { \page-ref #'ragtimes.original-rags "000" "?" }
+            }
+            \justified-lines { \original-rags-tagline }
             \line { \null }
-            \line { \with-link #'ragtimes.maple-leaf-rag { \uppercase \bold { \maple-leaf-rag-title } } }
-        }
-        \maple-leaf-rag-edits
+            \original-rags-edits
 
-        \column-lines {
             \line { \null }
-            \line { \with-link #'ragtimes.weeping-willow { \uppercase \bold { \weeping-willow-title } } }
+            \line { \null }
+            \fill-line {
+                \with-link #'ragtimes.maple-leaf-rag { \uppercase \bold { \maple-leaf-rag-title } }
+                \with-link #'ragtimes.maple-leaf-rag { \page-ref #'ragtimes.maple-leaf-rag "000" "?" }
+            }
+            \justified-lines { \maple-leaf-rag-tagline }
+            \line { \null }
+            \maple-leaf-rag-edits
         }
-        \weeping-willow-edits
+        \column-lines {
+            \fill-line {
+                \with-link #'ragtimes.weeping-willow { \uppercase \bold { \weeping-willow-title } }
+                \with-link #'ragtimes.weeping-willow { \page-ref #'ragtimes.weeping-willow "000" "?" }
+            }
+            \justified-lines { \weeping-willow-tagline }
+            \line { \null }
+            \weeping-willow-edits
 
-        \column-lines {
             \line { \null }
-            \line { \with-link #'ragtimes.palm-leaf-rag { \uppercase \bold { \palm-leaf-rag-title } } }
-        }
-        \palm-leaf-rag-edits
+            \line { \null }
+            \fill-line {
+                \with-link #'ragtimes.palm-leaf-rag { \uppercase \bold { \palm-leaf-rag-title } }
+                \with-link #'ragtimes.palm-leaf-rag { \page-ref #'ragtimes.palm-leaf-rag "000" "?" }
+            }
+            \justified-lines { \palm-leaf-rag-tagline }
+            \line { \null }
+            \palm-leaf-rag-edits
 
-        \column-lines {
             \line { \null }
-            \line { \with-link #'ragtimes.bethena { \uppercase \bold { \bethena-title } } }
+            \line { \null }
+            \fill-line {
+                \with-link #'ragtimes.bethena { \uppercase \bold { \bethena-title } }
+                \with-link #'ragtimes.bethena { \page-ref #'ragtimes.bethena "000" "?" }
+            }
+            \justified-lines { \bethena-tagline }
+            \line { \null }
+            \bethena-edits
         }
-        \bethena-edits
     }
 }

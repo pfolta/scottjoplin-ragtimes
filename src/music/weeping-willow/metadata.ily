@@ -13,6 +13,10 @@ weeping-willow-publication-publisher = "Val. A. Reis Music Co."
 weeping-willow-publication-place = "St. Louis, MO"
 weeping-willow-publication-year = "1903"
 
+weeping-willow-tagline = \markuplist {
+    First published by \italic { Val. A. Reis Music Co. } (St. Louis, MO) in 1903.
+}
+
 weeping-willow-header = \header {
     dedication = \weeping-willow-dedication
     title = \weeping-willow-title
@@ -20,13 +24,5 @@ weeping-willow-header = \header {
 
     composer = \weeping-willow-composer
 
-    tagline = \markup \concat {
-        "First published by "
-        \italic \weeping-willow-publication-publisher
-        " ("
-        \weeping-willow-publication-place
-        ") in "
-        \weeping-willow-publication-year
-        "."
-    }
+    tagline = \markup { \weeping-willow-tagline }
 }
