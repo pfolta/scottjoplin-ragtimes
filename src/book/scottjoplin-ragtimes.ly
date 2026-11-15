@@ -3,20 +3,27 @@
 
 \include "src/common.ily"
 
+\include "src/book/layout/preview.ily"
+
 \include "src/music/original-rags/metadata.ily"
 \include "src/music/original-rags/edits.ily"
+\include "src/music/original-rags/preview.ily"
 \include "src/music/original-rags/score.ily"
 \include "src/music/maple-leaf-rag/metadata.ily"
 \include "src/music/maple-leaf-rag/edits.ily"
+\include "src/music/maple-leaf-rag/preview.ily"
 \include "src/music/maple-leaf-rag/score.ily"
 \include "src/music/weeping-willow/metadata.ily"
 \include "src/music/weeping-willow/edits.ily"
+\include "src/music/weeping-willow/preview.ily"
 \include "src/music/weeping-willow/score.ily"
 \include "src/music/palm-leaf-rag/metadata.ily"
 \include "src/music/palm-leaf-rag/edits.ily"
+\include "src/music/palm-leaf-rag/preview.ily"
 \include "src/music/palm-leaf-rag/score.ily"
 \include "src/music/bethena/metadata.ily"
 \include "src/music/bethena/edits.ily"
+\include "src/music/bethena/preview.ily"
 \include "src/music/bethena/score.ily"
 
 \book {

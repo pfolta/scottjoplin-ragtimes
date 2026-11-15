@@ -10,7 +10,7 @@
     }
 
     \markup \abs-fontsize #10 {
-        \two-columns \hspace #(to-staff-space 5 'mm)
+        \two-columns \default-column-gap
         \column-lines {
             \fill-line {
                 \with-link #'ragtimes.original-rags { \uppercase \bold { \original-rags-title } }
