@@ -15,7 +15,7 @@ weeping-willow-score = \new PianoStaff <<
         | \stemUp g'16[ fs'16 g'16 a'16] b'8[ c''8] |
         | d'8[ d'8_~] d'16[ g'16 a'16 b'16] | \break
 
-        | \section \repeat volta 2 { \stemDown <g' b' d''>4 <g' b' g''>4 |
+        | \section \sectionLabel \section-a \repeat volta 2 { \stemDown <g' b' d''>4 <g' b' g''>4 |
         | << { \stemUp <g' b'>16[ as'16 <g' b'>16 <f'_~ g'_~ b'^~ d''^~>16] <f' g' b' d''>16[ d''8 e''16] } \\ { \stemDown s4 s16 <f' g' b'>8. } >> |
         | << { \stemUp d''16[ c''8 g'16^~] g'16[ a'8 g'16] } \\ { \stemDown <e' g'>8.[ e'16_~] \stemUp \once \omit Flag e'16 \stemDown ef'8. } >> |
         | \stemUp <d' b'>16[ g'16 e'16 d'16_~] d'16[ g'16 a'16 b'16] | \break
@@ -40,7 +40,7 @@ weeping-willow-score = \new PianoStaff <<
 
         \pageBreak
 
-        | \section \repeat volta 2 { <d''_~ fs''^~ c'''^~>4 <d'' fs'' c'''>16[ <gs' b'>16 <a' c''>8] |
+        | \section \sectionLabel \section-b \repeat volta 2 { <d''_~ fs''^~ c'''^~>4 <d'' fs'' c'''>16[ <gs' b'>16 <a' c''>8] |
         | \stemUp <es' gs'>16[ <fs' a'>8 <gs' b'>16] \stemDown <a' c''>8[ <c'' e''>8] |
         | <as' cs''>16[ <b' d''>8 <d''_~ g''^~ b''^~>16] <d'' g'' b''>16[ <cs'' g'' as''>16 <d'' g'' b''>16 <b'_~ d''^~ g''^~>16] |
         | <b' d'' g''>16[ fs''16 <b' d'' g''>8] fs''16[ <b' d'' g''>8 g'16^~] | \break
@@ -63,7 +63,7 @@ weeping-willow-score = \new PianoStaff <<
             { | \stemUp <b_~ d'_~ g'^~>4\repeatTie <b d' g'>16[ g'16 a'16 b'16] | }
         }} \break
 
-        | \section \stemDown <g' b' d''>4 <g' b' g''>4 |
+        | \section \sectionLabel \section-a \stemDown <g' b' d''>4 <g' b' g''>4 |
         | << { \stemUp <g' b'>16[ as'16 <g' b'>16 <f'_~ g'_~ b'^~ d''^~>16] <f' g' b' d''>16[ d''8 e''16] } \\ { \stemDown s4 s16 <f' g' b'>8. } >> |
         | << { \stemUp d''16[ c''8 g'16^~] g'16[ a'8 g'16] } \\ { \stemDown <e' g'>8.[ e'16_~] \stemUp \once \omit Flag e'16 \stemDown ef'8. } >> |
         | \stemUp <d' b'>16[ g'16 e'16 d'16_~] d'16[ g'16 a'16 b'16] | \break
@@ -85,7 +85,7 @@ weeping-willow-score = \new PianoStaff <<
         | <b' e''>16[ d''16 cs''16 d''16^~] \stemUp d''16[ c''16 a'16 fs'16] |
         | g'8 r8 \stemDown <g' b' d'' g''>8 r8 | \break
 
-        | \section \key c \major \repeat volta 2 { << { \stemUp e'16[ g'16 c''16 d''16] e''16[ g''8 e''16^~] } \\ { \stemDown e'4_~ e'8.[ gs'16_~] } >> |
+        | \section \sectionLabel \section-c \key c \major \repeat volta 2 { << { \stemUp e'16[ g'16 c''16 d''16] e''16[ g''8 e''16^~] } \\ { \stemDown e'4_~ e'8.[ gs'16_~] } >> |
         | << { \stemDown e''16[ ds''16 <gs' e''>8] } \\ { \stemDown \once \override Stem.length = #3 \once \omit Flag gs'16 s8. } >> <gs' f''>8[ <gs' e''>16 <a'_~ c''^~>16] |
         | <a' c''>16[ b'16 <a' c''>8] \stemUp <e' bf' c''>16[ <e' bf' c''>8 <f'_~ a'^~ c''^~>16] |
         | <f'_~ a'^~ c''^~>4 \stemDown <f' a' c''>16[ a'16 c''16 f''16] |
@@ -109,7 +109,7 @@ weeping-willow-score = \new PianoStaff <<
             { | <e' g' c''>8[ g'8_^] fs'8_^[ f'8_^] | }
             { | <e' g' c''>8[\repeatTie g'16_( a'16)] \stemDown b'16[^( c''16 d''16 e''16)] | }
         }}
-        | \section \repeat volta 2 { <b' d''>4 <b'_~ g''^~>4 |
+        | \section \sectionLabel \section-d \repeat volta 2 { <b' d''>4 <b'_~ g''^~>4 |
         | <b' g''>16[ d''16 <b' b''>16 d''16] f''16[ a''16 g''16 f''16] |
         | e''16[ ds''16 e''16 g''16^~] g''4 | \break
 

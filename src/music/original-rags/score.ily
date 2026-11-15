@@ -24,7 +24,7 @@ original-rags-score = \new PianoStaff <<
         |
         | \stemUp <c' e' c''>16[ <c' e' c''>8 <c' e' c''>16] <c' ef' c''>8[ <c' ef' c''>8] |
         | <c' d' c''>8 r8 r16 \stemDown d''16[ g''16 b''16] |
-        | \section \repeat volta 2 { <d'' d'''>16[ g''16 b''16 <d''_~ d'''^~>16] <d'' d'''>16[ b''16 <d'' d'''>16 b''16] |
+        | \section \sectionLabel \section-a \repeat volta 2 { <d'' d'''>16[ g''16 b''16 <d''_~ d'''^~>16] <d'' d'''>16[ b''16 <d'' d'''>16 b''16] |
         | <d'' d'''>16[ g''16 b''16 <d''_~ d'''^~>16] <d'' d'''>16[ b''16 <d'' d'''>16 b''16] | \break
 
         | <e'' e'''>16[ <e'' e'''>8 <e'' g''>16] <e'' a''>16[ <e'' g''>16 <ef'' a''>8] |
@@ -49,7 +49,7 @@ original-rags-score = \new PianoStaff <<
 
         \pageBreak
 
-        | \section \repeat volta 2 { \ottava 0 <fs'' as''>16[ <g'' b''>8 <fs'' as''>16] <g'' b''>8[ <fs'' as''>16 <g'' b''>16] |
+        | \section \sectionLabel \section-b \repeat volta 2 { \ottava 0 <fs'' as''>16[ <g'' b''>8 <fs'' as''>16] <g'' b''>8[ <fs'' as''>16 <g'' b''>16] |
         | <ds'' fs''>16[ <e'' g''>8 <c''_~ e''^~>16] <c'' e''>4 |
         | <ds'' fs''>16[ <e'' g''>8 <ds'' fs''>16] <e'' g''>8[ <ds'' fs''>16 <e'' g''>16] |
         | <as' cs''>16[ <b' d''>8 <g'_~ b'^~>16] \stemUp <g' b'>4 |
@@ -68,7 +68,7 @@ original-rags-score = \new PianoStaff <<
         | \stemUp <\single \cue-note c' a'>16[ <\single \cue-note d' b'>16 <\single \cue-note e' c''>16 <\single \cue-note d'_~ b'^~>16] <\single \cue-note d' b'>16[ <\single \cue-note c' a'>8 <\single \cue-note d' b'>16] |
         | <b g'>8 r8 \stemDown <g' b' d'' g''>4^> } | \break
 
-        | \section \key c \major \repeat volta 2 { g''16[ a''16 g''16 e''16] f''16[ d''8 e''16] |
+        | \section \sectionLabel \section-c \key c \major \repeat volta 2 { g''16[ a''16 g''16 e''16] f''16[ d''8 e''16] |
         | f''16[ g''16 a''16 e''16] f''16[ d''8 e''16] |
         | c''16[ e''16 g''16 <c''_~ e''^~ a''^~>16] <c'' e'' a''>4 |
         | r16 c''16[^( e''16 g''16] a''16[ g''16 e''16 c''16)] |
@@ -99,7 +99,7 @@ original-rags-score = \new PianoStaff <<
         |
         | | \stemUp <c' e' c''>16[ <c' e' c''>8 <c' e' c''>16] <c' ef' c''>8[ <c' ef' c''>8] |
         | <c' d' c''>8 r8 r16 \stemDown d''16[ g''16 b''16] |
-        | <d'' d'''>16[ g''16 b''16 <d''_~ d'''^~>16] <d'' d'''>16[ b''16 <d'' d'''>16 b''16] | \break
+        | \sectionLabel \section-a <d'' d'''>16[ g''16 b''16 <d''_~ d'''^~>16] <d'' d'''>16[ b''16 <d'' d'''>16 b''16] | \break
 
         | <d'' d'''>16[ g''16 b''16 <d''_~ d'''^~>16] <d'' d'''>16[ b''16 <d'' d'''>16 b''16] |
         | <e'' e'''>16[ <e'' e'''>8 <e'' g''>16] <e'' a''>16[ <e'' g''>16 <ef'' a''>8] |
@@ -119,7 +119,7 @@ original-rags-score = \new PianoStaff <<
         | <b' \single \cue-note d'' b''>16[ <a' \single \cue-note c'' a''>8 <b' \single \cue-note d'' b''>16] <c'' \single \cue-note e'' c'''>16[ <b' \single \cue-note d'' b''>16 <a' \single \cue-note c'' a''>8] |
         | | <g' \single \cue-note b' g''>8 r8 <g'' b'' d''' g'''>4^> | \break
 
-        | \section \key d \major \repeat volta 2 { <a' cs'' a''>8.[^\markup { \italic "brilliant" } b'16] cs''16[ a''16 <a' cs'' g''>8^>] |
+        | \section \sectionLabel \section-d \key d \major \repeat volta 2 { <a' cs'' a''>8.[^\markup { \italic "brilliant" } b'16] cs''16[ a''16 <a' cs'' g''>8^>] |
         | <a' cs'' a''>8.[ b'16] cs''16[ a''16 <a' cs'' g''>8^>] |
         | r8 <d'' a''>16[ a'16] r8 <d'' a''>16[ a'16] |
         | r16 <d'' a''>16[ r16 a'16] <d'' a''>8[ a'8] |
@@ -140,7 +140,7 @@ original-rags-score = \new PianoStaff <<
         | \stemUp <fs' d''>8[ a'8] b'16[ a'8 fs'16] |
         | d'8 r8 \acciaccatura { a'16[ b'16 cs''16] } \stemDown d''4 } | \break
 
-        | \section \key g \major \repeat volta 2 { \stemUp as'16[ <b' d''>8 fs'16] <a' c''>8[ as'16 <b'~ d''^~>16] |
+        | \section \sectionLabel \section-e \key g \major \repeat volta 2 { \stemUp as'16[ <b' d''>8 fs'16] <a' c''>8[ as'16 <b'~ d''^~>16] |
         | <b' d''>16[ fs'16 <a' c''>16 as'16] \stemDown <b' d''>8[ <a' c''>8] |
         | \stemUp as'16[ <b' d''>8 d'16] <g' b'>8[ as'16 <b'_~ d''^~>16_(] |
         | <b' d''>16[ d'16 g'16 a'16)] b'16[_( a'16 g'16 d'16)] |

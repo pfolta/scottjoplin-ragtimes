@@ -12,7 +12,7 @@ maple-leaf-rag-score = \new PianoStaff <<
         \tag #'midi { \tempo 4 = 100 }
 
           r8 |
-        | \repeat volta 2 { r16 \stemDown af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] |
+        | \sectionLabel \section-a \repeat volta 2 { r16 \stemDown af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] |
         | <ef' ef''>16[ g'16 bf'16 <ef' ef''>16~] <ef' ef''>4 |
         | r16 af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] |
         | <ef' ef''>16[ g'16 bf'16 <ef' ef''>16~] <ef' ef''>8[ r16 <ef' ef''>16] | \break
@@ -37,7 +37,7 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         \pageBreak
 
-        | \section \repeat volta 2 { r16 \stemDown g''16[ <ef'' ef'''>16 g''16] bf''16[ <d'' d'''>8 g''16] |
+        | \section \sectionLabel \section-b \repeat volta 2 { r16 \stemDown g''16[ <ef'' ef'''>16 g''16] bf''16[ <d'' d'''>8 g''16] |
         | <df'' df'''>16[ g''16 bf''16 <c'' c'''>16~] <c'' c'''>16[ ef''16 <bf' bf''>16 ef''16] |
         | r16 c''16[ <af' af''>16 c''16] ef''16[ <f' f''>8 c''16] |
         | <af' af''>16[ c''16 ef''16 <f' f''>16~] <f' f''>16[ c''16 <f' f''>8] | \break
@@ -59,7 +59,7 @@ maple-leaf-rag-score = \new PianoStaff <<
             { | <c' af'>8[ <ef' ef''>8] <ef' ef''>8[ <ef' ef''>8] | }
             { | r16 \stemDown af'16[ c''16 ef''16] <af' af''>8 r8 | }
         }}
-        | \section r16 af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] | \break
+        | \section \sectionLabel \section-a r16 af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] | \break
 
         | <ef' ef''>16[ g'16 bf'16 <ef' ef''>16~] <ef' ef''>4 |
         | r16 af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] |
@@ -81,7 +81,7 @@ maple-leaf-rag-score = \new PianoStaff <<
         | \stemUp <ff' af'>16[ bf'16 <ff' cf''>16 af'16] bf'16[ <ef' c''>8 af'16] |
         | <ef' c''>16[ af'16 <ef' bf'>8] \stemDown <ef' af'>8[ <af' af''>8] | \break
 
-        | \section \sectionLabel "Trio" \key df \major \repeat volta 2 { <af' c'' ef'' af''>8.[ <bf' c'' ef'' af''>16~] <bf' c'' ef'' af''>16[ <c'' ef''>16 bf'8] |
+        | \section \sectionLabel \section-c-trio \key df \major \repeat volta 2 { <af' c'' ef'' af''>8.[ <bf' c'' ef'' af''>16~] <bf' c'' ef'' af''>16[ <c'' ef''>16 bf'8] |
         | <af' c'' ef'' af''>8.[ <bf' c'' ef'' af''>16~] <bf' c'' ef'' af''>16[ <c'' ef''>16 bf'16 <c'' ef''>16] |
         | af'16[ df''16 bf'16 df''16] f''16[ af'16 df''16 f''16] |
         | bf'16[ df''16 f''16 af'16~] af'16[ f''16 bf'16 f''16] | \break
@@ -106,7 +106,7 @@ maple-leaf-rag-score = \new PianoStaff <<
 
             { | <f' df''>16\repeatTie[ df''16 f''16 af''16] <df'' df'''>8 r8 | }
         }}
-        | \section \key af \major \repeat volta 2 { <af' af''>8[ <af' f''>8] <af' af''>8[ <af' f''>8] |
+        | \section \sectionLabel \section-d \key af \major \repeat volta 2 { <af' af''>8[ <af' f''>8] <af' af''>8[ <af' f''>8] |
         | <f'' af''>8[ <f'' bf''>16 <f'' c'''>16~] <f'' c'''>16[ bf''16 af''16 f''16] |
         | ef''16[ f''8 <af' c''>16~] <af' c''>4 | \break
 

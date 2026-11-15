@@ -15,7 +15,7 @@ palm-leaf-rag-score = \new PianoStaff <<
         | c'8[ d'16 ef'16] f'16[ g'8 a'16] |
         | \stemDown bf'8 r8 r4 | \break
 
-        | \section \repeat volta 2 { \stemUp f'8[ g'16 a'16_~] a'16[ g'16 f'8] |
+        | \section \sectionLabel \section-a \repeat volta 2 { \stemUp f'8[ g'16 a'16_~] a'16[ g'16 f'8] |
         | \stemDown <f'_~ a'^~ f''^~>4 <f' a' f''>16[ ef''16 c''16 cs''16] |
         | d''16[ d'''16 bf''16 f''16] g''16[ f''16 bf'16 d''16^~] |
         | d''16[ bf''16 a''16 g''16] g''16[ f''8 d''16] | \break
@@ -40,7 +40,7 @@ palm-leaf-rag-score = \new PianoStaff <<
             { | \stemUp <d' bf'>8 \stemDown d''8[^( f''8 <f'' d'''>8)] | }
         }} \break
 
-        | \section \repeat volta 2 { <fs'' c'''>16[ <g'' bf''>8 <g'_~ ef''^~ g''^~>16] <g' ef'' g''>16[ <a' f'' a''>16 <bf' g'' bf''>8] |
+        | \section \sectionLabel \section-b \repeat volta 2 { <fs'' c'''>16[ <g'' bf''>8 <g'_~ ef''^~ g''^~>16] <g' ef'' g''>16[ <a' f'' a''>16 <bf' g'' bf''>8] |
         | \stemUp <ef'_~ ef''^~>4 \stemDown <ef' ef''>8[ <bf' g'' bf''>8] |
         | \stemUp <cs'' g''>16[ <d'' f''>8 <d'_~ bf'^~ d''^~>16] <d' bf' d''>16[ <ef' c'' ef''>16 <f' d'' f''>8] |
         | <bf_~ bf'^~>4 <bf bf'>8[ d''8] | \break
@@ -65,7 +65,7 @@ palm-leaf-rag-score = \new PianoStaff <<
 
         \pageBreak
 
-          \section \key ef \major \stemUp g'16[_( af'16)] |
+          \section \sectionLabel \section-c \key ef \major \stemUp g'16[_( af'16)] |
         | \show-measure-number \repeat volta 2 { | \stemDown bf'16[^( g''16 f''16 ef''16] bf'16[ b'16 c''16 cs''16)] |
         | d''16[ <af'' c'''>8 d''16] <af'' c'''>8.[ bf'16^~] |
         | bf'16[ g''16^( f''16 ef''16] bf'16[ b'16 c''16 cs''16)] | \break
@@ -97,7 +97,7 @@ palm-leaf-rag-score = \new PianoStaff <<
         | \stemDown a'16[ c''16 ef''16 g''16^~] g''16[ f''16 ef''16 a'16] |
         | bf'8 r8 r4 | \break
 
-        | \section \key bf \major \repeat volta 2 { \stemUp f'8[ g'16 a'16_~] a'16[ g'16 f'8] |
+        | \section \sectionLabel \section-a \key bf \major \repeat volta 2 { \stemUp f'8[ g'16 a'16_~] a'16[ g'16 f'8] |
         | \stemDown <f'_~ a'^~ f''^~>4 <f' a' f''>16[ ef''16 c''16 cs''16] |
         | d''16[ d'''16 bf''16 f''16] g''16[ f''16 bf'16 d''16^~] |
         | d''16[ bf''16 a''16 g''16] g''16[ f''8 d''16] | \break

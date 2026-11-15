@@ -19,7 +19,7 @@ bethena-score = \new PianoStaff <<
         | <g c' ef'>2. |
         | <fs c' d'>2. |
         | <c' fs' a'>2. |
-        | \section \tempo "a tempo" << { \stemUp a'8^\markup { \italic "Valse cantabile" } g'4 b'8 a'4 } \\ { \stemDown <b d'>2. } >> |
+        | \section \sectionLabel \section-a \tempo "a tempo" << { \stemUp a'8^\markup { \italic "Valse cantabile" } g'4 b'8 a'4 } \\ { \stemDown <b d'>2. } >> |
         | << { \stemUp a'8 g'4 b'8 a'4 } \\ { \stemDown <cs' g'>2. } >> |
         | << { \stemUp a'8 c''4 b'8 a'4 } \\ { \stemDown <c' fs'>2 <c' fs'>4 } >> |
         | << { \stemUp g'2. } \\ { \stemDown <b e'>2. } >> | \break
@@ -47,7 +47,7 @@ bethena-score = \new PianoStaff <<
           \tag #'layout { \once \override Staff.Arpeggio.positions = #'(-3 . 4) << { \stemUp <c'' f''>2.\arpeggio^\tenuto } \\ { \stemDown <ef' a'>2.\arpeggio } >> }
           \tag #'midi { << { ef'2. } \\ { s16 a'2~ a'8. } \\ { s8 c''2~ c''8 } \\ { s8. f''2~ f''16 } >> }
         |
-        | \key bf \major \repeat volta 2 { <d' bf' d''>8 \stemDown <g' g''>4 <f' f''>8 <g' g''>8[ <a' a''>8] |
+        | \section \sectionLabel \section-b \key bf \major \repeat volta 2 { <d' bf' d''>8 \stemDown <g' g''>4 <f' f''>8 <g' g''>8[ <a' a''>8] |
         | << { \stemUp <bf' bf''>2. } \\ { \stemDown r4 <d'' f''>4 <d'' f''>4 } >> | \break
 
         | <d'' d'''>8 <c'' c'''>4 <f'' f'''>8 <e'' e'''>8[ <ef'' ef'''>8] |
@@ -78,7 +78,7 @@ bethena-score = \new PianoStaff <<
         | <c'_~ fs'_~ a'^~>2. |
         | <c' fs' a'>2.^\tenuto | \break
 
-        | \section \key g \major << { \stemUp a'8^\markup { \italic "cantabile" } g'4 b'8 a'4 } \\ { \stemDown <b d'>2. } >> |
+        | \section \sectionLabel \section-a \key g \major << { \stemUp a'8^\markup { \italic "cantabile" } g'4 b'8 a'4 } \\ { \stemDown <b d'>2. } >> |
         | << { \stemUp a'8 g'4 b'8 a'4 } \\ { \stemDown <cs' g'>2. } >> |
         | << { \stemUp a'8 c''4 b'8 a'4 } \\ { \stemDown <c' fs'>2 <c' fs'>4 } >> |
         | << { \stemUp g'2. } \\ { \stemDown <b e'>2. } >> |
@@ -109,7 +109,7 @@ bethena-score = \new PianoStaff <<
         | \tempo "rit." <df' f' af'>4 <d' f' af'>4 <d' f' a'>4 |
         | << { \stemUp bf'2.^\tenuto } \\ { \stemDown <d' f'>4_( <c' e'>2) } >> | \break
 
-        | \section \key f \major \repeat volta 2 { \tempo "a tempo" <c' f' a'>4_(^\markup { \italic "cantabile" } <c' e' bf'> <d' f' b'>4) |
+        | \section \sectionLabel \section-c \key f \major \repeat volta 2 { \tempo "a tempo" <c' f' a'>4_(^\markup { \italic "cantabile" } <c' e' bf'> <d' f' b'>4) |
         | \stemDown c''8^( <f'' a''>4) c''8^( <f'' a''>4) |
         | bf'8^( <e'' g''>4) bf'8^( <bf' e'' g''>4) |
         | <a' d'' f''>2 <a' a''>4 |
@@ -147,7 +147,7 @@ bethena-score = \new PianoStaff <<
         | ef''8[^( d''8 ef''8 d''8 df''8 c''8)] |
         | cs''2 r4^\fermata | \break
 
-        | \section \key b \minor \repeat volta 2 { d''8^\markup { \italic "cantabile" } b'4 fs''8 d''4 |
+        | \section \sectionLabel \section-d \key b \minor \repeat volta 2 { d''8^\markup { \italic "cantabile" } b'4 fs''8 d''4 |
         | b''8[^( fs''8 d''8) b'8^~] b'4 |
         | \stemUp as'8 \stemDown fs''4 g''8 fs''4 |
         | b'8 fs''4 g''8 fs''4 |
@@ -171,7 +171,7 @@ bethena-score = \new PianoStaff <<
 
             { | \stemDown b'4 \stemUp <d' es' gs' d''>4 <d' fs' a' c''>4 | }
         }}
-        | \once \omit Staff.KeySignature \key d \major \repeat volta 2 { << { \stemUp b'8 d''4 b'8 d''4 } \\ { \stemDown <d' g' b'>2 <d' gs'>4 } >> |
+        | \section \sectionLabel \section-e \once \omit Staff.KeySignature \key d \major \repeat volta 2 { << { \stemUp b'8 d''4 b'8 d''4 } \\ { \stemDown <d' g' b'>2 <d' gs'>4 } >> |
         | << { \stemUp a'4. a'8[^( d''8 fs''8)] } \\ { \stemDown d'4. r8 r4 } >> |
         | << { \stemUp a''8 g''4 g''8 fs''8[ e''8] } \\ { \stemDown <a' cs''>2. } >> | \break
 
@@ -207,7 +207,7 @@ bethena-score = \new PianoStaff <<
         | <cs' e' bf'>4 <c' g' a'>2^\tenuto |
         | <c' fs' a'>2.^\tenuto | \break
 
-        | \section \sectionLabel "Finale" \key g \major << { \stemUp a'8 g'4 b'8 a'4 } \\ { \stemDown <b d'>2. } >> |
+        | \section \sectionLabel \section-a-finale \key g \major << { \stemUp a'8 g'4 b'8 a'4 } \\ { \stemDown <b d'>2. } >> |
         | << { \stemUp a'8 g'4 b'8 a'4 } \\ { \stemDown <cs' g'>2. } >> |
         | << { \stemUp a'8 c''4 b'8 a'4 } \\ { \stemDown <c' fs'>2 <c' fs'>4 } >> |
         | << { \stemUp g'2. } \\ { \stemDown <b e'>2. } >> |
