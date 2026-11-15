@@ -3,6 +3,11 @@
 
 original-rags-edits = \markuplist {
     \column-lines {
+        \justified-lines \bold { Title: }
+        \justified-lines { \italic { Picked by SCOTT JOPLIN. } omitted. }
+        \justified-lines { \italic { Arranged by CHAS. N. DANIELS. } omitted. }
+        \line { \null }
+
         \justified-lines \bold { Measure 20, upper staff, first note: }
         \justified-lines { Accent \concat { "(" \smufl-accent ")" } added (cf. measure 73). }
         \line { \null }

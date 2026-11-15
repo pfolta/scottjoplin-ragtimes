@@ -3,6 +3,10 @@
 
 maple-leaf-rag-edits = \markuplist {
     \column-lines {
+        \justified-lines \bold { Title: }
+        \justified-lines { \italic { \maple-leaf-rag-dedication } appears on the cover of the second edition (1901) only. }
+        \line { \null }
+
         \justified-lines \bold { Measure 41, lower staff: }
         \justified-lines { Slurs added (cf. measure 7). }
         \line { \null }

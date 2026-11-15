@@ -3,9 +3,9 @@
 
 bethena-output-name = "Bethena"
 
-bethena-dedication = "Respectfully Dedicated to Mr. & Mrs. Dan E. Davenport of St. Louis, Mo."
+bethena-dedication = \markuplist { Respectfully Dedicated to Mr. & Mrs. Dan E. Davenport of St. Louis, Mo. }
 bethena-title = "Bethena"
-bethena-subtitle = "A Concert Waltz"
+bethena-subtitle = \markuplist { A Concert Waltz }
 
 bethena-composer = "Scott Joplin"
 
@@ -13,14 +13,12 @@ bethena-publication-publisher = "T. Bahnsen Piano Mfg. Co."
 bethena-publication-place = "St. Louis, MO"
 bethena-publication-year = "1905"
 
-bethena-tagline = \markuplist {
-    First published by \italic { T. Bahnsen Piano Mfg. Co. } (St. Louis, MO) in 1905.
-}
+bethena-tagline = \markuplist { First published by \italic { T. Bahnsen Piano Mfg. Co. } (St. Louis, MO) in 1905. }
 
 bethena-header = \header {
-    dedication = \bethena-dedication
+    dedication = \markup \bethena-dedication
     title = \bethena-title
-    subtitle = \bethena-subtitle
+    subtitle = \markup \bethena-subtitle
 
     composer = \bethena-composer
 

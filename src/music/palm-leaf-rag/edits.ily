@@ -3,6 +3,11 @@
 
 palm-leaf-rag-edits = \markuplist {
     \column-lines {
+        \justified-lines \bold { Title: }
+        \justified-lines { \italic { \palm-leaf-rag-subtitle } appears on the cover only. }
+        \justified-lines { \italic { Composer of “Maple Leaf Rag” } omitted. }
+        \line { \null }
+
         \justified-lines \bold { Measure 34, upper staff, first note \concat { "(E" \super \smufl-flat "4):" } }
         \justified-lines { Double-dotted note changed to single-dotted note. }
     }

@@ -3,6 +3,10 @@
 
 weeping-willow-edits = \markuplist {
     \column-lines {
+        \justified-lines \bold { Title: }
+        \justified-lines { \italic { \weeping-willow-dedication } appears on the cover only. }
+        \line { \null }
+
         \justified-lines \bold { Measure 12, upper staff, last note: }
         \justified-lines { A4 changed to B4 (cf. measure 46). }
         \line { \null }
