@@ -16,6 +16,6 @@ maple-leaf-rag-edits = \markuplist {
         \line { \null }
 
         \justified-lines \bold { Measure 46, lower staff, third note: }
-        \justified-lines { \concat { "E" \super \smufl-flat "4" } omitted (cf. measure 12). }
+        \justified-lines { E♭4 omitted (cf. measure 12). }
     }
 }

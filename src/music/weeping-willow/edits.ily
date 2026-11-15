@@ -16,7 +16,7 @@ weeping-willow-edits = \markuplist {
         \line { \null }
 
         \justified-lines \bold { Measure 15, lower staff, last note: }
-        \justified-lines { E3 changed to \concat { "E" \super \smufl-flat "3" } (cf. measures 7, 41 and 49). }
+        \justified-lines { E3 changed to E♭3 (cf. measures 7, 41 and 49). }
         \line { \null }
 
         \justified-lines \bold { Measure 41, lower staff: }

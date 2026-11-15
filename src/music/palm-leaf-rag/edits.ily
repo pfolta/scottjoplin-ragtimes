@@ -8,7 +8,7 @@ palm-leaf-rag-edits = \markuplist {
         \justified-lines { \italic { Composer of “Maple Leaf Rag” } omitted. }
         \line { \null }
 
-        \justified-lines \bold { Measure 34, upper staff, first note \concat { "(E" \super \smufl-flat "4):" } }
+        \justified-lines \bold { Measure 34, upper staff, first note (E♭4): }
         \justified-lines { Double-dotted note changed to single-dotted note. }
     }
 }

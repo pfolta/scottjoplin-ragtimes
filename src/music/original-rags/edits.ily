@@ -33,7 +33,7 @@ original-rags-edits = \markuplist {
         \line { \null }
 
         \justified-lines \bold { Measure 82, lower staff, second note: }
-        \justified-lines { \concat { "F" \super \smufl-sharp "3" } omitted (cf. measure 83). }
+        \justified-lines { F♯3 omitted (cf. measure 83). }
         \line { \null }
 
         \justified-lines \bold { Measure 85: }

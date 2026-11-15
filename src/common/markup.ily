@@ -40,8 +40,6 @@ tenuto = \markup { \italic "ten." }
 %
 % Code points can be found in the SMuFL glyph tables:
 % https://smufl.formats.music/latest/tables/index.html
-smufl-flat = \markup { \with-dimension #Y #'(0 . 0) { \ekm-char ##xE260 } }
-smufl-sharp = \markup { \with-dimension #Y #'(0 . 0) { \ekm-char ##xE262 } }
 smufl-accent = \markup { \with-dimension #Y #'(0 . 0) { \ekm-char ##xE4A0 } }
 
 % \uppercase
