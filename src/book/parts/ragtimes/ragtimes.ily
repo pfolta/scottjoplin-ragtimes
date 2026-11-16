@@ -35,6 +35,8 @@
         \column-lines {
         }
 
+        \preview-score-gap
+
         \two-columns \default-column-gap
         \column-lines {
             \score {
@@ -46,6 +48,8 @@
         }
         \column-lines {
         }
+
+        \preview-score-gap
 
         \two-columns \default-column-gap
         \column-lines {
@@ -76,6 +80,8 @@
         \column-lines {
         }
 
+        \preview-score-gap
+
         \two-columns \default-column-gap
         \column-lines {
             \score {
@@ -87,6 +93,8 @@
         }
         \column-lines {
         }
+
+        \preview-score-gap
 
         \two-columns \default-column-gap
         \column-lines {
@@ -117,6 +125,8 @@
         \column-lines {
         }
 
+        \preview-score-gap
+
         \two-columns \default-column-gap
         \column-lines {
             \score {
@@ -128,6 +138,8 @@
         }
         \column-lines {
         }
+
+        \preview-score-gap
 
         \two-columns \default-column-gap
         \column-lines {
@@ -158,6 +170,8 @@
         \column-lines {
         }
 
+        \preview-score-gap
+
         \two-columns \default-column-gap
         \column-lines {
             \score {
@@ -169,6 +183,8 @@
         }
         \column-lines {
         }
+
+        \preview-score-gap
 
         \two-columns \default-column-gap
         \column-lines {
@@ -199,6 +215,8 @@
         \column-lines {
         }
 
+        \preview-score-gap
+
         \two-columns \default-column-gap
         \column-lines {
             \score {
@@ -210,6 +228,8 @@
         }
         \column-lines {
         }
+
+        \preview-score-gap
 
         \two-columns \default-column-gap
         \column-lines {

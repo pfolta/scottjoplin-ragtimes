@@ -1,6 +1,9 @@
 \version "2.26.0"
 \language "english"
 
+% Spacing to use above and below preview scores.
+preview-score-gap = \markup { \vspace #(to-staff-space 0.5 'mm) }
+
 % Scale song preview scores to 75%.
 #(define preview-scale 0.75)
 
