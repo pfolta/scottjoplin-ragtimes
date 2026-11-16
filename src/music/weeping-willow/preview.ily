@@ -26,7 +26,7 @@ weeping-willow-preview = \new PianoStaff <<
         \key g \major
         \clef bass
 
-        | \bar ".|:" g,8[ <d g b>8] d,8[ <d g b>8] |
+        | \bar ".|:" \stemDown g,8[ <d g b>8] d,8[ <d g b>8] |
         | g,8[ <d g b>8] b,8[ <d g b>8] |
         | << { \stemUp c4 c4 } \\ { \stemDown c8[ <e g c'>8] c8[ <ef g c'>8] } >> |
     }

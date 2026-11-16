@@ -26,7 +26,7 @@ bethena-preview = \new PianoStaff <<
         \key g \major
         \clef bass
 
-        | g,4 \stemDown <d g>4 <d g>4 |
+        | \stemUp g,4 \stemDown <d g>4 <d g>4 |
         | \stemUp <e, e>4 \stemDown <e g a>4 <e g a>4 |
         | << { \stemUp r4 <fs a>4 r4 } \\ { \stemDown <d, d>2 <ds, ds>4 } >> |
     }

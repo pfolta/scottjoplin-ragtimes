@@ -26,7 +26,7 @@ palm-leaf-rag-preview = \new PianoStaff <<
         \key bf \major
         \clef bass
 
-        | \bar ".|:" <c c'>8[ <f a ef'>8] f,8[ <f a ef'>8] |
+        | \bar ".|:" \stemDown <c c'>8[ <f a ef'>8] f,8[ <f a ef'>8] |
         | c8[ <f a ef'>8] f,8[ <f a ef'>8] |
         | bf,8[ <f bf d'>8] f,8[ <f bf d'>8] |
     }

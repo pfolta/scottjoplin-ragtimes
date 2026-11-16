@@ -26,7 +26,7 @@ original-rags-preview = \new PianoStaff <<
         \clef bass
 
           s8. \bar ".|:" |
-        | \section \stemDown g8[ <b d'>8] d8[ <b d'>8] |
+        | \stemDown g8[ <b d'>8] d8[ <b d'>8] |
         | g8[ <b d'>8] d8[ <b d'>8] |
     }
 >>
