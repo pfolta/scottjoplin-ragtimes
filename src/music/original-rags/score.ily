@@ -170,7 +170,7 @@ original-rags-score = \new PianoStaff <<
         | s2\< |
         | s2\!\ff |
 
-        | s2\> |
+        | s8 s4.\> |
         | s2\p |
         | s2 |
         | \section \repeat volta 2 { s2\p |
