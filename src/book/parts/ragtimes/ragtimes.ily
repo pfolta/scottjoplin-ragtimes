@@ -24,7 +24,7 @@
 
     \pageBreak
 
-    \markuplist \abs-fontsize #10 \override-lines #'(padding . 1) {
+    \markuplist \abs-fontsize #10 \override-lines #preview-table-padding {
         \two-columns \default-column-gap
         \column-lines {
             \fill-line {
@@ -41,9 +41,7 @@
         \column-lines {
             \score {
                 \original-rags-preview
-                \layout {
-                    \preview-layout
-                }
+                \layout { \preview-layout }
             }
         }
         \column-lines {
@@ -69,7 +67,7 @@
         }
     }
 
-    \markuplist \abs-fontsize #10 \override-lines #'(padding . 1) {
+    \markuplist \abs-fontsize #10 \override-lines #preview-table-padding {
         \two-columns \default-column-gap
         \column-lines {
             \fill-line {
@@ -86,9 +84,7 @@
         \column-lines {
             \score {
                 \maple-leaf-rag-preview
-                \layout {
-                    \preview-layout
-                }
+                \layout { \preview-layout }
             }
         }
         \column-lines {
@@ -114,7 +110,7 @@
         }
     }
 
-    \markuplist \abs-fontsize #10 \override-lines #'(padding . 1) {
+    \markuplist \abs-fontsize #10 \override-lines #preview-table-padding {
         \two-columns \default-column-gap
         \column-lines {
             \fill-line {
@@ -131,9 +127,7 @@
         \column-lines {
             \score {
                 \weeping-willow-preview
-                \layout {
-                    \preview-layout
-                }
+                \layout { \preview-layout }
             }
         }
         \column-lines {
@@ -159,7 +153,7 @@
         }
     }
 
-    \markuplist \abs-fontsize #10 \override-lines #'(padding . 1) {
+    \markuplist \abs-fontsize #10 \override-lines #preview-table-padding {
         \two-columns \default-column-gap
         \column-lines {
             \fill-line {
@@ -176,9 +170,7 @@
         \column-lines {
             \score {
                 \palm-leaf-rag-preview
-                \layout {
-                    \preview-layout
-                }
+                \layout { \preview-layout }
             }
         }
         \column-lines {
@@ -204,7 +196,7 @@
         }
     }
 
-    \markuplist \abs-fontsize #10 \override-lines #'(padding . 1) {
+    \markuplist \abs-fontsize #10 \override-lines #preview-table-padding {
         \two-columns \default-column-gap
         \column-lines {
             \fill-line {
@@ -221,9 +213,7 @@
         \column-lines {
             \score {
                 \bethena-preview
-                \layout {
-                    \preview-layout
-                }
+                \layout { \preview-layout }
             }
         }
         \column-lines {

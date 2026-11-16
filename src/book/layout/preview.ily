@@ -4,6 +4,9 @@
 % Spacing to use above and below preview scores.
 preview-score-gap = \markup { \vspace #(to-staff-space 0.5 'mm) }
 
+% Spacing between table columns (Form/Keys).
+#(define preview-table-padding '(padding . 2))
+
 % Scale song preview scores to 75%.
 #(define preview-scale 0.75)
 
