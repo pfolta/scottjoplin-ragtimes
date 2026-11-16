@@ -27,13 +27,15 @@
 }
 
 % Make pedal markings smaller.
+#(define default-pedal-font-size -2)
+
 \layout {
     \context {
         \Dynamics
 
-        \override SustainPedal.font-size = #-2
-        \override SostenutoPedal.font-size = #-2
-        \override UnaCordaPedal.font-size = #-2
+        \override SustainPedal.font-size = #default-pedal-font-size
+        \override SostenutoPedal.font-size = #default-pedal-font-size
+        \override UnaCordaPedal.font-size = #default-pedal-font-size
     }
 }
 

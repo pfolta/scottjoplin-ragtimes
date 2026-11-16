@@ -30,4 +30,10 @@ bethena-preview = \new PianoStaff <<
         | \stemUp <e, e>4 \stemDown <e g a>4 <e g a>4 |
         | << { \stemUp r4 <fs a>4 r4 } \\ { \stemDown <d, d>2 <ds, ds>4 } >> |
     }
+
+    \new Dynamics {
+        | s2\sustainOn s4\sustainOff |
+        | s2\sustainOn s4\sustainOff |
+        | s4\sustainOn s2\sustainOff |
+    }
 >>

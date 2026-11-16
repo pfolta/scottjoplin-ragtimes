@@ -10,6 +10,11 @@ preview-layout = \layout {
 
         % Scale dynamic markings (pp, p, mf, f, etc.).
         \override DynamicText.font-size = #(magnification->font-size preview-scale)
+
+        % Scale pedal markings (text styles).
+        \override SustainPedal.font-size = #(+ default-pedal-font-size (magnification->font-size preview-scale))
+        \override SostenutoPedal.font-size = #(+ default-pedal-font-size (magnification->font-size preview-scale))
+        \override UnaCordaPedal.font-size = #(+ default-pedal-font-size (magnification->font-size preview-scale))
     }
 
     \context {
