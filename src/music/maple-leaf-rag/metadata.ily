@@ -9,10 +9,10 @@ maple-leaf-rag-title = "Maple Leaf Rag"
 maple-leaf-rag-composer = "Scott Joplin"
 
 maple-leaf-rag-publication-publisher = "John Stark & Son"
-maple-leaf-rag-publication-place = "Sedalia, MO"
+maple-leaf-rag-publication-place = "Sedalia, Mo."
 maple-leaf-rag-publication-year = "1899"
 
-maple-leaf-rag-tagline = \markuplist { First published by \italic { John Stark & Son } (Sedalia, MO) in 1899. }
+maple-leaf-rag-tagline = \markuplist { First published by \italic { John Stark & Son } (Sedalia, Mo.) in 1899. }
 
 maple-leaf-rag-header = \header {
     dedication = \markup \maple-leaf-rag-dedication
