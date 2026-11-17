@@ -17,6 +17,7 @@
                         \null
                     }
                     \fill-line { \null }
+                    \fill-line { \null }
                 }
             }
             \if #(has-field? 'header:title) {
@@ -30,6 +31,7 @@
             }
             \if #(has-field? 'header:subtitle) {
                 \column-lines {
+                    \fill-line { \null }
                     \fill-line { \null }
                     \fill-line \abs-fontsize #14 \uppercase {
                         \null
