@@ -22,7 +22,6 @@
 
             \line { \null }
             \line { \null }
-            \line { \null }
             \fill-line {
                 \with-link #'ragtimes.maple-leaf-rag { \uppercase \bold { \maple-leaf-rag-title } }
                 \with-link #'ragtimes.maple-leaf-rag { \page-ref #'ragtimes.maple-leaf-rag "000" "?" }
@@ -42,7 +41,6 @@
 
             \line { \null }
             \line { \null }
-            \line { \null }
             \fill-line {
                 \with-link #'ragtimes.palm-leaf-rag { \uppercase \bold { \palm-leaf-rag-title } }
                 \with-link #'ragtimes.palm-leaf-rag { \page-ref #'ragtimes.palm-leaf-rag "000" "?" }
@@ -51,7 +49,6 @@
             \line { \null }
             \palm-leaf-rag-edits
 
-            \line { \null }
             \line { \null }
             \line { \null }
             \fill-line {

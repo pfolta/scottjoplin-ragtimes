@@ -8,7 +8,7 @@
         title = "Contents"
     }
 
-    \markup {
+    \markup \abs-fontsize #10 {
         \column {
             \column-lines {
                 \fill-line \bold {

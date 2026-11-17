@@ -1,0 +1,47 @@
+\version "2.26.0"
+\language "english"
+
+% Test whether a property is present.
+#(define (has-field? field)
+    (lambda (layout props)
+        (and (chain-assoc-get field props #f) #t)))
+
+\paper {
+    bookTitleMarkup = \markup \abs-fontsize #10 {
+        \column {
+            \if #(has-field? 'header:dedication) {
+                \column-lines {
+                    \fill-line \abs-fontsize #12 \italic {
+                        \null
+                        \fromproperty #'header:dedication
+                        \null
+                    }
+                    \fill-line { \null }
+                }
+            }
+            \if #(has-field? 'header:title) {
+                \column-lines {
+                    \fill-line \abs-fontsize #20 \uppercase \bold {
+                        \null
+                        \fromproperty #'header:title
+                        \null
+                    }
+                }
+            }
+            \if #(has-field? 'header:subtitle) {
+                \column-lines {
+                    \fill-line { \null }
+                    \fill-line \abs-fontsize #14 \uppercase {
+                        \null
+                        \fromproperty #'header:subtitle
+                        \null
+                    }
+                }
+            }
+            \if #(has-field? 'header:title) {
+                \fill-line { \null }
+                \fill-line { \null }
+            }
+        }
+    }
+}

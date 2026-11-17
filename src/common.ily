@@ -13,3 +13,4 @@
 \include "src/common/pdf.ily"
 \include "src/common/score.ily"
 \include "src/common/section.ily"
+\include "src/common/title.ily"
