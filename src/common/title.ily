@@ -7,6 +7,9 @@
         (and (chain-assoc-get field props #f) #t)))
 
 \paper {
+    % Keep the space below the title fixed, so all rags start the same way.
+    markup-system-spacing.stretchability = 0
+
     bookTitleMarkup = \markup \abs-fontsize #10 {
         \column {
             \if #(has-field? 'header:dedication) {
@@ -16,7 +19,6 @@
                         \fromproperty #'header:dedication
                         \null
                     }
-                    \fill-line { \null }
                     \fill-line { \null }
                 }
             }
@@ -32,7 +34,6 @@
             \if #(has-field? 'header:subtitle) {
                 \column-lines {
                     \fill-line { \null }
-                    \fill-line { \null }
                     \fill-line \abs-fontsize #14 \uppercase {
                         \null
                         \fromproperty #'header:subtitle
@@ -43,6 +44,14 @@
             \if #(has-field? 'header:title) {
                 \fill-line { \null }
                 \fill-line { \null }
+            }
+            \if #(has-field? 'header:composer) {
+                \column-lines {
+                    \fill-line \abs-fontsize #12 {
+                        \null
+                        \fromproperty #'header:composer
+                    }
+                }
             }
         }
     }
