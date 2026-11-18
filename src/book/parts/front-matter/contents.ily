@@ -4,6 +4,12 @@
 \bookpart {
     \pdf-bookmark "toc" "Contents" #0
 
+    \paper {
+        % Ensure content is top-aligned on all pages and never compressed.
+        ragged-bottom = ##t
+        ragged-last-bottom = ##t
+    }
+
     \header {
         title = "Contents"
     }

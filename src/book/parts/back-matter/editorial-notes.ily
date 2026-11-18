@@ -5,6 +5,12 @@
     \label #'appendix.editorial-notes
     \pdf-bookmark "appendix.editorial-notes" "Editorial Notes" #0
 
+    \paper {
+        % Ensure content is top-aligned on all pages and never compressed.
+        ragged-bottom = ##t
+        ragged-last-bottom = ##t
+    }
+
     \header {
         title = "Editorial Notes"
     }
