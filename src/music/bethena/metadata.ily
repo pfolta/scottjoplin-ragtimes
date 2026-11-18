@@ -9,11 +9,11 @@ bethena-subtitle = \markuplist { A Concert Waltz }
 
 bethena-composer = "Scott Joplin"
 
-bethena-publication-publisher = "T. Bahnsen Piano Mfg. Co."
+bethena-publication-publisher = "T. Bahnsen Piano Manufacturing Co."
 bethena-publication-place = "St. Louis, Mo."
 bethena-publication-year = "1905"
 
-bethena-tagline = \markuplist { First published by \italic { T. Bahnsen Piano Mfg. Co. } "(St. Louis," Mo.) in 1905. }
+bethena-tagline = \markuplist { First published by \italic { T. Bahnsen Piano Manufacturing Co. } "(St. Louis," Mo.) in 1905. }
 
 bethena-header = \header {
     dedication = \markup \bethena-dedication

@@ -13,6 +13,9 @@ original-rags-publication-year = "1899"
 
 original-rags-tagline = \markuplist { First published by \italic { Carl Hoffman } (Kansas City, Mo.) in 1899. }
 
+original-rags-source-label = \markuplist { Duke University }
+original-rags-source-url = "https://idn.duke.edu/ark:/87924/r44j0g596"
+
 original-rags-header = \header {
     title = \original-rags-title
 

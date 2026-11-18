@@ -15,6 +15,9 @@ weeping-willow-publication-year = "1903"
 
 weeping-willow-tagline = \markuplist { First published by \italic { Val. A. Reis Music Co. } "(St. Louis," Mo.) in 1903. }
 
+weeping-willow-source-label = \markuplist { Library of Congress }
+weeping-willow-source-url = "https://www.loc.gov/item/2023864270/"
+
 weeping-willow-header = \header {
     dedication = \markup \weeping-willow-dedication
     title = \weeping-willow-title

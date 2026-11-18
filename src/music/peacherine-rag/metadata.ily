@@ -13,6 +13,9 @@ peacherine-rag-publication-year = "1901"
 
 peacherine-rag-tagline = \markuplist { First published by \italic { John Stark & Son } "(St. Louis," Mo.) in 1901. }
 
+peacherine-rag-source-label = \markuplist { Library of Congress }
+peacherine-rag-source-url = "https://www.loc.gov/item/2023864255/"
+
 peacherine-rag-header = \header {
     title = \peacherine-rag-title
 

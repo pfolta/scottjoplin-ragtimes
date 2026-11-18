@@ -14,6 +14,9 @@ maple-leaf-rag-publication-year = "1899"
 
 maple-leaf-rag-tagline = \markuplist { First published by \italic { John Stark & Son } (Sedalia, Mo.) in 1899. }
 
+maple-leaf-rag-source-label = \markuplist { Indiana University }
+maple-leaf-rag-source-url = "https://webapp1.dlib.indiana.edu/inharmony/detail.do?action=detail&fullItemID=/lilly/devincent/LL-SDV-202046"
+
 maple-leaf-rag-header = \header {
     dedication = \markup \maple-leaf-rag-dedication
     title = \maple-leaf-rag-title
