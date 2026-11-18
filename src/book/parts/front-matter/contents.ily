@@ -27,6 +27,11 @@
                 }
 
                 \fill-line {
+                    \concat { \hspace #(to-staff-space 10 'mm) \with-link #'ragtimes.peacherine-rag { \peacherine-rag-title } }
+                    \with-link #'ragtimes.peacherine-rag { \page-ref #'ragtimes.peacherine-rag "000" "?" }
+                }
+
+                \fill-line {
                     \concat { \hspace #(to-staff-space 10 'mm) \with-link #'ragtimes.weeping-willow { \weeping-willow-title } }
                     \with-link #'ragtimes.weeping-willow { \page-ref #'ragtimes.weeping-willow "000" "?" }
                 }

@@ -32,6 +32,16 @@
         }
         \column-lines {
             \fill-line {
+                \with-link #'ragtimes.peacherine-rag { \uppercase \bold { \peacherine-rag-title } }
+                \with-link #'ragtimes.peacherine-rag { \page-ref #'ragtimes.peacherine-rag "000" "?" }
+            }
+            \justified-lines { \peacherine-rag-tagline }
+            \line { \null }
+            \peacherine-rag-edits
+
+            \line { \null }
+            \line { \null }
+            \fill-line {
                 \with-link #'ragtimes.weeping-willow { \uppercase \bold { \weeping-willow-title } }
                 \with-link #'ragtimes.weeping-willow { \page-ref #'ragtimes.weeping-willow "000" "?" }
             }

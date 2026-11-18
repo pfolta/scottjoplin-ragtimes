@@ -2,6 +2,9 @@
 \language "english"
 
 \bookpart {
+    \label #'ragtimes
+    \pdf-bookmark "ragtimes" "Ragtimes" #6
+
     \paper {
         % Use the full page height and stretch the space between song previews.
         ragged-bottom = ##f
@@ -12,9 +15,6 @@
         indent = 0\mm
         ragged-right = ##f
     }
-
-    \label #'ragtimes
-    \pdf-bookmark "ragtimes" "Ragtimes" #5
 
     \header {
         title = "Ragtimes"
@@ -33,6 +33,10 @@
             }
         }
         \column-lines {
+            \fill-line {
+                \with-link #'ragtimes.bethena { \uppercase \bold { \bethena-title } }
+                \with-link #'ragtimes.bethena { \page-ref #'ragtimes.bethena "000" "?" }
+            }
         }
 
         \preview-score-gap
@@ -45,6 +49,10 @@
             }
         }
         \column-lines {
+            \score {
+                \bethena-preview
+                \layout { \preview-layout }
+            }
         }
 
         \preview-score-gap
@@ -64,6 +72,17 @@
             }
         }
         \column-lines {
+            \fill-line {
+                \column {
+                    \table #'(-1 -1 -1 -1 -1 -1 -1 -1) {
+                        \bold { "Form:" } A BB A CC DD EE A
+                        \bold { "Keys:" } G B♭ G F Bm D G
+                    }
+                }
+                \right-column {
+                    \line { \bethena-publication-year }
+                }
+            }
         }
     }
 
@@ -103,6 +122,49 @@
                 }
                 \right-column {
                     \line { \maple-leaf-rag-publication-year }
+                }
+            }
+        }
+        \column-lines {
+        }
+    }
+
+    \markuplist \abs-fontsize #10 \override-lines #preview-table-padding {
+        \two-columns \default-column-gap
+        \column-lines {
+            \fill-line {
+                \with-link #'ragtimes.peacherine-rag { \uppercase \bold { \peacherine-rag-title } }
+                \with-link #'ragtimes.peacherine-rag { \page-ref #'ragtimes.peacherine-rag "000" "?" }
+            }
+        }
+        \column-lines {
+        }
+
+        \preview-score-gap
+
+        \two-columns \default-column-gap
+        \column-lines {
+            \score {
+                \peacherine-rag-preview
+                \layout { \preview-layout }
+            }
+        }
+        \column-lines {
+        }
+
+        \preview-score-gap
+
+        \two-columns \default-column-gap
+        \column-lines {
+            \fill-line {
+                \column {
+                    \table #'(-1 -1 -1 -1 -1 -1) {
+                        \bold { "Form:" } AA BB A CC DD
+                        \bold { "Keys:" } E♭ B♭ E♭ A♭ A♭
+                    }
+                }
+                \right-column {
+                    \line { \peacherine-rag-publication-year }
                 }
             }
         }
@@ -189,49 +251,6 @@
                 }
                 \right-column {
                     \line { \palm-leaf-rag-publication-year }
-                }
-            }
-        }
-        \column-lines {
-        }
-    }
-
-    \markuplist \abs-fontsize #10 \override-lines #preview-table-padding {
-        \two-columns \default-column-gap
-        \column-lines {
-            \fill-line {
-                \with-link #'ragtimes.bethena { \uppercase \bold { \bethena-title } }
-                \with-link #'ragtimes.bethena { \page-ref #'ragtimes.bethena "000" "?" }
-            }
-        }
-        \column-lines {
-        }
-
-        \preview-score-gap
-
-        \two-columns \default-column-gap
-        \column-lines {
-            \score {
-                \bethena-preview
-                \layout { \preview-layout }
-            }
-        }
-        \column-lines {
-        }
-
-        \preview-score-gap
-
-        \two-columns \default-column-gap
-        \column-lines {
-            \fill-line {
-                \column {
-                    \table #'(-1 -1 -1 -1 -1 -1 -1 -1) {
-                        \bold { "Form:" } A BB A CC DD EE A
-                        \bold { "Keys:" } G B♭ G F Bm D G
-                    }
-                }
-                \right-column {
-                    \line { \bethena-publication-year }
                 }
             }
         }
