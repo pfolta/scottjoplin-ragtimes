@@ -8,10 +8,10 @@
 
 \book {
     \bookOutputName \weeping-willow-output-name
+    \weeping-willow-header
 
     \bookpart {
         \pdf-two-page-left
-        \weeping-willow-header
 
         \score {
             \keepWithTag #'layout {

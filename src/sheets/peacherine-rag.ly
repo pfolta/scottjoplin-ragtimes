@@ -8,10 +8,10 @@
 
 \book {
     \bookOutputName \peacherine-rag-output-name
+    \peacherine-rag-header
 
     \bookpart {
         \pdf-two-page-left
-        \peacherine-rag-header
 
         \score {
             \keepWithTag #'layout {

@@ -8,10 +8,10 @@
 
 \book {
     \bookOutputName \original-rags-output-name
+    \original-rags-header
 
     \bookpart {
         \pdf-two-page-left
-        \original-rags-header
 
         \score {
             \keepWithTag #'layout {

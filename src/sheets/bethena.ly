@@ -8,10 +8,10 @@
 
 \book {
     \bookOutputName \bethena-output-name
+    \bethena-header
 
     \bookpart {
         \pdf-two-page-left
-        \bethena-header
 
         \score {
             \keepWithTag #'layout {

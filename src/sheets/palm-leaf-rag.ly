@@ -8,10 +8,10 @@
 
 \book {
     \bookOutputName \palm-leaf-rag-output-name
+    \palm-leaf-rag-header
 
     \bookpart {
         \pdf-two-page-left
-        \palm-leaf-rag-header
 
         \score {
             \keepWithTag #'layout {
