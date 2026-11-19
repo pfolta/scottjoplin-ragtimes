@@ -3,6 +3,10 @@
 
 \bookpart {
     \paper {
+        % Ensure content is top-aligned and never compressed.
+        ragged-bottom = ##t
+        ragged-last-bottom = ##t
+
         % Do not render a page header or footer.
         evenHeaderMarkup = ##f
         oddHeaderMarkup = ##f

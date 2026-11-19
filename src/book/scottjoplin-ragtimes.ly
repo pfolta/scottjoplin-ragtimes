@@ -3,6 +3,7 @@
 
 \include "src/common.ily"
 
+\include "src/book/layout/paper.ily"
 \include "src/book/layout/preview.ily"
 
 \include "src/music/original-rags/metadata.ily"
