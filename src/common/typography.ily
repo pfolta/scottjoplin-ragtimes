@@ -1,6 +1,11 @@
 \version "2.26.0"
 \language "english"
 
+% Use a staff size of 18pt instead of the default 20pt.
+% This has to be set before any other configuration as it resets any custom
+% font configuration.
+#(set-global-staff-size 18)
+
 % Load Edwin font files.
 #(ly:font-config-add-font (ly:find-file "vendor/fonts/edwin/Edwin-BdIta.otf" #t))
 #(ly:font-config-add-font (ly:find-file "vendor/fonts/edwin/Edwin-Bold.otf" #t))
