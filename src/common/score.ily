@@ -1,6 +1,15 @@
 \version "2.26.0"
 \language "english"
 
+% Disable automatic line and page breaking, use explicit breaks instead.
+\layout {
+    \context {
+        \Score
+        \override NonMusicalPaperColumn.line-break-permission = ##f
+        \override NonMusicalPaperColumn.page-break-permission = ##f
+    }
+}
+
 % Make ledger lines the same thickness as regular staff lines.
 \layout {
     \context {

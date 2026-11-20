@@ -9,7 +9,6 @@
 \include "src/common/layout.ily"
 \include "src/common/markup.ily"
 \include "src/common/midi.ily"
-\include "src/common/page.ily"
 \include "src/common/pdf.ily"
 \include "src/common/score.ily"
 \include "src/common/section.ily"
