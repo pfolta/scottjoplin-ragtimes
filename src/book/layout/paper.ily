@@ -2,17 +2,10 @@
 \language "english"
 
 \paper {
-    #(set-paper-size "a4")
-
-    % The book is double-sided.
+    % The book is double-sided, with a binding offset on the inside.
     two-sided = ##t
-    binding-offset = 5
-    inner-margin = 10
-    outer-margin = 10
-    top-margin = 10
-    bottom-margin = 10
+    inner-margin = 15\mm
+    outer-margin = 15\mm
+    binding-offset = 10\mm
 
-    % Stretch score systems to use the full page height on all pages.
-    ragged-bottom = ##f
-    ragged-last-bottom = ##f
 }
