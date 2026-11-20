@@ -18,6 +18,28 @@
     \markup \abs-fontsize #10 {
         \two-columns \default-column-gap
         \column-lines {
+            \line \bold \italic { TODO: }
+            \justified-lines \italic {
+                Add an introductory section outlining the overall editorial
+                approach and conventions used in this book.
+            }
+
+            \line { \null }
+            \line { \null }
+            \line \bold \italic { TODO: }
+            \justified-lines \italic {
+                Refactor the notes for the individual rags to create more
+                naturally flowing columns and more pleasing line breaking.
+            }
+
+            \line { \null }
+            \line { \null }
+            \line \bold \italic { TODO: }
+            \justified-lines \italic {
+                Improve how sources and links are typeset.
+            }
+        }
+        \column-lines {
             \fill-line {
                 \with-link #'ragtimes.original-rags { \uppercase \bold { \original-rags-title } }
                 \with-link #'ragtimes.original-rags { \page-ref #'ragtimes.original-rags "000" "?" }
@@ -28,9 +50,14 @@
             }
             \line { \null }
             \original-rags-edits
+        }
+    }
 
-            \line { \null }
-            \line { \null }
+    \pageBreak
+
+    \markup \abs-fontsize #10 {
+        \two-columns \default-column-gap
+        \column-lines {
             \fill-line {
                 \with-link #'ragtimes.maple-leaf-rag { \uppercase \bold { \maple-leaf-rag-title } }
                 \with-link #'ragtimes.maple-leaf-rag { \page-ref #'ragtimes.maple-leaf-rag "000" "?" }
@@ -41,8 +68,9 @@
             }
             \line { \null }
             \maple-leaf-rag-edits
-        }
-        \column-lines {
+
+            \line { \null }
+            \line { \null }
             \fill-line {
                 \with-link #'ragtimes.peacherine-rag { \uppercase \bold { \peacherine-rag-title } }
                 \with-link #'ragtimes.peacherine-rag { \page-ref #'ragtimes.peacherine-rag "000" "?" }
@@ -53,9 +81,8 @@
             }
             \line { \null }
             \peacherine-rag-edits
-
-            \line { \null }
-            \line { \null }
+        }
+        \column-lines {
             \fill-line {
                 \with-link #'ragtimes.weeping-willow { \uppercase \bold { \weeping-willow-title } }
                 \with-link #'ragtimes.weeping-willow { \page-ref #'ragtimes.weeping-willow "000" "?" }
