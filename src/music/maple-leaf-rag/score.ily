@@ -11,22 +11,26 @@ maple-leaf-rag-score = \new PianoStaff <<
         \tag #'layout { \tempo "Tempo di marcia" }
         \tag #'midi { \tempo 4 = 100 }
 
+        % Measure 1
           r8 |
-        | \sectionLabel \section-a \repeat volta 2 { r16 \stemDown af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] |
+        | \section \sectionLabel \section-a \repeat volta 2 { r16 \stemDown af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] |
         | <ef' ef''>16[ g'16 bf'16 <ef' ef''>16~] <ef' ef''>4 |
         | r16 af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] |
         | <ef' ef''>16[ g'16 bf'16 <ef' ef''>16~] <ef' ef''>8[ r16 <ef' ef''>16] | \break
 
+        % Measure 5
         | r16 af'16[ cf''16 <ff' ff''>16] r16 <ef' ef''>16 r16 <ef' ef''>16 |
         | r16 af'16[ cf''16 <ff' ff''>16] r16 <ef' ef''>16 r8 |
         | \tag #'layout { s2 } \tag #'midi { r16 af,16[( cf16 af16)] r16 af16[( cf'16 af'16)] } |
         | r16 af'16[( cf''16 af''16)] r16 af''16[( cf'''16 af'''16)] | \break
 
+        % Measure 9
         | <af'' af'''>8[ <af'' af'''>8] <af'' af'''>8[ <af'' af'''>16 <af'' af'''>16~] |
         | <af'' af'''>16[ ef'''16 f'''16 c'''16] ef'''16[ <af'' f'''>8 <ff'' af''>16~] |
         | <ff'' af''>16[ bf''16 <ff'' cf'''>16 af''16] bf''16[ <ef'' c'''>8 af''16] |
         | <ef'' c'''>16[ af''16 <ef'' bf''>8] <ef'' af''>8[ r16 <af' af''>16~] | \break
 
+        % Measure 13
         | <af' af''>8[ <af' af''>8] <af' af''>8[ <af' af''>16 <af' af''>16~] |
         | <af' af''>16[ ef''16 <af' f''>16 c''16] ef''16[ <af' f''>8 <ff' af'>16~] |
         | \stemUp <ff' af'>16[ bf'16 <ff' cf''>16 af'16] bf'16[ <ef' c''>8 af'16] |
@@ -37,22 +41,26 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         \pageBreak
 
+        % Measure 18
         | \section \sectionLabel \section-b \repeat volta 2 { r16 \stemDown g''16[ <ef'' ef'''>16 g''16] bf''16[ <d'' d'''>8 g''16] |
         | <df'' df'''>16[ g''16 bf''16 <c'' c'''>16~] <c'' c'''>16[ ef''16 <bf' bf''>16 ef''16] |
         | r16 c''16[ <af' af''>16 c''16] ef''16[ <f' f''>8 c''16] |
         | <af' af''>16[ c''16 ef''16 <f' f''>16~] <f' f''>16[ c''16 <f' f''>8] | \break
 
+        % Measure 22
         | r16 ef''16[ <g' g''>16 bf'16] df''16[ <f' f''>8 ef''16] |
         | <g' g''>16[ bf'16 df''16 <f' f''>16~] <f' f''>16[ df''16 <f' f''>8] |
         | r16 c''16[ <af' af''>16 c''16] ef''16[ <f' f''>8 c''16] |
         | <af' af''>16[ c''16 ef''16 <f' f''>16~] <f' f''>16[ c''16 <f' f''>8] | \break
 
+        % Measure 26
         | r16 g''16[ <ef'' ef'''>16 g''16] bf''16[ <d'' d'''>8 g''16] |
         | <df'' df'''>16[ g''16 bf''16 <c'' c'''>16~] <c'' c'''>16[ ef''16 <bf' bf''>16 ef''16] |
         | r16 c''16[ <af' af''>16 c''16] ef''16[ <f' f''>8 c''16] |
         | <af' af''>8[ <af' af''>8] <g' g''>8[ <gf' gf''>8] |
         | r16 \stemUp f'16[ a'16 c''16] f''16[ c''16 a'16 f'16] | \break
 
+        % Measure 31
         | r16 f'16[ bf'16 df''16] <f' f''>8[ <f' bf' df''>8] |
         | <d' f' af' c''>8[ r16 <d' f' af' c''>16] r16 <df' bf'>8[ ef'16] |
         \alternative {
@@ -61,6 +69,7 @@ maple-leaf-rag-score = \new PianoStaff <<
         }}
         | \section \sectionLabel \section-a r16 af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] | \break
 
+        % Measure 36
         | <ef' ef''>16[ g'16 bf'16 <ef' ef''>16~] <ef' ef''>4 |
         | r16 af'16[ <ef' ef''>16 af'16] c''16[ <ef' ef''>8 g'16] |
         | <ef' ef''>16[ g'16 bf'16 <ef' ef''>16~] <ef' ef''>8[ r16 <ef' ef''>16] |
@@ -69,28 +78,33 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         \pageBreak
 
+        % Measure 41
         | \tag #'layout { s2 } \tag #'midi { r16 af,16[( cf16 af16)] r16 af16[( cf'16 af'16)] } |
         | r16 af'16[( cf''16 af''16)] r16 af''16[( cf'''16 af'''16)] |
         | <af'' af'''>8[ <af'' af'''>8] <af'' af'''>8[ <af'' af'''>16 <af'' af'''>16~] |
         | <af'' af'''>16[ ef'''16 f'''16 c'''16] ef'''16[ <af'' f'''>8 <ff'' af''>16~] |
         | <ff'' af''>16[ bf''16 <ff'' cf'''>16 af''16] bf''16[ <ef'' c'''>8 af''16] | \break
 
+        % Measure 46
         | <ef'' c'''>16[ af''16 <ef'' bf''>8] <ef'' af''>8[ r16 <af' af''>16~] |
         | <af' af''>8[ <af' af''>8] <af' af''>8[ <af' af''>16 <af' af''>16~] |
         | <af' af''>16[ ef''16 <af' f''>16 c''16] ef''16[ <af' f''>8 <ff' af'>16~] |
         | \stemUp <ff' af'>16[ bf'16 <ff' cf''>16 af'16] bf'16[ <ef' c''>8 af'16] |
         | <ef' c''>16[ af'16 <ef' bf'>8] \stemDown <ef' af'>8[ <af' af''>8] | \break
 
+        % Measure 51
         | \section \sectionLabel \section-c-trio \key df \major \repeat volta 2 { <af' c'' ef'' af''>8.[ <bf' c'' ef'' af''>16~] <bf' c'' ef'' af''>16[ <c'' ef''>16 bf'8] |
         | <af' c'' ef'' af''>8.[ <bf' c'' ef'' af''>16~] <bf' c'' ef'' af''>16[ <c'' ef''>16 bf'16 <c'' ef''>16] |
         | af'16[ df''16 bf'16 df''16] f''16[ af'16 df''16 f''16] |
         | bf'16[ df''16 f''16 af'16~] af'16[ f''16 bf'16 f''16] | \break
 
+        % Measure 55
         | <af' c'' ef'' af''>8.[ <bf' c'' ef'' af''>16~] <bf' c'' ef'' af''>16[ <c'' ef''>16 bf'8] |
         | <af' c'' ef'' af''>8.[ <bf' c'' ef'' af''>16~] <bf' c'' ef'' af''>16[ <c'' ef''>16 bf'16 <c'' ef''>16] |
         | af'16[ df''16 bf'16 df''16] f''16[ af'16 df''16 f''16] |
         | bf'16[ df''16 f''16 af'16~] af'16[ f''16 a'16 <ef'' f''>16] | \break
 
+        % Measure 59
         | <bf' d'' f'' bf''>8.[ <c'' d'' f'' bf''>16~] <c'' d'' f'' bf''>16[ <d'' f''>16 c''8] |
         | <bf' d'' f'' bf''>8.[ <c'' d'' f'' bf''>16~] <c'' d'' f'' bf''>16[ <d'' f''>16 c''16 <d'' f''>16] |
         | r16 ef''16[ <bf' bf''>16 ef''16] gf''16[ <c'' c'''>8 ef''16] |
@@ -98,29 +112,34 @@ maple-leaf-rag-score = \new PianoStaff <<
 
         \pageBreak
 
+        % Measure 63
         | <df'' ff'' df'''>8[ <df'' ff'' df'''>8] <c'' ff'' c'''>8[ <bf' ff'' bf''>8] |
         | <af' f''>16[ df''16 ef''16 <bf' gf''>16~] <bf' gf''>16[ bf'16 <af' f''>8] |
         | <g' f''>16[ df''16 ef''16 <gf' f''>16~] <gf' f''>16[ c''16 <gf' ef''>16 <f' df''>16~] |
         \alternative {
             { | <f' df''>16[ <af' af''>8 f''16] <af' af''>16[ f''16 <af' af''>16 f''16] | \break }
 
+            % Measure 67
             { | <f' df''>16\repeatTie[ df''16 f''16 af''16] <df'' df'''>8 r8 | }
         }}
         | \section \sectionLabel \section-d \key af \major \repeat volta 2 { <af' af''>8[ <af' f''>8] <af' af''>8[ <af' f''>8] |
         | <f'' af''>8[ <f'' bf''>16 <f'' c'''>16~] <f'' c'''>16[ bf''16 af''16 f''16] |
         | ef''16[ f''8 <af' c''>16~] <af' c''>4 | \break
 
+        % Measure 71
         | r16 ef''16[ <af' f''>16 c''16] ef''16[ <af' f''>8 c''16] |
         | <g' ef''>8[ f''16 <g' bf'>16~] \stemUp <g' bf'>4 |
         | r16 \stemDown df''16[ <g' f''>16 bf'16] df''16[ <g' f''>8 <af' c''>16~] |
         | <af' c''>16[ ef''16 <af' f''>16 c''16] ef''16[ <af' f''>8 <af' c''>16~] | \break
 
+        % Measure 75
         | <af' c''>16[ ef''16 <af' f''>16 c''16] ef''16[ <af' f''>8 ef''16] |
         | <af' af''>8[ <af' f''>8] <af' af''>8[ <af' f''>8] |
         | <f'' af''>8[ <f'' bf''>16 <f'' c'''>16~] <f'' c'''>16[ bf''16 af''16 f''16] |
         | af''8[ f''8] ef''16[ af''8 <af' c''>16~] |
         | <af' c''>16[ ef''16 <af' f''>16 c''16] ef''16[ <af' f''>8 <f' af'>16~] | \break
 
+        % Measure 80
         | \stemUp <f' af'>16[ bf'16 <f' af'>8] <ff' af'>8[ <ff' bf'>16 <ef' af'>16~] |
         | <ef' af'>16[ bf'16 <ef' c''>16 af'16] bf'16[ <ef' c''>8 <d' af'>16~] |
         | <d' af'>16[ bf'16 <d' c''>16 af'16] r16 <df' bf'>8[ ef'16] |
@@ -133,22 +152,26 @@ maple-leaf-rag-score = \new PianoStaff <<
     }
 
     \new Dynamics {
+        % Measure 1
           s8 |
         | \repeat volta 2 { s2\f |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 5
         | s2 |
         | s2 |
         | s2\p |
         | s2 |
 
+        % Measure 9
         | \once \override Hairpin.to-barline = ##f s2\mf\< |
         | s16\! s4.. |
         | s2 |
         | s2 |
 
+        % Measure 13
         | s2 |
         | s2 |
         | s2 |
@@ -157,22 +180,26 @@ maple-leaf-rag-score = \new PianoStaff <<
             { | s2 | }
         }}
 
+        % Measure 18
         | \section \repeat volta 2 { \tag #'midi { s2\f } \tag #'layout { s2\f-stacc } |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 22
         | s2 |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 26
         | s2 |
         | s2 |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 31
         | s2 |
         | s2 |
         \alternative {
@@ -181,62 +208,73 @@ maple-leaf-rag-score = \new PianoStaff <<
         }}
         | s2\f |
 
+        % Measure 36
         | s2 |
         | s2 |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 41
         | s2\p |
         | s2 |
         | s2\mf\< |
         | s16 s16 s16\! s16 s4 |
         | s2 |
 
+        % Measure 46
         | s2 |
         | s2 |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 51
         | \section \repeat volta 2 { s2 |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 55
         | s2 |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 59
         | s2 |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 63
         | s2 |
         | s2 |
         | s2 |
         \alternative {
             { | s2 | }
 
+            % Measure 67
             { | s2 | }
         }}
         | \section \repeat volta 2 { s2 |
         | s2 |
         | s2 |
 
+        % Measure 71
         | s2 |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 75
         | s2 |
         | s2 |
         | s2 |
         | s2 |
         | s2 |
 
+        % Measure 80
         | s2 |
         | s2 |
         | s2 |
@@ -252,22 +290,26 @@ maple-leaf-rag-score = \new PianoStaff <<
         \key af \major
         \clef bass
 
+        % Measure 1
           \stemUp <ef, ef>8 |
         | \repeat volta 2 { \stemDown <af, af>8[ <ef af c'>8] <ef af c'>8[ <a, a>8] |
         | <bf, bf>8[ <ef g df'>8] <ef g df'>8[ <ef, ef>8] |
         | <af, af>8[ <ef af c'>8] <ef af c'>8[ <a, a>8] |
         | <bf, bf>8[ <ef g df'>8] <ef g df'>8[ <ef, ef>8] |
 
+        % Measure 5
         | \stemUp <ff, ff>4 <ef, ef>8[ <ef, ef>8] |
         | <ff, ff>4 <ef, ef>8 r8 |
         | \tag #'layout { << { \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \stemDown af,,8_\lh r8 af,8_\lh r8 } >> } \tag #'midi { af,,8 r8 af,8 r8 } |
         | \stemDown af8 r8 af'8 r8 |
 
+        % Measure 9
         | \clef treble \stemUp <d' f' af' b'>8[ <d' f' af' b'>8] <d' f' af' b'>8[ <d' f' af' b'>8] |
         | <ef' af' c''>8[ <ef' af' c''>8] <ef' af' c''>8[ <ef' af' c''>8] |
         | <ff' af' cf''>8[ <ff' af' cf''>8] <ef' af' c''>8[ <ef' af' c''>8] |
         | <ef' af' c''>8[ <ef' g' df''>8] \stemDown <af' c''>8 r8 |
 
+        % Measure 13
         | \clef bass <d f af b>8[ <d f af b>8] <d f af b>8[ <d f af b>8] |
         | <ef af c'>8[ <ef af c'>8] <ef af c'>8[ <ef af c'>8] |
         | <ff af cf'>8[ <ff af cf'>8] <ef af c'>8[ <ef af c'>8] |
@@ -276,22 +318,26 @@ maple-leaf-rag-score = \new PianoStaff <<
             { | <ef af c'>8[ <ef g df'>8] <af c'>8[ <a, a>8] | }
         }}
 
+        % Measure 18
         | \section \repeat volta 2 { <bf, bf>8[ <ef g df'>8] <ef, ef>8[ <ef g df'>8] |
         | <bf, bf>8[ <ef g df'>8] \stemUp <ef, ef>8[ <g, g>8] |
         | \stemDown <af, af>8[ <ef af c'>8] <ef, ef>8[ <ef af c'>8] |
         | <af, af>8[ <ef af c'>8] <af, af>8[ <a, a>8] |
 
+        % Measure 22
         | <bf, bf>8[ <ef g df'>8] <ef, ef>8[ <ef g df'>8] |
         | <bf, bf>8[ <ef g df'>8] <bf, bf>8[ <b, b>8] |
         | <c c'>8[ <ef af c'>8] <ef, ef>8[ <ef af c'>8] |
         | <af, af>8[ <ef af c'>8] <af, af>8[ <a, a>8] |
 
+        % Measure 26
         | <bf, bf>8[ <ef g df'>8] <ef, ef>8[ <ef g df'>8] |
         | <bf, bf>8[ <ef g df'>8] \stemUp <ef, ef>8[ <g, g>8] |
         | \stemDown <af, af>8[ <ef af c'>8] <ef, ef>8[ <ef af c'>8] |
         | <af, af>8[ <af, af>8] <g, g>8[ <gf, gf>8] |
         | \stemUp <f, f>8[ <f, f>8] \stemDown <a, a>8[ <a, a>8] |
 
+        % Measure 31
         | <bf, bf>8[ <f bf df'>8] <f bf df'>8[ <f bf df'>8] |
         | <bf, f bf>8[ <bf, f bf>8] \stemUp <ef, ef>8[ <g, g>8] |
         \alternative {
@@ -300,62 +346,73 @@ maple-leaf-rag-score = \new PianoStaff <<
         }}
         | \section <af, af>8[ <ef af c'>8] <ef af c'>8[ <a, a>8] |
 
+        % Measure 36
         | <bf, bf>8[ <ef g df'>8] <ef g df'>8[ <ef, ef>8] |
         | <af, af>8[ <ef af c'>8] <ef af c'>8[ <a, a>8] |
         | <bf, bf>8[ <ef g df'>8] <ef g df'>8[ <ef, ef>8] |
         | \stemUp <ff, ff>4 <ef, ef>8[ <ef, ef>8] |
         | <ff, ff>4 <ef, ef>8 r8 |
 
+        % Measure 41
         | \tag #'layout { << { \stemUp r16 af,16[(^\rh cf16 af16)] r16 af16[(^\rh cf'16 af'16)] } \\ { \stemDown af,,8_\lh r8 af,8_\lh r8 } >> } \tag #'midi { af,,8 r8 af,8 r8 } |
         | \stemDown af8 r8 af'8 r8 |
         | \clef treble \stemUp <d' f' af' b'>8[ <d' f' af' b'>8] <d' f' af' b'>8[ <d' f' af' b'>8] |
         | <ef' af' c''>8[ <ef' af' c''>8] <ef' af' c''>8[ <ef' af' c''>8] |
         | <ff' af' cf''>8[ <ff' af' cf''>8] <ef' af' c''>8[ <ef' af' c''>8] |
 
+        % Measure 46
         | <ef' af' c''>8[ <ef' g' df''>8] \stemDown <af' c''>8 r8 |
         | \clef bass <d f af b>8[ <d f af b>8] <d f af b>8[ <d f af b>8] |
         | <ef af c'>8[ <ef af c'>8] <ef af c'>8[ <ef af c'>8] |
         | <ff af cf'>8[ <ff af cf'>8] <ef af c'>8[ <ef af c'>8] |
         | <ef af c'>8[ <ef g df'>8] <af c'>8 r8 |
 
+        % Measure 51
         | \section \key df \major \repeat volta 2 { <ef, ef>8[ <af c' gf'>8] <gf, gf>8[ <af c' gf'>8] |
         | <f, f>8[ <af c' gf'>8] \stemUp <ef, ef>8[ <c, c>8] |
         | \stemDown <df, df>8[ <af df' f'>8] <af, af>8[ <af df' f'>8] |
         | <f, f>8[ <af df' f'>8] \stemUp <df, df>8[ <d, d>8] |
 
+        % Measure 55
         | \stemDown <ef, ef>8[ <af c' gf'>8] <gf, gf>[ <af c' gf'>8] |
         | <f, f>8[ <af c' gf'>8] \stemUp <ef, ef>8[ <c, c>8] |
         | \stemDown <df, df>8[ <af df' f'>8] <af, af>8[ <af df' f'>8] |
         | <f, f>8[ <af df' f'>8] \stemUp <df, df>8[ <c, c>8] |
 
+        % Measure 59
         | \stemDown <bf,, bf,>8[ <bf d' gf'>8] <d, d>8[ <bf d' gf'>8] |
         | <f, f>8[ <bf d' gf'>8] <bf, bf>8[ <bf d' gf'>8] |
         | <ef, ef>8[ <bf ef' gf'>8] <gf, gf>8[ <bf ef' gf'>8] |
         | <ef, ef>8[ <bf ef' gf'>8] <gf, gf>8[ <bf ef' gf'>8] |
 
+        % Measure 63
         | g16[ bf8 df'16] ff'16[ df'16 bf16 g16] |
         | <af, af>8[ <af df' f'>8] bf,8[ <af bf d'>8] |
         | <ef bf df'>8[ <ef bf df'>8] <af c'>8[ <af c'>8] |
         \alternative {
             { | <df df'>8[ <af df' f'>8] <af df' f'>8[ <d, d>8] | }
 
+            % Measure 67
             { | <df df'>8[ <af, af>8] <df, df>8[ <c c'>8] | }
         }}
         | \section \key af \major \repeat volta 2 { <df df'>8[ <af df' f'>8] <af df' f'>8[ <c c'>8] |
         | <df df'>8[ <af df' f'>8] <bf, bf>8[ <b, b>8] |
         | <c c'>8[ <af c' ef'>8] <af c' ef'>8[ <ef, ef>8] |
 
+        % Measure 71
         | <af, af>8[ <ef af c'>8] <ef, ef>8[ <a, a>8] |
         | <bf, bf>8[ <ef g df'>8] <ef, ef>8[ <a, a>8] |
         | <bf, bf>8[ <ef g df'>8] <ef, ef>8[ <g, g>8] |
         | <af, af>8[ <ef af c'>8] <ef, ef>8[ <ef af c'>8] |
 
+        % Measure 75
         | <af, af>8[ <ef af c'>8] <bf, bf>8[ <c c'>8] |
         | <df df'>8[ <af df' f'>8] <af df' f'>8[ <c c'>8] |
         | <df df'>8[ <af df' f'>8] <bf, bf>8[ <b, b>8] |
         | <c c'>8[ <af c' ef'>8] <af c' ef'>8[ <ef, ef>8] |
         | <af, af>8[ <ef af c'>8] <ef, ef>8[ <ef af c'>8] |
 
+        % Measure 80
         | \stemUp <df, df>8[ <df, df>8] <bf,, bf,>8[ <d, d>8] |
         | \stemDown <ef, ef>8[ <ef af c'>8] \stemUp <ef, ef>8[ <e, e>8] |
         | <f, f>8[ <f, f>8] <g, g>8[ <g, g>8] |
