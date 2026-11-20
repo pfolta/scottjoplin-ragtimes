@@ -14,7 +14,7 @@
         \column {
             \if #(has-field? 'header:dedication) {
                 \column-lines {
-                    \fill-line \abs-fontsize #12 \italic {
+                    \fill-line \with-dimension #Y #'(0 . 0) \general-align #Y #CENTER \abs-fontsize #12 \italic {
                         \null
                         \fromproperty #'header:dedication
                         \null
@@ -24,7 +24,7 @@
             }
             \if #(has-field? 'header:title) {
                 \column-lines {
-                    \fill-line \abs-fontsize #20 \uppercase \bold {
+                    \fill-line \with-dimension #Y #'(0 . 0) \general-align #Y #CENTER \abs-fontsize #20 \uppercase \bold {
                         \null
                         \fromproperty #'header:title
                         \null
@@ -34,7 +34,7 @@
             \if #(has-field? 'header:subtitle) {
                 \column-lines {
                     \fill-line { \null }
-                    \fill-line \abs-fontsize #14 \uppercase {
+                    \fill-line \with-dimension #Y #'(0 . 0) \general-align #Y #CENTER \abs-fontsize #14 \uppercase {
                         \null
                         \fromproperty #'header:subtitle
                         \null
@@ -47,7 +47,7 @@
             }
             \if #(has-field? 'header:composer) {
                 \column-lines {
-                    \fill-line \abs-fontsize #12 {
+                    \fill-line {
                         \null
                         \fromproperty #'header:composer
                     }
