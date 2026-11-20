@@ -17,6 +17,14 @@
     }
 }
 
+% Set the default appearance of double repeat bar lines.
+\layout {
+    \context {
+        \Score
+        doubleRepeatBarType = #":|.|:"
+    }
+}
+
 % Place volta brackets above tempo markings.
 \layout {
     \context {
