@@ -3,6 +3,8 @@
 
 peacherine-rag-output-name = "Peacherine Rag"
 
+peacherine-rag-index = "Peacherine Rag"
+
 peacherine-rag-title = "Peacherine Rag"
 
 peacherine-rag-composer = "Scott Joplin"

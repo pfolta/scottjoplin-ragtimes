@@ -3,6 +3,8 @@
 
 bethena-output-name = "Bethena"
 
+bethena-index = "Bethena"
+
 bethena-dedication = \markuplist { Respectfully Dedicated to Mr. & Mrs. Dan E. Davenport of "St. Louis," Mo. }
 bethena-title = "Bethena"
 bethena-subtitle = \markuplist { A Concert Waltz }

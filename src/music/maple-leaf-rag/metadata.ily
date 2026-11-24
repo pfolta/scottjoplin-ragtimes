@@ -3,6 +3,8 @@
 
 maple-leaf-rag-output-name = "Maple Leaf Rag"
 
+maple-leaf-rag-index = "Maple Leaf Rag"
+
 maple-leaf-rag-dedication = \markuplist { To the Maple Leaf Club }
 maple-leaf-rag-title = "Maple Leaf Rag"
 

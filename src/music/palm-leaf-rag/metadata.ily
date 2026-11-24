@@ -3,6 +3,8 @@
 
 palm-leaf-rag-output-name = "Palm Leaf Rag"
 
+palm-leaf-rag-index = "Palm Leaf Rag"
+
 palm-leaf-rag-title = "Palm Leaf Rag"
 palm-leaf-rag-subtitle = \markuplist { A Slow Drag }
 

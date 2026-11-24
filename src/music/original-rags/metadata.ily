@@ -3,6 +3,8 @@
 
 original-rags-output-name = "Original Rags"
 
+original-rags-index = "Original Rags"
+
 original-rags-title = "Original Rags"
 
 original-rags-composer = "Scott Joplin"

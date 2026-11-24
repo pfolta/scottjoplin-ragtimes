@@ -3,6 +3,8 @@
 
 weeping-willow-output-name = "Weeping Willow"
 
+weeping-willow-index = "Weeping Willow"
+
 weeping-willow-dedication = \markuplist { Respectfully Dedicated to the “Pawnee Club”, "St. Louis," Mo. }
 weeping-willow-title = "Weeping Willow"
 weeping-willow-subtitle = \markuplist { A Ragtime Two-Step }
