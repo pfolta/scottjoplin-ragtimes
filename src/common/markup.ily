@@ -21,6 +21,10 @@ p-then-f = \tweak DynamicText.self-alignment-X #LEFT
                          #:normal-text #:italic " time "
                          #:ekm-dynamic "f"))))))
 
+p-f = \tweak DynamicText.self-alignment-X #LEFT
+    #(make-dynamic-script
+        (markup #:concat (#:ekm-dynamic "p" #:normal-text #:italic " / " #:ekm-dynamic "f")))
+
 f-stacc = \tweak DynamicText.self-alignment-X #LEFT
     #(make-dynamic-script
         (markup #:concat (#:ekm-dynamic "f" #:normal-text #:italic " stacc.")))

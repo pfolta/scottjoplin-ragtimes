@@ -3,7 +3,7 @@
 
 \bookpart {
     \label #'ragtimes
-    \pdf-bookmark "ragtimes" "Ragtimes" #6
+    \pdf-bookmark "ragtimes" "Ragtimes" #7
 
     \paper {
         % Use the full page height and stretch the space between song previews.
@@ -34,8 +34,8 @@
         }
         \column-lines {
             \fill-line {
-                \with-link #'ragtimes.bethena { \uppercase \bold { \bethena-title } }
-                \with-link #'ragtimes.bethena { \page-ref #'ragtimes.bethena "000" "?" }
+                \with-link #'ragtimes.the-cascades { \uppercase \bold { \the-cascades-title } }
+                \with-link #'ragtimes.the-cascades { \page-ref #'ragtimes.the-cascades "000" "?" }
             }
         }
 
@@ -50,7 +50,7 @@
         }
         \column-lines {
             \score {
-                \bethena-preview
+                \the-cascades-preview
                 \layout { \preview-layout }
             }
         }
@@ -74,13 +74,13 @@
         \column-lines {
             \fill-line {
                 \column {
-                    \table #'(-1 -1 -1 -1 -1 -1 -1 -1) {
-                        \bold { "Form:" } A BB A CC DD EE A
-                        \bold { "Keys:" } G B♭ G F Bm D G
+                    \table #'(-1 -1 -1 -1 -1) {
+                        \bold { "Form:" } AA BB CC DD
+                        \bold { "Keys:" } C  C  B♭ E♭
                     }
                 }
                 \right-column {
-                    \line { \bethena-publication-year }
+                    \line { \the-cascades-publication-year }
                 }
             }
         }
@@ -95,6 +95,10 @@
             }
         }
         \column-lines {
+            \fill-line {
+                \with-link #'ragtimes.bethena { \uppercase \bold { \bethena-title } }
+                \with-link #'ragtimes.bethena { \page-ref #'ragtimes.bethena "000" "?" }
+            }
         }
 
         \preview-score-gap
@@ -107,6 +111,10 @@
             }
         }
         \column-lines {
+            \score {
+                \bethena-preview
+                \layout { \preview-layout }
+            }
         }
 
         \preview-score-gap
@@ -126,6 +134,17 @@
             }
         }
         \column-lines {
+            \fill-line {
+                \column {
+                    \table #'(-1 -1 -1 -1 -1 -1 -1 -1) {
+                        \bold { "Form:" } A BB A CC DD EE A
+                        \bold { "Keys:" } G B♭ G F Bm D G
+                    }
+                }
+                \right-column {
+                    \line { \bethena-publication-year }
+                }
+            }
         }
     }
 

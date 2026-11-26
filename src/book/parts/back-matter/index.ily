@@ -26,6 +26,14 @@
 
             \line { \null }
             \line { \null }
+            \line \bold { C }
+
+            \fill-with-pattern #1 #RIGHT "."
+                \with-link #'ragtimes.the-cascades \the-cascades-index
+                \with-link #'ragtimes.the-cascades \page-ref #'ragtimes.the-cascades "000" "?"
+
+            \line { \null }
+            \line { \null }
             \line \bold { M }
 
             \fill-with-pattern #1 #RIGHT "."

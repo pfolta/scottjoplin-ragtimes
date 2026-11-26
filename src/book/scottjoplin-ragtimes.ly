@@ -26,6 +26,10 @@
 \include "src/music/peacherine-rag/edits.ily"
 \include "src/music/peacherine-rag/preview.ily"
 \include "src/music/peacherine-rag/score.ily"
+\include "src/music/the-cascades/metadata.ily"
+\include "src/music/the-cascades/edits.ily"
+\include "src/music/the-cascades/preview.ily"
+\include "src/music/the-cascades/score.ily"
 \include "src/music/bethena/metadata.ily"
 \include "src/music/bethena/edits.ily"
 \include "src/music/bethena/preview.ily"
@@ -53,6 +57,7 @@
     \include "src/book/parts/ragtimes/peacherine-rag.ily"
     \include "src/book/parts/ragtimes/weeping-willow.ily"
     \include "src/book/parts/ragtimes/palm-leaf-rag.ily"
+    \include "src/book/parts/ragtimes/the-cascades.ily"
     \include "src/book/parts/ragtimes/bethena.ily"
 
     % Back Matter

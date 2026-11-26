@@ -81,8 +81,9 @@
             }
             \line { \null }
             \peacherine-rag-edits
-        }
-        \column-lines {
+
+            \line { \null }
+            \line { \null }
             \fill-line {
                 \with-link #'ragtimes.weeping-willow { \uppercase \bold { \weeping-willow-title } }
                 \with-link #'ragtimes.weeping-willow { \page-ref #'ragtimes.weeping-willow "000" "?" }
@@ -93,9 +94,8 @@
             }
             \line { \null }
             \weeping-willow-edits
-
-            \line { \null }
-            \line { \null }
+        }
+        \column-lines {
             \fill-line {
                 \with-link #'ragtimes.palm-leaf-rag { \uppercase \bold { \palm-leaf-rag-title } }
                 \with-link #'ragtimes.palm-leaf-rag { \page-ref #'ragtimes.palm-leaf-rag "000" "?" }
@@ -106,6 +106,19 @@
             }
             \line { \null }
             \palm-leaf-rag-edits
+
+            \line { \null }
+            \line { \null }
+            \fill-line {
+                \with-link #'ragtimes.the-cascades { \uppercase \bold { \the-cascades-title } }
+                \with-link #'ragtimes.the-cascades { \page-ref #'ragtimes.the-cascades "000" "?" }
+            }
+            \justified-lines {
+                \the-cascades-tagline
+                \bold Source: \concat { \with-url \the-cascades-source-url \line { \the-cascades-source-label } "." }
+            }
+            \line { \null }
+            \the-cascades-edits
 
             \line { \null }
             \line { \null }

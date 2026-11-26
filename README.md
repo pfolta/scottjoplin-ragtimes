@@ -9,4 +9,5 @@ LilyPond files for a collection of Scott Joplin's ragtimes.
 | 3 | [**Peacherine Rag**](src/music/peacherine-rag) | 1901 | AA BB A CC DD | E♭ B♭ E♭ A♭ A♭ |
 | 4 | [**Weeping Willow**](src/music/weeping-willow) | 1903 | AA BB A CC DD | G G G C C |
 | 5 | [**Palm Leaf Rag**](src/music/palm-leaf-rag) | 1903 | AA BB CC AA | B♭ B♭ E♭ B♭ |
-| 6 | [**Bethena**](src/music/bethena) | 1905 | A BB A CC DD EE A | G B♭ G F Bm D G |
+| 6 | [**The Cascades**](src/music/the-cascades) | 1904 | AA BB CC DD | C C B♭ E♭ |
+| 7 | [**Bethena**](src/music/bethena) | 1905 | A BB A CC DD EE A | G B♭ G F Bm D G |

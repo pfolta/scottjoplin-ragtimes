@@ -48,6 +48,11 @@
                 }
 
                 \fill-line {
+                    \concat { \hspace #(to-staff-space 10 'mm) \with-link #'ragtimes.the-cascades { \the-cascades-title } }
+                    \with-link #'ragtimes.the-cascades { \page-ref #'ragtimes.the-cascades "000" "?" }
+                }
+
+                \fill-line {
                     \concat { \hspace #(to-staff-space 10 'mm) \with-link #'ragtimes.bethena { \bethena-title } }
                     \with-link #'ragtimes.bethena { \page-ref #'ragtimes.bethena "000" "?" }
                 }
