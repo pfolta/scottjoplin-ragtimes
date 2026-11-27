@@ -49,7 +49,7 @@ bethena-score = \new PianoStaff <<
         | << { \stemUp <cs' g'>2.^\tenuto } \\ { \stemDown bf2_( a4) } >> |
         | << { \stemUp fs'4^( f'2)^\tenuto } \\ { \shiftOn \once \override NoteColumn.force-hshift = #0.5 \stemDown a2. } \\ { \shiftOff \stemDown \shape #'((1.25 . 1) (2 . 0.5) (0 . 0.5) (0 . 0)) Slur d'2_( ef'4) } >> |
         |
-          \tag #'layout { \once \override Staff.Arpeggio.positions = #'(-3 . 4) << { \stemUp <c'' f''>2.\arpeggio^\tenuto } \\ { \stemDown <ef' a'>2.\arpeggio } >> }
+          \tag #'layout { \once \override Staff.Arpeggio.positions = #'(-2 . 3) << { \stemUp <c'' f''>2.\arpeggio^\tenuto } \\ { \stemDown <ef' a'>2.\arpeggio } >> }
           \tag #'midi { << { ef'2. } \\ { s32 a'2~ a'8.~ a'32 } \\ { s16 c''2~ c''8. } \\ { s16. f''2~ f''8~ f''32 } >> }
         |
         | \section \sectionLabel \section-b \key bf \major \repeat volta 2 { <d' bf' d''>8 \stemDown <g' g''>4 <f' f''>8 <g' g''>8[ <a' a''>8] |
